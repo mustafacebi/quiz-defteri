@@ -1,0 +1,1498 @@
+############################################################
+  QUIZ DERLEMESİ (YENİ) - SORULAR VE CEVAPLAR
+  [✔] = doğru şık
+  [kontrol et] = cevaptan tam emin değilim, notlardan bak
+############################################################
+
+
+============================================================
+YENİ QUIZ 1 - Etik ve Kurumsal Etik (Bölüm 1)
+============================================================
+
+1) "Bir bireyin neyin doğru neyin yanlış olduğu konusundaki kararlarını dayandırdığı kişisel ilkeler" tanımı aşağıdaki kavramlardan hangisine aittir?
+   [ ] a) Etik
+   [✔] b) Ahlak
+   [ ] c) Erdem
+   [ ] d) Yasa
+   ✔ Cevap: b) Ahlak  (Etik = grubun beklediği davranış kuralları.)
+
+2) Etik ile ahlakı birbirinden ayıran temel fark nedir?
+   [ ] a) Etik yasalarla belirlenir, ahlak ise dinle belirlenir.
+   [ ] b) Etik yalnızca iş dünyasında, ahlak yalnızca özel hayatta geçerlidir.
+   [✔] c) Etik bireyin ait olduğu grup tarafından tanımlanır, ahlak ise bireyin kişisel ilkeleridir.
+   [ ] d) Etik değişmez kurallardır, ahlak ise duruma göre değişir.
+   ✔ Cevap: c)
+
+3) İnsanları kabul edilebilir olanı yapmaya yönelten alışkanlığa ne ad verilir?
+   [✔] a) Erdem
+   [ ] b) Bütünlük
+   [ ] c) Kötülük
+   [ ] d) Ahlak
+   ✔ Cevap: a) Erdem  (Kabul edilemez davranış alışkanlığı = kötülük.)
+
+4) Bir yönetici, yakın arkadaşı olan bir çalışanın kural ihlalini görmezden gelirken başka bir çalışanı aynı ihlal için cezalandırıyor. Bu yöneticide hangi özellik eksiktir?
+   [ ] a) Erdem
+   [ ] b) Kurumsal sosyal sorumluluk
+   [ ] c) Yasal uyum
+   [✔] d) Bütünlük
+   ✔ Cevap: d) Bütünlük  (Bütünlük: herkese aynı ölçüde tutarlı davranmak, kendi ilkelerine göre hareket etmek.)
+
+5) Yasal ve etik davranış arasındaki ilişki hakkında aşağıdakilerden hangisi doğrudur?
+   [ ] a) Yasal olan her eylem aynı zamanda etiktir.
+   [✔] b) Bir eylem yasal olduğu hâlde etik olmayabilir.
+   [ ] c) Etik olan her eylem aynı zamanda yasaldır.
+   [ ] d) Yasa dışı eylemler her durumda etik dışıdır.
+   ✔ Cevap: b)
+
+6) Aşağıdakilerden hangisi iş dünyasında etik olmayan davranış riskini artıran eğilimler arasında sayılmaz?
+   [ ] a) Farklı kültürleri kapsayan daha karmaşık çalışma ortamları
+   [ ] b) Zorlu ekonomik iklimin gelir ve kâr üzerinde yarattığı baskı
+   [✔] c) Kurumsal etik sorumlularının sayısının hızla artması
+   [ ] d) Çalışanların, hissedarların ve düzenleyici kurumların artan dikkati
+   ✔ Cevap: c)  (Etik sorumlusu sayısının artması riski azaltan bir gelişmedir.)
+
+7) Bathsheba Sendromu neyi tanımlar?
+   [ ] a) Çalışanların misilleme korkusuyla suistimali bildirmemesini
+   [ ] b) Farklı kültürlerde etik kuralların farklı yorumlanmasını
+   [ ] c) Kuruluşların ekonomik krizde kâr için etik dışı yollara başvurmasını
+   [✔] d) İktidardakilerin güç ve başarıyla ahlaki olarak yozlaşmasını
+   ✔ Cevap: d)
+
+8) İktidardaki kişilerin ahlaki yozlaşmasını kolaylaştıran faktör nedir?
+   [✔] a) İnsanların, liderleri uygunsuz davrandığında başka tarafa bakma eğilimi
+   [ ] b) Yöneticilerin etik eğitimi almaması
+   [ ] c) Yönetim kurulunun CEO'ya rapor vermesi
+   [ ] d) Sosyal denetimlerin yılda bir kez yapılması
+   ✔ Cevap: a)
+
+9) İş yerinde bildirilen suistimallerin en büyük payı hangi gruba aittir?
+   [ ] a) Üst düzey yöneticiler
+   [ ] b) Orta düzey yöneticiler
+   [✔] c) Yönetici olmayan çalışanlar
+   [ ] d) İlk kademe yöneticiler
+   ✔ Cevap: c)   [kontrol et]
+   (Kitapta suistimallerin ~%60'ı yöneticilerden kaynaklanıyor ama bu pay üç
+   yönetici kademesine bölünüyor; tek grup olarak en büyük pay ~%40 ile
+   yönetici olmayan çalışanlarda. Hocanın notunda farklı yazıyorsa ona uy.)
+
+10) Kurumsal sosyal sorumluluk (KSS) kapsamında bir kuruluşun eylemlerinin etkisinden sorumlu tutulduğu gruplar arasında aşağıdakilerden hangisi yer almaz?
+   [ ] a) Tedarikçiler
+   [ ] b) Çevre
+   [ ] c) Topluluk
+   [✔] d) Rakip firmalar
+   ✔ Cevap: d) Rakip firmalar
+
+11) Tedarik zinciri sürdürülebilirliği en iyi hangi ifadeyle tanımlanır?
+   [ ] a) Tedarik maliyetlerini en aza indirerek kârı artırmak
+   [✔] b) Gelecek nesillerin ihtiyaçlarını karşılama yeteneğinden ödün vermeden bugünün ihtiyaçlarını karşılayan bir tedarik zinciri geliştirmek
+   [ ] c) Tedarikçileri yalnızca yerel firmalardan seçmek
+   [ ] d) Tedarik zincirindeki tüm süreçleri dijitalleştirmek
+   ✔ Cevap: b)
+
+12) Aşağıdakilerden hangisi KSS'yi ve iyi iş ahlakını teşvik etme nedenlerinden biri değildir?
+   [ ] a) Topluluğun iyi niyetini kazanmak
+   [ ] b) Olumsuz tanıtımlardan kaçınmak
+   [✔] c) Vergi yükümlülüklerini tamamen ortadan kaldırmak
+   [ ] d) Kuruluşu ve çalışanlarını yasal işlemlerden korumak
+   ✔ Cevap: c)
+
+13) Bir kuruluşun etik olmayan davranış riskini azaltmak için kullanabileceği iki temel unsur hangisidir?
+   [✔] a) İyi uygulanmış bir etik programı ve güçlü bir etik kültürü
+   [ ] b) Sıkı yasal denetim ve yüksek cezalar
+   [ ] c) Sosyal denetim ve tedarik zinciri sürdürülebilirliği
+   [ ] d) Performans primleri ve terfi sistemi
+   ✔ Cevap: a)
+
+14) Aşağıdakilerden hangisi başarılı bir etik programının özelliği değildir?
+   [ ] a) Çalışanlar etikle ilgili konularda tavsiye almaya isteklidir.
+   [ ] b) Çalışanlar etik davranışları için ödüllendirilir.
+   [ ] c) Çalışanlar şirketleri hakkında olumlu hisseder.
+   [✔] d) Kuruluş, nasıl elde edildiğine bakmaksızın her başarıyı ödüllendirir.
+   ✔ Cevap: d)
+
+15) Kurumsal etik sorumlusu ideal olarak kime doğrudan rapor vermelidir?
+   [ ] a) İnsan kaynakları müdürüne
+   [✔] b) CEO'ya
+   [ ] c) Hukuk departmanına
+   [ ] d) Orta düzey yöneticilere
+   ✔ Cevap: b) CEO'ya
+
+16) Örgütsel etik kurallar kimlere uygulanmalıdır?
+   [ ] a) Yalnızca yeni işe alınan çalışanlara
+   [ ] b) Yalnızca üst düzey yöneticilere
+   [✔] c) Yöneticilere, memurlara ve çalışanlara
+   [ ] d) Yalnızca müşterilerle doğrudan çalışan personele
+   ✔ Cevap: c)
+
+17) Sosyal denetim nedir?
+   [✔] a) Kuruluşun etik ve sosyal sorumluluk hedeflerini gözden geçirip gelecek yılın hedeflerini paydaşlara iletmesi
+   [ ] b) Devletin kuruluşların vergi kayıtlarını incelemesi
+   [ ] c) Çalışanların sosyal medya kullanımının izlenmesi
+   [ ] d) Tedarikçilerin finansal durumunun denetlenmesi
+   ✔ Cevap: a)
+
+18) Aşağıdakilerden hangisi çalışanlara yönelik etik eğitiminin hedeflerinden biridir?
+   [ ] a) Çalışanların performans primlerini artırmak
+   [ ] b) Etik kuralları yasal düzenlemelerin yerine koymak
+   [ ] c) Suistimal bildirimlerini yalnızca yöneticilere sınırlamak
+   [✔] d) Çalışanlara bildirimleri nedeniyle misillemeye maruz kalmayacaklarına dair güvence vermek
+   ✔ Cevap: d)
+
+19) Beş adımlı etik karar verme sürecinin doğru sıralaması hangisidir?
+   [ ] a) Alternatifleri belirle → Sorunu tanımla → Uygula → Seç → Sonuçları izle
+   [✔] b) Sorunu tanımla → Alternatifleri belirle → Alternatif seç → Kararı uygula → Sonuçları izle
+   [ ] c) Sorunu tanımla → Alternatif seç → Alternatifleri belirle → Sonuçları izle → Uygula
+   [ ] d) Kararı uygula → Sorunu tanımla → Alternatifleri belirle → Seç → Sonuçları izle
+   ✔ Cevap: b)
+
+(Bu quizin orijinalinde 19 soru var.)
+
+
+
+============================================================
+YENİ QUIZ 2 - BT Profesyonellerinin Etiği (Bölüm 2)
+============================================================
+
+1) Ticari sır en iyi hangi ifadeyle tanımlanır?
+   [ ] a) Patent ofisine kaydedilmiş ve kamuya açık teknik bilgi
+   [✔] b) Bir şirketin gizli tutmak için güçlü önlemler aldığı bilgiler
+   [ ] c) Çalışanların şirkette tutulan kişisel verileri
+   [ ] d) Devlet kurumlarının gizlilik dereceli belgeleri
+   ✔ Cevap: b)
+
+2) Bir çalışanın, kamu yararını tehdit eden bir şirket eylemine dikkat çekme çabasına ne ad verilir?
+   [ ] a) Çıkar çatışması
+   [ ] b) Yanlış beyan
+   [✔] c) İhbar (whistle-blowing)
+   [ ] d) Özgeçmiş enflasyonu
+   ✔ Cevap: c) İhbar (bilgi uçurma)
+
+3) Bir BT danışmanı, müşterisine ortağı olduğu bir firmanın yazılımını, daha uygun seçenekler varken öneriyor. Bu durum hangi etik sorunu örnekler?
+   [✔] a) Çıkar çatışması
+   [ ] b) Sözleşmenin maddi ihlali
+   [ ] c) Dolandırıcılık
+   [ ] d) Görevlerin ayrılması
+   ✔ Cevap: a) Çıkar çatışması
+
+4) Maddi bir gerçeğin yanlış veya eksik beyan edilmesi hangi kavramla ifade edilir?
+   [ ] a) Rüşvet
+   [ ] b) Sözleşmenin ihlali
+   [ ] c) Dolandırıcılık
+   [✔] d) Yanlış beyan
+   ✔ Cevap: d) Yanlış beyan
+
+5) Bir tarafın belirli yükümlülüklerini yerine getirmeyerek sözleşmenin özünü bozması durumuna ne denir?
+   [ ] a) Çıkar çatışması
+   [✔] b) Sözleşmenin maddi ihlali
+   [ ] c) Yanlış beyan
+   [ ] d) İhmal
+   ✔ Cevap: b) Sözleşmenin maddi ihlali
+
+6) Aşağıdakilerden hangisi BT projelerinde sık karşılaşılan sorunların nedenleri arasında gösterilmez?
+   [ ] a) Eski (legacy) sistemler
+   [ ] b) Kapsam kayması (scope creep)
+   [✔] c) Görevlerin ayrılması
+   [ ] d) Zayıf iletişim
+   ✔ Cevap: c)  (Görevlerin ayrılması bir sorun değil, iç kontrol önlemidir.)
+
+7) "Görevlerin ayrılması" ilkesi neyi ifade eder?
+   [✔] a) Finansal işlemleri içeren süreçlerin farklı aşamalarının farklı kişilerce yürütülmesi
+   [ ] b) Proje ekibinin farklı şehirlerde çalışması
+   [ ] c) Her çalışanın yalnızca tek bir projede görev alması
+   [ ] d) BT ve muhasebe departmanlarının farklı yöneticilere bağlanması
+   ✔ Cevap: a)
+
+8) Yabancı Yolsuzluk Uygulamaları Yasası'na (FCPA) göre yasayı ihlal eden bireylere verilebilecek en ağır ceza nedir?
+   [ ] a) İhlal başına 2 milyon dolara kadar para cezası
+   [✔] b) 100.000 dolara kadar para cezası ve 5 yıl hapis
+   [ ] c) 50.000 dolara kadar para cezası ve 2 yıl hapis
+   [ ] d) 1 milyon dolara kadar para cezası ve 10 yıl hapis
+   ✔ Cevap: b)  (a şıkkı ŞİRKETLER için olan cezadır: ihlal başına 2 milyon $.)
+
+9) FCPA aşağıdakilerden hangisine uygulanır?
+   [ ] a) Yalnızca ABD'deki kamu kurumlarına
+   [ ] b) Yalnızca yabancı devlet yetkililerine
+   [ ] c) Yalnızca Avrupa'da faaliyet gösteren ABD şirketlerine
+   [✔] d) Her ABD vatandaşına, ABD şirketine ve hisseleri ABD borsasında işlem gören şirketlere
+   ✔ Cevap: d)
+
+10) Aşağıdakilerden hangisi rüşveti hediyeden ayıran bir özelliktir?
+   [ ] a) Açık ve aleni şekilde verilmesi
+   [ ] b) Doğrudan verenden alıcıya yapılması
+   [✔] c) Genellikle dolaylı olarak üçüncü bir taraf aracılığıyla yapılması
+   [ ] d) Gelecekte bir karşılık beklentisi olmadan verilmesi
+   ✔ Cevap: c)  (a, b ve d hediyenin özellikleridir.)
+
+11) Özgeçmiş enflasyonu nedir?
+   [ ] a) Deneyim arttıkça maaş beklentisinin yükselmesi
+   [ ] b) Özgeçmişin gereğinden uzun yazılması
+   [ ] c) Bir çalışanın birden fazla işe başvurması
+   [✔] d) Bir kişinin nitelikleri hakkında özgeçmişinde yalan söylemesi
+   ✔ Cevap: d)
+
+12) Aşağıdakilerden hangisi BT çalışanlarının mesleklerinin profesyonellik itibarını artırma yollarından biri değildir?
+   [ ] a) Profesyonel bir etik kurallarına abone olmak
+   [✔] b) Devlet lisansına karşı çıkmak
+   [ ] c) Uygun sertifikaları almak
+   [ ] d) Profesyonel kuruluşlara katılmak
+   ✔ Cevap: b)
+
+13) Aşağıdakilerden hangisi mesleki etik kuralların sağladığı faydalar arasında yer almaz?
+   [✔] a) Meslek mensuplarının maaşlarının yasal olarak artırılması
+   [ ] b) Etik karar vermeye yardımcı olması
+   [ ] c) Halktan güven ve saygı görülmesi
+   [ ] d) Değerlendirme kriterleri sunması
+   ✔ Cevap: a)
+
+14) Aşağıdakilerden hangisi BT ile ilgili önde gelen profesyonel kuruluşlar arasında sayılmaz?
+   [ ] a) ACM
+   [ ] b) IEEE-CS
+   [✔] c) BSA
+   [ ] d) SANS Enstitüsü
+   ✔ Cevap: c) BSA  (BSA bir ticaret grubudur, profesyonel kuruluş değildir. Profesyonel kuruluşlar: ACM, IEEE-CS, AITP, SANS.)
+
+15) Endüstri derneklerinden alınan sertifikalar, satıcı (vendor) sertifikalarıyla karşılaştırıldığında genellikle neyi gerektirir?
+   [ ] a) Daha kısa bir eğitim süresini
+   [✔] b) Daha yüksek deneyim seviyesi ve daha geniş bir bakış açısını
+   [ ] c) Yalnızca tek bir ürüne ilişkin bilgiyi
+   [ ] d) Sınava girmeden belge almayı
+   ✔ Cevap: b)
+
+16) Belirli bir uzmanlığa veya yetkinliğe sahip profesyonellerin eylemlerini ölçmek için kullanılan standart hangisidir?
+   [✔] a) Makul mesleki standart
+   [ ] b) Makul kişi standardı
+   [ ] c) Özen yükümlülüğü
+   [ ] d) Kabul edilebilir kullanım politikası
+   ✔ Cevap: a) Makul mesleki standart
+
+17) Sunuma göre profesyonel ihmal (malpraktis) ancak hangi koşulda ortaya çıkabilir?
+   [ ] a) Çalışan bir sertifika sınavında başarısız olduğunda
+   [ ] b) Müşteri sözleşmeyi feshettiğinde
+   [ ] c) İşveren gizlilik anlaşması imzalattığında
+   [✔] d) Mesleki davranışı karşılaştırmak için tek tip standartlar bulunduğunda
+   ✔ Cevap: d)
+
+18) Bir kuruluşta kabul edilebilir kullanım politikasına (AUP) uyumu izlemekten hangi birim sorumludur?
+   [ ] a) İnsan kaynakları departmanı
+   [✔] b) Bilgi güvenliği (infosec) grubu
+   [ ] c) Denetim komitesi
+   [ ] d) Hukuk departmanı
+   ✔ Cevap: b)
+
+19) Güvenlik duvarı (firewall) en iyi nasıl tanımlanır?
+   [✔] a) Kuruluşun ağı ile İnternet arasında ilk savunma hattı olarak çalışan donanım veya yazılım
+   [ ] b) Çalışanların parolalarını saklayan veritabanı
+   [ ] c) Yazılım lisanslarını takip eden program
+   [ ] d) Virüslü dosyaları silen yedekleme sistemi
+   ✔ Cevap: a)
+
+20) Aşağıdakilerden hangisi iç denetim departmanının değil, denetim komitesinin görevidir?
+   [ ] a) İç sistemlerin ve kontrollerin etkili olduğunu belirlemek
+   [ ] b) Şirket varlıklarının varlığını doğrulamak ve korunmalarını sağlamak
+   [ ] c) Kuruluşun kendi politika ve prosedürlerine uyumunu ölçmek
+   [✔] d) Bağımsız denetçinin niteliklerini, bağımsızlığını ve performansını değerlendirmek
+   ✔ Cevap: d)  (a, b, c iç denetim departmanının görevleridir.)
+
+
+
+============================================================
+YENİ QUIZ 3 - Siber Saldırılar ve Siber Güvenlik (Bölüm 3)
+============================================================
+
+1) Sıfır gün saldırısını diğer saldırılardan ayıran özellik nedir?
+   [ ] a) Yalnızca hafta sonları veya tatil günlerinde gerçekleştirilmesi
+   [ ] b) Saldırının ilk 24 saat içinde fark edilip durdurulması
+   [✔] c) Güvenlik topluluğu veya yazılım geliştiricisi açığı fark edip onarmadan önce gerçekleşmesi
+   [ ] d) Yalnızca yeni kurulmuş sistemleri hedef alması
+   ✔ Cevap: c)
+
+2) Bir grup, hükümetin yeni bir politikasını protesto etmek için bir bakanlığın web sitesine sızıp ana sayfaya siyasi sloganlar yerleştiriyor. Bu failler hangi grupta sınıflandırılır?
+   [✔] a) Hacktivist
+   [ ] b) Siber suçlu
+   [ ] c) Endüstriyel casus
+   [ ] d) İçeriden kötü niyetli kişi
+   ✔ Cevap: a) Hacktivist  (Amaç siyasi mesaj vermek; siber terörist ise kritik altyapıya zarar verip korku yaratır.)
+
+3) Rakip bir firmanın yeni ürün tasarımlarını ele geçirerek kendi şirketine haksız rekabet avantajı sağlamaya çalışan kişi hangi fail türüdür?
+   [ ] a) Hacktivist
+   [ ] b) Siber terörist
+   [ ] c) Cracker
+   [✔] d) Endüstriyel casus
+   ✔ Cevap: d) Endüstriyel casus
+
+4) Zararsız görünen bir programın içine kötü amaçlı kod gizlenmesiyle oluşturulan zararlı yazılıma ne ad verilir?
+   [ ] a) Solucan
+   [✔] b) Truva atı
+   [ ] c) Rootkit
+   [ ] d) Fidye yazılımı
+   ✔ Cevap: b) Truva atı
+
+5) Bir programcı, kendi adı bordro sisteminden silindiği gün şirket veritabanını silecek bir kod yazmıştır. Bu kod hangi tür suistimale örnektir?
+   [ ] a) Karma tehdit
+   [ ] b) DDoS saldırısı
+   [✔] c) Mantık bombası
+   [ ] d) Gelişmiş kalıcı tehdit (APT)
+   ✔ Cevap: c) Mantık bombası  (Belirli bir olayla tetiklenen Truva atı türü.)
+
+6) Solucanı (worm) tanımlayan temel özellik hangisidir?
+   [ ] a) Fidye ödenene kadar verilere erişimi engellemesi
+   [ ] b) Zararsız görünen bir programın içine gizlenmesi
+   [ ] c) Yalnızca belirli bir tarihte etkinleşmesi
+   [✔] d) Bilgisayarın aktif belleğinde bulunup kendini kopyalaması
+   ✔ Cevap: d)  (a = fidye yazılımı, b = Truva atı, c = mantık bombası.)
+
+7) CAN-SPAM Yasası'na göre ticari bir e-postada aşağıdakilerden hangisinin bulunması zorunlu değildir?
+   [ ] a) Gerçek bir iade adresi
+   [✔] b) Alıcının önceden verdiği yazılı onay
+   [ ] c) E-postanın reklam veya talep olduğunu belirten etiket
+   [ ] d) Alıcının gelecekteki e-postalardan vazgeçebileceği bir yol
+   ✔ Cevap: b)  (CAN-SPAM, şartlara uyulursa onay almadan da spam göndermeye izin verir.)
+
+8) Saldırganın bir ağa erişip haftalar veya aylar boyunca tespit edilmeden kalarak veri çaldığı saldırı türü hangisidir?
+   [✔] a) Gelişmiş kalıcı tehdit (APT)
+   [ ] b) Dağıtılmış hizmet reddi (DDoS)
+   [ ] c) Spam
+   [ ] d) Sıfır gün saldırısı
+   ✔ Cevap: a) APT
+
+9) Bir kullanıcı, bankasından geliyormuş gibi görünen ve bir web sitesinde oturum açmasını isteyen bir kısa mesaj (SMS) alıyor. Bu hangi kimlik avı çeşididir?
+   [ ] a) Vishing
+   [ ] b) Spear phishing
+   [✔] c) Smishing
+   [ ] d) Siber casusluk
+   ✔ Cevap: c) Smishing  (SMS ile = smishing; sesli/telefon ile = vishing.)
+
+10) Kimlik avcısının belirli bir kuruluşun çalışanlarına hileli e-postalar gönderdiği kimlik avı çeşidine ne denir?
+   [ ] a) Smishing
+   [ ] b) Vishing
+   [ ] c) Karma tehdit
+   [✔] d) Spear phishing
+   ✔ Cevap: d) Spear phishing (hedef odaklı kimlik avı)
+
+11) CIA güvenlik üçlüsünde "bütünlük" ilkesi neyi sağlar?
+   [ ] a) Verilere ihtiyaç duyulan zaman ve yerde erişilebilmesini
+   [✔] b) Verilerin yalnızca yetkili kullanıcılar tarafından değiştirilebilmesini
+   [ ] c) Hassas verilere yalnızca yetkili kişilerin erişebilmesini
+   [ ] d) Verilerin düzenli olarak yedeklenmesini
+   ✔ Cevap: b)  (a = erişilebilirlik/availability, c = gizlilik/confidentiality.)
+
+12) CIA güvenliğinin uygulanması gereken düzeyler arasında aşağıdakilerden hangisi yer almaz?
+   [ ] a) Ağ düzeyi
+   [ ] b) Uygulama düzeyi
+   [✔] c) Donanım üreticisi düzeyi
+   [ ] d) Son kullanıcı düzeyi
+   ✔ Cevap: c)  (Düzeyler: kuruluş, ağ, uygulama, son kullanıcı.)
+
+13) Genel risk değerlendirme sürecinin ilk adımı nedir?
+   [✔] a) En çok endişe duyulan BT varlıkları kümesini belirlemek
+   [ ] b) Fayda-maliyet analizi yapmak
+   [ ] c) Bir karşı önlemin uygulanıp uygulanmayacağına karar vermek
+   [ ] d) Her tehdidin nasıl azaltılabileceğini belirlemek
+   ✔ Cevap: a)
+
+14) Bir kuruluşun iyi düşünülmüş bir güvenlik politikasına sahip olup olmadığını ve bu politikaya uyulup uyulmadığını değerlendiren işleme ne ad verilir?
+   [ ] a) Risk değerlendirmesi
+   [ ] b) Felaketten kurtarma planı
+   [ ] c) Güvenlik gösterge tablosu
+   [✔] d) Güvenlik denetimi
+   ✔ Cevap: d) Güvenlik denetimi
+
+15) ABD'deki finans kuruluşlarının kara para aklamanın tespit edilmesi ve önlenmesinde devlet kurumlarına yardımcı olmasını gerektiren yasa hangisidir?
+   [ ] a) Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA)
+   [ ] b) Federal Bilgi Güvenliği Yönetimi Yasası
+   [✔] c) 1970 tarihli Banka Gizlilik Yasası
+   [ ] d) ABD Vatanseverlik Yasası
+   ✔ Cevap: c) Banka Gizlilik Yasası (Bank Secrecy Act)
+
+16) Bir izinsiz giriş tespit sistemi (IDS), bir çalışanın hesabından gece 03.00'te olağandışı miktarda veri aktarıldığını fark ederek uyarı veriyor. Bu sistem hangi yaklaşımı kullanıyor olabilir?
+   [✔] a) Davranış tabanlı
+   [ ] b) Bilgi tabanlı
+   [ ] c) İmza tabanlı antivirüs
+   [ ] d) Tek faktörlü kimlik doğrulama
+   ✔ Cevap: a) Davranış tabanlı  (Normal davranıştan sapmayı yakalar; bilgi tabanlı ise bilinen saldırı kalıplarını arar.)
+
+17) Uzak kullanıcıların, İnternet gibi genel ağlar üzerinden şifrelenmiş veri ileterek bir kuruluşun kaynaklarına güvenle erişmesini sağlayan teknoloji hangisidir?
+   [ ] a) Proxy sunucusu
+   [ ] b) Yönlendirici
+   [ ] c) Rootkit
+   [✔] d) Sanal özel ağ (VPN)
+   ✔ Cevap: d) VPN
+
+18) Bir güvenlik olayı sırasında birincil hedef ne olmalıdır?
+   [ ] a) Saldırganı izleyip yakalamaya çalışmak
+   [✔] b) Kontrolü yeniden kazanmak ve hasarı sınırlamak
+   [ ] c) Olayı müşterilerden tamamen gizlemek
+   [ ] d) Tüm sistemleri kalıcı olarak kapatmak
+   ✔ Cevap: b)
+
+19) BT güvenlik grubu, yok etme (eradication) çalışmalarına başlamadan önce ne yapmalıdır?
+   [ ] a) Tüm yedekleri silip sistemi sıfırdan kurmak
+   [ ] b) Olayı hemen basına duyurmak
+   [✔] c) Olası tüm suç delillerini toplayıp kaydetmek ve yedeklerin güncel, eksiksiz ve zararlı yazılımdan arınmış olduğunu doğrulamak
+   [ ] d) Saldırganla iletişime geçip fidye pazarlığı yapmak
+   ✔ Cevap: c)
+
+20) Bilgisayar adli bilişimi (computer forensics) en iyi nasıl tanımlanır?
+   [ ] a) Ağ trafiğini paket içeriğine göre filtreleyen güvenlik sistemi
+   [✔] b) Verilerin bütünlüğünü koruyarak mahkemede delil olarak kabul edilecek şekilde toplanması, incelenmesi ve saklanması
+   [ ] c) Kuruluşların güvenliğini dışarıdan yöneten hizmet sağlayıcısı
+   [ ] d) Kullanıcıların kimliğini biyometrik yöntemlerle doğrulama süreci
+   ✔ Cevap: b)  (a = yeni nesil güvenlik duvarı, c = MSSP.)
+
+
+
+============================================================
+YENİ QUIZ 4 - Mahremiyet / Gizlilik (Bölüm 4)
+============================================================
+
+1) Bilgi gizliliği hangi iki unsurun birleşiminden oluşur?
+   [ ] a) Anonimlik ve şifreleme
+   [ ] b) Finansal gizlilik ve sağlık gizliliği
+   [✔] c) İletişim gizliliği ve veri gizliliği
+   [ ] d) Yalnız bırakılma hakkı ve mülkiyet hakkı
+   ✔ Cevap: c)
+
+2) ABD'de Dördüncü Değişiklik'in bireyleri koruyabilmesi için hangi koşulun bulunması gerekir?
+   [ ] a) İletişimin şifrelenmiş olması
+   [✔] b) Makul bir mahremiyet beklentisinin bulunması
+   [ ] c) Kişinin özel bir işverende çalışması
+   [ ] d) Kişinin ABD vatandaşı olması
+   ✔ Cevap: b)
+
+3) Finansal Gizlilik Hakkı Yasası, finansal kurum müşterilerinin kayıtlarını kime karşı korur?
+   [✔] a) Federal hükümetin yetkisiz incelemesine
+   [ ] b) Özel işletmelere
+   [ ] c) Eyalet ve yerel yönetimlere
+   [ ] d) Kredi raporlama bürolarına
+   ✔ Cevap: a)  (Yasa yalnızca FEDERAL hükümete karşı korur; eyalet/yerel yönetimleri kapsamaz.)
+
+4) Gramm-Leach-Bliley Yasası'nın (GLBA) hangi kuralı, kişilerin uygun yetki olmadan kişisel bilgilere erişme girişimlerini ele alır?
+   [✔] a) Bahane (pretexting) kuralı
+   [ ] b) Koruma kuralı
+   [ ] c) Finansal gizlilik kuralı
+   [ ] d) Devre dışı bırakma kuralı
+   ✔ Cevap: a) Bahane kuralı
+   (GLBA'nın 3 kuralı: finansal gizlilik kuralı = gizlilik bildirimi;
+   koruma kuralı = veri güvenliği planı; bahane kuralı = yetkisiz erişim girişimi.)
+
+5) GLBA kapsamında, kişisel verilerinin üçüncü taraflarla paylaşılmasını reddetmek için hiçbir işlem yapmayan müşteriler için ne geçerlidir?
+   [ ] a) Her paylaşım için ayrı onay verirler
+   [✔] b) Otomatik olarak paylaşıma kaydolmuş sayılırlar
+   [ ] c) Verileri hiçbir zaman paylaşılamaz
+   [ ] d) Verileri yalnızca devletle paylaşılabilir
+   ✔ Cevap: b)  (GLBA "opt-out" sistemidir: müşteri reddetmezse kabul etmiş sayılır.)
+
+6) Tüketicilerin Equifax, Experian ve TransUnion'un her birinden yılda bir kez ücretsiz kredi raporu almasına olanak tanıyan yasa hangisidir?
+   [✔] a) Adil ve Doğru Kredi İşlemleri Yasası
+   [ ] b) Finansal Gizlilik Hakkı Yasası
+   [ ] c) Gizlilik Yasası
+   [ ] d) Adil Kredi Raporlama Yasası
+   ✔ Cevap: a) FACTA  (Dikkat: FCRA değil, FACTA.)
+
+7) Amerikan Kurtarma ve Yeniden Yatırım Yasası'nın elektronik sağlık kayıtlarıyla (EHR) ilgili hükümleri arasında aşağıdakilerden hangisi yer alır?
+   [ ] a) Sağlık sigortasını zorunlu kılmak
+   [ ] b) Şifreleme kullanımını yasaklamak
+   [ ] c) Hastaların kendi kayıtlarına erişimini kısıtlamak
+   [✔] d) Sağlık bilgilerinin satışını yasaklamak
+   ✔ Cevap: d)  (Ayrıca şifrelemeyi teşvik eder ve hastalara erişim hakkı verir.)
+
+8) Ebeveynlere, çocuklarının kişisel bilgilerinin İnternet üzerinden toplanması, kullanılması ve ifşa edilmesi üzerinde kontrol sağlayan yasa hangisidir?
+   [✔] a) COPPA
+   [ ] b) FOIA
+   [ ] c) HIPAA
+   [ ] d) FERPA
+   ✔ Cevap: a) COPPA
+
+9) Bir veli, okulun çocuğunun not kayıtlarını izinsiz olarak üçüncü kişilerle paylaştığını öğrenerek okul hakkında şikâyette bulunmak istiyor. Bu hak hangi yasaya dayanır?
+   [ ] a) GLBA
+   [ ] b) COPPA
+   [✔] c) FERPA
+   [ ] d) ECPA
+   ✔ Cevap: c) FERPA  (Öğrenci/eğitim kayıtları.)
+
+10) Omnibus Suç Kontrolü ve Güvenli Sokaklar Yasası'nın III. Başlığı (Telefon Dinleme Yasası) neyi düzenler?
+   [ ] a) Kredi raporlama bürolarının faaliyetlerini
+   [ ] b) Çocukların çevrimiçi verilerinin toplanmasını
+   [✔] c) Telli ve sözlü iletişimin dinlenmesini
+   [ ] d) Yabancı güçler arasındaki iletişimin gözetimini
+   ✔ Cevap: c)  (d = FISA.)
+
+11) Yabancı İstihbarat Gözetim Yasası'na (FISA) göre hükümet, dünyanın herhangi bir yerindeki bir ABD vatandaşını kasıtlı olarak hedef almadan önce ne yapmalıdır?
+   [ ] a) Kongre'den onay almak
+   [ ] b) Kişiye yazılı bildirim göndermek
+   [ ] c) Yalnızca FBI direktörünün onayını almak
+   [✔] d) Kişiselleştirilmiş bir mahkeme emri almak
+   ✔ Cevap: d)
+
+12) Ulusal Güvenlik Mektubu (NSL) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?
+   [✔] a) Yargı denetimine tabi değildir ve alıcıların talebi açıklaması yasaklanabilir
+   [ ] b) Yalnızca bir yargıç tarafından çıkarılabilir
+   [ ] c) Alıcı, talebi kamuya açıklamakla yükümlüdür
+   [ ] d) Yalnızca yabancı uyruklu kişileri kapsar
+   ✔ Cevap: a)  (Açıklama yasağına "gag provision / susturma hükmü" denir.)
+
+13) Belirli bir telefon numarasına gelen aramaların başlangıç numarasını kaydeden cihaza ne ad verilir?
+   [ ] a) Takip uygulaması
+   [✔] b) Yakalama ve izleme (trap and trace)
+   [ ] c) Olay veri kaydedicisi (EDR)
+   [ ] d) Kalem kaydı (pen register)
+   ✔ Cevap: b) Trap and trace  (GELEN aramalar. Kalem kaydı = GİDEN aramalar.)
+
+14) Edward Snowden'ın ifşaatlarının ardından kabul edilen ve NSA'nın toplu telefon meta verisi toplamasını sona erdiren yasa hangisidir?
+   [ ] a) ABD Vatanseverlik Yasası
+   [ ] b) 2008 FISA Değişiklik Yasası
+   [✔] c) ABD Özgürlük Yasası
+   [ ] d) CALEA
+   ✔ Cevap: c) USA Freedom Act (2015)
+
+15) Aşağıdakilerden hangisi OECD adil bilgi uygulamaları rehberinin sekiz ilkesinden biri değildir?
+   [✔] a) Sınırsız veri saklama
+   [ ] b) Toplama sınırlaması
+   [ ] c) Veri kalitesi
+   [ ] d) Sorumluluk
+   ✔ Cevap: a)
+   (8 ilke: toplama sınırlaması, veri kalitesi, amaç belirtme, kullanım
+   sınırlaması, güvenlik önlemleri, açıklık, bireysel katılım, sorumluluk.)
+
+16) Genel Veri Koruma Yönetmeliği (GDPR) hakkında aşağıdakilerden hangisi doğrudur?
+   [ ] a) Yalnızca AB sınırları içinde kurulu şirketlere uygulanır
+   [ ] b) Yalnızca sağlık verilerini kapsar
+   [ ] c) ABD ile AB arasındaki Güvenli Liman anlaşmasının bir parçasıdır
+   [✔] d) AB vatandaşlarının kişisel verilerini dünyanın herhangi bir yerinde işleyen kuruluşların uyum sağlamasını gerektirir
+   ✔ Cevap: d)
+
+17) ABD devlet kurumlarının herhangi bir kişisel veri kayıt tutma sisteminin varlığını gizlemesini yasaklayan yasa hangisidir?
+   [ ] a) Adil Kredi Raporlama Yasası
+   [✔] b) Gizlilik Yasası (Privacy Act)
+   [ ] c) Elektronik Haberleşme Gizliliği Yasası
+   [ ] d) Bilgi Edinme Özgürlüğü Yasası (FOIA)
+   ✔ Cevap: b) Gizlilik Yasası (1974)
+
+18) Ceza ve hukuk davalarında, ilgili belgeleri tanıması için belge inceleme yazılımını insan rehberliği ile "eğiten" sürece ne ad verilir?
+   [ ] a) Tüketici profili oluşturma
+   [ ] b) Çerez analizi
+   [ ] c) Sınır ötesi veri akışı
+   [✔] d) Tahmine dayalı kodlama
+   ✔ Cevap: d) Tahmine dayalı kodlama (predictive coding)
+
+19) Özel sektörde işyeri izleme ile ilgili aşağıdaki ifadelerden hangisi doğrudur?
+   [ ] a) İşverenler yalnızca çalışanın yazılı onayıyla iş telefonlarını izleyebilir
+   [ ] b) Dördüncü Değişiklik, özel işverenlerin çalışanlarını izlemesini yasaklar
+   [ ] c) Eyalet gizlilik yasaları genellikle çalışanları işverenlere tercih eder
+   [✔] d) Özel işverenler, kendi sağladıkları cihazların çalışanlarca kullanımını yasal olarak izleyebilir
+   ✔ Cevap: d)  (Dördüncü Değişiklik yalnızca devlete karşı korur, özel işverenlere değil.)
+
+20) Araç olay veri kaydedicisi (EDR) ne zaman veri kaydeder?
+   [ ] a) Yalnızca araç servise götürüldüğünde
+   [✔] b) Hava yastıklarını açacak kadar şiddetli bir kazadan önce, kaza sırasında ve sonrasında birkaç saniye boyunca
+   [ ] c) Yalnızca sürücü hız sınırını aştığında
+   [ ] d) Araç her çalıştırıldığında, yolculuk boyunca kesintisiz olarak
+   ✔ Cevap: b)
+
+
+
+============================================================
+YENİ QUIZ 5 - İfade Özgürlüğü (Bölüm 5)
+============================================================
+
+1) ABD Yüksek Mahkemesi kararlarına göre aşağıdakilerden hangisi Birinci Değişiklik kapsamındaki ifade özgürlüğüne dahildir?
+   [ ] a) Paniğe teşvik
+   [✔] b) Bayrak yakma gibi sembolik ifade biçimleri
+   [ ] c) Suça teşvik
+   [ ] d) Yalan yere yemin etme
+   ✔ Cevap: b)
+
+2) Aşağıdakilerden hangisi Birinci Değişiklik tarafından korunan ifadeler arasında yer alır?
+   [ ] a) Dolandırıcılık
+   [ ] b) Müstehcen konuşma
+   [ ] c) Hakaret
+   [✔] d) Anonim olarak konuşma
+   ✔ Cevap: d)  (Müstehcenlik ve hakaret korunmaz.)
+
+3) Miller v. Kaliforniya davasında belirlenen müstehcenlik testinin ölçütlerinden biri aşağıdakilerden hangisidir?
+   [✔] a) Eserin bir bütün olarak ciddi edebi, sanatsal, politik veya bilimsel değerden yoksun olması
+   [ ] b) Eserin yazarının anonim olması
+   [ ] c) Eserin İnternet üzerinde yayımlanmış olması
+   [ ] d) Eserin bir hükümet yetkilisini eleştirmesi
+   ✔ Cevap: a)
+
+4) Yanlış olduğu ve başka bir kişiye zarar verdiği iddia edilen bir olgu beyanının yazılı biçimine ne ad verilir?
+   [ ] a) Doxing
+   [ ] b) Nefret söylemi
+   [ ] c) Sözlü iftira (slander)
+   [✔] d) Yazılı iftira (libel)
+   ✔ Cevap: d) Libel  (Yazılı = libel, sözlü = slander.)
+
+5) İletişim Ahlakı Yasası'nın (CDA) 230. maddesi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?
+   [ ] a) Yalnızca telefon şirketlerini kapsar
+   [✔] b) Kullanıcı içeriği yayınlayan ISS'lere, içerik sağlayıcı düzeyine çıkmadıkları sürece dokunulmazlık sağlar
+   [ ] c) ISS'leri kullanıcı içeriklerinden her durumda sorumlu tutar
+   [ ] d) ABD Yüksek Mahkemesi tarafından anayasaya aykırı bulunmuştur
+   ✔ Cevap: b)  (CDA'nın müstehcenlik kısmı iptal edildi ama 230. madde yürürlükte kaldı.)
+
+6) 1998'de kabul edilen ve reşit olmayanları çevrimiçi ortamda zararlı materyallere maruz bırakmayı cezalandıran, ancak 2004'te anayasaya aykırı bulunan yasa hangisidir?
+   [ ] a) Dijital Binyıl Telif Hakkı Yasası (DMCA)
+   [ ] b) Çocukların İnternetten Korunması Yasası (CIPA)
+   [ ] c) Telekomünikasyon Yasası
+   [✔] d) Çocukların Çevrimiçi Korunması Yasası (COPA)
+   ✔ Cevap: d) COPA
+
+7) Federal fon alan okulların ve kütüphanelerin reşit olmayanlar için zararlı içeriğe erişimi engellemesini gerektiren yasa hangisidir?
+   [ ] a) CDA
+   [ ] b) COPA
+   [✔] c) CIPA
+   [ ] d) DMCA
+   ✔ Cevap: c) CIPA
+   (Karıştırma: COPA = iptal edildi; CIPA = okul/kütüphane filtresi, yürürlükte;
+   COPPA = çocukların kişisel verileri.)
+
+8) Aşağıdakilerden hangisi CIPA'ya yöneltilen eleştirilerden biri değildir?
+   [ ] a) Yoksul okullardaki öğrencilerin daha kısıtlı bir İnternet'e mahkûm kalabilmesi
+   [✔] b) Yetişkinlerin telif hakkı ihlallerini cezalandırması
+   [ ] c) Bazı filtrelerin etkisiz olması
+   [ ] d) Eğitim üzerindeki gücü filtre geliştiren yazılım şirketlerine devretmesi
+   ✔ Cevap: b)  (CIPA'nın telif hakkıyla ilgisi yok.)
+
+9) İnternet filtreleri, uygunsuz sitelere erişimi engellemek için genellikle hangi yöntemlerin bir kombinasyonunu kullanır?
+   [✔] a) URL, anahtar kelime ve dinamik içerik filtreleme
+   [ ] b) IP gizleme ve vekil sunucu kullanımı
+   [ ] c) Biyometrik doğrulama ve parola
+   [ ] d) Şifreleme, sıkıştırma ve yedekleme
+   ✔ Cevap: a)
+
+10) DMCA'nın II. Başlığına göre bir ISS, abonesinin yayınladığı telif hakkıyla korunan materyal nedeniyle ne zaman sorumluluktan kurtulur?
+   [ ] a) Materyal ticari amaçla kullanılmıyorsa
+   [ ] b) Aboneden ücret almıyorsa
+   [✔] c) Telif hakkı sahibi bildirdiğinde aboneyi bilgilendirip içeriği kaldırırsa
+   [ ] d) İçerik altı aydan uzun süre yayında kalmışsa
+   ✔ Cevap: c)  ("Bildir ve kaldır" / safe harbor kuralı.)
+
+11) İnternette yayımlanan bir ifadenin izleyicisine ulaşması için bir dizi aracıdan geçmesi, sansür açısından neden önemlidir?
+   [✔] a) Her aracı, ifadeyi susturmak isteyenlerin baskısına karşı bir ölçüde savunmasızdır
+   [ ] b) Aracılar ifadeyi otomatik olarak şifreler
+   [ ] c) Aracılar yalnızca yasal içeriği iletebilir
+   [ ] d) Aracılar ifadenin anonimliğini garanti eder
+   ✔ Cevap: a)
+
+12) Aşağıdakilerden hangisi sunumda belirtilen İnternet sansürü biçimlerinden biri değildir?
+   [ ] a) Belirli web sitelerine erişimi sınırlama
+   [ ] b) Uygunsuz içerik barındıran alan adının kaydını silme
+   [✔] c) Kullanıcılara ücretsiz VPN hizmeti sağlama
+   [ ] d) Çevrimiçi aramalarda belirli anahtar kelimeleri reddetme
+   ✔ Cevap: c)  (VPN sansürü aşmak için kullanılır.)
+
+13) Bir inşaat şirketi, projesinin çevreye zarar vereceğini sosyal medyada yazan yerel bir dernek aleyhine, onları susturmak amacıyla dava açıyor. Bu dava türüne ne ad verilir?
+   [ ] a) Toplu dava
+   [ ] b) John Doe davası
+   [ ] c) Telif hakkı davası
+   [✔] d) SLAPP davası
+   ✔ Cevap: d) SLAPP
+
+14) Birinin ev adresi, telefon numarası ve iş yeri gibi özel bilgilerini çevrimiçi araştırıp İnternette yayınlamaya ne ad verilir?
+   [✔] a) Doxing
+   [ ] b) SLAPP
+   [ ] c) Yayından kaldırma
+   [ ] d) Spam
+   ✔ Cevap: a) Doxing
+
+15) Anonim remailer hizmetinin işlevi nedir?
+   [✔] a) E-postalardan kaynak başlığını ve/veya IP numarasını çıkararak iletir
+   [ ] b) Gönderenin kimliğini mahkemeye bildirir
+   [ ] c) Spam e-postaları otomatik olarak siler
+   [ ] d) E-postaları şifreleyip alıcıya iki kez gönderir
+   ✔ Cevap: a)
+
+16) Bir şirket, kendisini takma adla karalayan bir forum kullanıcısının kimliğini öğrenmek istiyor. Bu amaçla açılan davaya ne ad verilir?
+   [ ] a) SLAPP davası
+   [ ] b) DMCA davası
+   [✔] c) John Doe davası
+   [ ] d) Miller davası
+   ✔ Cevap: c) John Doe davası
+   (Fark: John Doe = kimliği bilinmeyeni ortaya çıkarmak; SLAPP = eleştireni susturmak.)
+
+17) Nefret söylemi ve konuşma kısıtlamaları açısından aşağıdakilerden hangisi doğrudur?
+   [ ] a) Özel üniversiteler Birinci Değişiklik nedeniyle e-posta kurallarını uygulayamaz
+   [✔] b) Devlet okulları ve üniversiteler de Birinci Değişikliğin konuşma kısıtlamaları yasağına uymak zorundadır
+   [ ] c) ISS'ler hiçbir içeriği kaldıramaz
+   [ ] d) Özel şirketler, kendi ağlarında çalışanların rahatsız edici konuşmalarını yasaklayamaz
+   ✔ Cevap: b)  (Devlet okulları devlet ajanı sayılır; özel kurumlar kısıtlama koyabilir.)
+
+18) Bir sosyal ağ sitesinin, hizmet sözleşmesi gereği nefret söylemi içeren gönderileri kaldırması hakkında ne söylenebilir?
+   [ ] a) Yalnızca mahkeme kararıyla yapılabilir
+   [ ] b) Birinci Değişikliği ihlal eder
+   [ ] c) CDA 230. madde tarafından yasaklanmıştır
+   [✔] d) Birinci Değişikliği ihlal etmez
+   ✔ Cevap: d)  (Birinci Değişiklik devleti bağlar, özel şirketleri değil.)
+
+19) Sunuma göre aşağıdakilerden hangisi Birinci Değişiklik tarafından korunur?
+   [ ] a) Belirli bir kişiye yönelik tehdit ve korkutma
+   [ ] b) İsyana teşvik
+   [✔] c) Yalnızca sinir bozucu, eleştirel veya küçük düşürücü olan konuşmalar
+   [ ] d) Kavga kelimeleri (fighting words)
+   ✔ Cevap: c)
+
+20) Sahte haber sitelerinin kullandığı yöntemlerden biri aşağıdakilerden hangisidir?
+   [ ] a) Haberleri yalnızca resmi kaynaklardan aktarmak
+   [✔] b) Gerçek haberleri tıklama çekmek için değiştirmek
+   [ ] c) Her habere bağımsız doğrulama eklemek
+   [ ] d) Yalnızca hiciv içeriğini etiketleyerek yayınlamak
+   ✔ Cevap: b)
+
+
+
+============================================================
+YENİ QUIZ 6 - Fikri Mülkiyet (Bölüm 6)
+============================================================
+SÜRELER (sık sorulur):
+  - Telif hakkı: yazarın ömrü + 70 yıl
+  - Patent: 20 yıl
+  - Ticari marka: kullanımda olduğu sürece süresiz yenilenebilir
+  - Ticari sır: zaman sınırı yok (gizli kaldığı sürece)
+
+1) ABD'de yeni oluşturulan eserler için telif hakkı koruma süresi ne kadardır?
+   [ ] a) Kullanımda olduğu sürece süresiz
+   [ ] b) Yayın tarihinden itibaren 20 yıl
+   [ ] c) Yazarın ömrü boyunca
+   [✔] d) Yazarın ömrü artı 70 yıl
+   ✔ Cevap: d)
+
+2) Aşağıdakilerden hangisi mahkemelerin adil kullanım kararlarında dikkate aldığı dört faktörden biri değildir?
+   [✔] a) Eser sahibinin uyruğu
+   [ ] b) Eserin bütününe göre kullanılan kısmın oranı
+   [ ] c) Kullanımın amacı ve niteliği
+   [ ] d) Kullanımın eserin piyasa değeri üzerindeki etkisi
+   ✔ Cevap: a)
+   (4 faktör: kullanımın amacı/niteliği, eserin niteliği, kullanılan kısmın
+   oranı, piyasa değerine etkisi.)
+
+3) Yazılım telif hakkı ihlali davasında ihlalin ispatı için ne gösterilmelidir?
+   [ ] a) İki programın aynı programlama dilinde yazıldığı
+   [ ] b) İki programın aynı işlevi gördüğü
+   [✔] c) Ancak kopyalamayla açıklanabilecek çarpıcı bir benzerlik
+   [ ] d) Sanığın programı satarak kâr elde ettiği
+   ✔ Cevap: c)
+
+4) Her hükümetin tüm DTÖ üyelerinin fikri mülkiyetine sağlaması gereken asgari koruma seviyelerini belirleyen anlaşma hangisidir?
+   [ ] a) PRO-IP Yasası
+   [ ] b) Lanham Yasası
+   [✔] c) TRIPS
+   [ ] d) GATT
+   ✔ Cevap: c) TRIPS
+
+5) DMCA'yı geleneksel telif hakkı yasasından ayıran temel özellik nedir?
+   [ ] a) Patent başvurularını düzenlemesi
+   [✔] b) Kopyalamayı değil, ihlalde kullanılabilecek araç ve yazılımların dağıtımını yönetmesi
+   [ ] c) Telif süresini uzatması
+   [ ] d) Yalnızca müzik eserlerini kapsaması
+   ✔ Cevap: b)
+
+6) Aşağıdakilerden hangisi patentlenebilir?
+   [ ] a) Doğal bir fenomen
+   [ ] b) Bir doğa kanunu
+   [✔] c) Yeni bir üretim süreci
+   [ ] d) Soyut bir fikir
+   ✔ Cevap: c)  (Patentlenemeyen 3 sınıf: doğa kanunları, doğal fenomenler, soyut fikirler.)
+
+7) USPTO, bir patent vermeden önce "önceki teknik" araştırması yapar. Önceki teknik neyi ifade eder?
+   [✔] a) Alanında sıradan beceriye sahip bir kişinin erişebileceği mevcut bilgi birikimini
+   [ ] b) Başvuru sahibinin daha önce aldığı patentleri
+   [ ] c) Yalnızca yabancı ülkelerde verilmiş patentleri
+   [ ] d) Rakip firmaların ticari sırlarını
+   ✔ Cevap: a)
+
+8) Patent ihlali tespit edildiğinde mahkemeler en fazla ne kadar tazminata hükmedebilir?
+   [ ] a) Talep edilen tazminatın iki katına
+   [✔] b) Talep edilen tazminatın üç katına
+   [ ] c) Talep edilen tazminat kadar
+   [ ] d) Talep edilen tazminatın yarısına
+   ✔ Cevap: b) Üç katı
+
+9) Leahy-Smith Amerika İcatlar Yasası (2011) ABD patent sisteminde ne değiştirdi?
+   [ ] a) Yazılım patentlerini tamamen yasakladı
+   [ ] b) Patent süresini süresiz hâle getirdi
+   [ ] c) Önceki teknik tanımını daralttı
+   [✔] d) Sistemi "ilk icat eden"den "ilk başvuran mucit"e dönüştürdü
+   ✔ Cevap: d)  (Önceki teknik tanımını daraltmadı, GENİŞLETTİ.)
+
+10) Çapraz lisans sözleşmeleri küçük işletmeleri nasıl etkiler?
+   [✔] a) Genellikle büyük şirketler arasında yapıldığından küçük işletmeler ek maliyet ödemek zorunda kalır
+   [ ] b) Küçük işletmelere ücretsiz patent hakkı sağlar
+   [ ] c) Küçük işletmelerin dava açmasını kolaylaştırır
+   [ ] d) Küçük işletmeleri patent ihlalinden muaf tutar
+   ✔ Cevap: a)
+
+11) Aşağıdakilerden hangisi ticari sır olarak korunabilecek bilginin niteliklerinden biri değildir?
+   [ ] a) Gizli tutulması
+   [ ] b) Ekonomik değeri olması
+   [ ] c) Genellikle halk tarafından bilinmemesi
+   [✔] d) USPTO'ya tescil edilmiş olması
+   ✔ Cevap: d)  (Ticari sır için tescil gerekmez.)
+
+12) Ticari sır korumasının patent korumasına göre avantajlarından biri aşağıdakilerden hangisidir?
+   [✔] a) Korumada zaman sınırı olmaması
+   [ ] b) Tüm ülkelerde aynı şekilde uygulanması
+   [ ] c) Bilginin kamuya açıklanmasını gerektirmesi
+   [ ] d) Bağımsız olarak geliştiren kişilere karşı da koruma sağlaması
+   ✔ Cevap: a)  (d yanlış: bağımsız geliştirene karşı koruma YOKTUR, bu bir dezavantajdır.)
+
+13) Ticari sırların kötüye kullanılması için federal bir hukuk yolu oluşturan ve belirli koşullarda mülke el konulmasına izin veren yasa hangisidir?
+   [✔] a) 2016 Ticari Sırları Savunma Yasası
+   [ ] b) Tekdüzen Ticari Sırlar Yasası (UTSA)
+   [ ] c) Lanham Yasası
+   [ ] d) 1996 Ekonomik Casusluk Yasası
+   ✔ Cevap: a) DTSA (2016)
+   (UTSA = eyalet düzeyinde tekdüzelik; EEA = ticari sır hırsızlığını federal SUÇ yaptı.)
+
+14) Bir yazılım mühendisinin iş sözleşmesinde, şirketten ayrıldıktan sonra iki yıl boyunca rakip bir firmada çalışmasını yasaklayan madde ne olarak adlandırılır?
+   [ ] a) İfşa etmeme maddesi
+   [ ] b) Çapraz lisans sözleşmesi
+   [ ] c) Yalın adil kullanım
+   [✔] d) Rekabet etmeme sözleşmesi
+   ✔ Cevap: d)  (İfşa etmeme = sırları açıklamama; rekabet etmeme = rakipte çalışmama.)
+
+15) Tersine mühendislik konusunda mahkemeler genellikle hangi amaçla yapılan tersine mühendisliğin lehine karar vermiştir?
+   [✔] a) Birlikte çalışabilirliği sağlamak
+   [ ] b) Ticari sırları rakiplere satmak
+   [ ] c) Lisans ücretinden kaçınmak
+   [ ] d) Rakip ürünün birebir kopyasını satmak
+   ✔ Cevap: a)
+
+16) Aşağıdakilerden hangisi geliştiricilerin açık kaynak kod üretme nedenleri arasında sayılmaz?
+   [ ] a) Geliştirici topluluğuna geri ödemede bulunmak
+   [✔] b) Kodu rakiplerden gizli tutmak
+   [ ] c) Lisans ve pazarlama zahmetinden kaçınmak
+   [ ] d) Uzmanlığı tanıtmak ve yeni müşteri çekmek
+   ✔ Cevap: b)
+
+17) Rekabet istihbaratını endüstriyel casusluktan ayıran temel fark nedir?
+   [ ] a) Aralarında bir fark yoktur
+   [ ] b) Rekabet istihbaratı yalnızca devlet kurumlarınca yapılır
+   [ ] c) Endüstriyel casusluk yalnızca yıllık raporları kullanır
+   [✔] d) Rekabet istihbaratı yalnızca yasal olarak elde edilen bilgilere dayanır
+   ✔ Cevap: d)
+
+18) Ticari marka koruması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?
+   [ ] a) 20 yıl sonra kamuya geçer
+   [ ] b) Yazarın ömrü artı 70 yıl sürer
+   [✔] c) Marka kullanımda olduğu sürece süresiz yenilenebilir
+   [ ] d) Yalnızca logoları kapsar
+   ✔ Cevap: c)  (a = patent, b = telif hakkı.)
+
+19) Bir yedek parça satıcısı, "X marka otomobillerle uyumludur" ifadesinde X markasını kullandığı için dava ediliyor. Satıcının başvurabileceği savunma hangisidir?
+   [ ] a) Adil kullanım doktrini
+   [ ] b) Rekabet etmeme
+   [✔] c) Yalın (nominatif) adil kullanım
+   [ ] d) Önceki teknik
+   ✔ Cevap: c)  (Ticari marka davalarında savunma = nominatif adil kullanım; düz "adil kullanım" telif hakkı içindir.)
+
+20) Ünlü bir şirketin adını taşıyan alan adını, şirketle hiçbir bağlantısı olmadan kaydedip yüksek fiyata satmayı amaçlayan kişiye ne ad verilir?
+   [ ] a) Endüstriyel casus
+   [✔] b) Siber işgalci (cybersquatter)
+   [ ] c) Rekabet istihbaratı analisti
+   [ ] d) Hacktivist
+   ✔ Cevap: b)
+
+
+
+============================================================
+YENİ QUIZ 7 - Yazılım Geliştirme ve Kalite (Bölüm 7)
+============================================================
+
+1) Yazılım kalitesi en iyi hangi ifadeyle tanımlanır?
+   [✔] a) Bir yazılım ürününün kullanıcılarının ihtiyaçlarını karşılama derecesi
+   [ ] b) Bir yazılımın geliştirilme süresinin kısalığı
+   [ ] c) Bir yazılımdaki kod satırı sayısı
+   [ ] d) Bir yazılımın satış fiyatı
+   ✔ Cevap: a)
+
+2) Gereksinim beyanları ve akış şemaları gibi geliştirme sürecinin ürünlerine ne ad verilir?
+   [ ] a) Karar destek sistemleri
+   [ ] b) Yazılım hataları
+   [ ] c) Hata modları
+   [✔] d) Teslim edilecekler (deliverables)
+   ✔ Cevap: d)
+
+3) Sunuma göre düşük kaliteli yazılımın önemli nedenlerinden biri hangisidir?
+   [ ] a) Donanım fiyatlarının düşmesi
+   [ ] b) Açık kaynak kodun yaygınlaşması
+   [ ] c) Kullanıcıların fazla eğitimli olması
+   [✔] d) Ürünü pazara hızla sunma baskısı nedeniyle kalite için gereken zaman ve kaynağın kısılması
+   ✔ Cevap: d)
+
+4) Kusursuz sorumluluk (strict liability) ilkesine göre davacının neyi kanıtlaması yeterlidir?
+   [ ] a) Üreticinin ihmalkâr davrandığını
+   [ ] b) Üreticinin kasıtlı olarak zarar verdiğini
+   [✔] c) Yazılımın kusurlu veya makul olmayan biçimde tehlikeli olduğunu ve kusurun yaralanmaya yol açtığını
+   [ ] d) Garantinin yazılı olarak verildiğini
+   ✔ Cevap: c)  (İhmal veya kast kanıtlamaya gerek yoktur.)
+
+5) Aşağıdakilerden hangisi kusursuz sorumluluk iddialarına karşı kullanılan yasal savunmalardan biri değildir?
+   [ ] a) Devlet müteahhidi savunması
+   [✔] b) Yazılımın açık kaynak olması
+   [ ] c) Zamanaşımı süresinin dolması
+   [ ] d) Denetleyici olay (araya giren neden) doktrini
+   ✔ Cevap: b)
+
+6) Bir kullanıcı, yazılımın uyarılarını defalarca görmezden gelerek zarara uğramıştır. Üretici, kullanıcının kendi eylemlerinin zarara katkıda bulunduğunu ileri sürer. Bu savunmaya ne ad verilir?
+   [ ] a) Garanti ihlali
+   [✔] b) Katkıda bulunan ihmal
+   [ ] c) Kusursuz sorumluluk
+   [ ] d) Yanlış beyan
+   ✔ Cevap: b) Katkıda bulunan ihmal (contributory negligence)
+
+7) Yazılımda garanti ihlalini kanıtlamanın zor olmasının temel nedeni nedir?
+   [✔] a) Yazılım tedarikçisinin garantiyi kendi sorumluluğunu sınırlayacak şekilde yazması
+   [ ] b) Garantinin yalnızca donanımı kapsaması
+   [ ] c) Garantilerin yalnızca sözlü verilmesi
+   [ ] d) Mahkemelerin yazılım davalarına bakmaması
+   ✔ Cevap: a)
+
+8) Etkili bir yazılım geliştirme metodolojisi, üreticiyi yasal sorumluluktan nasıl korur?
+   [ ] a) Garanti süresini kısaltarak
+   [ ] b) Kullanıcıların dava açma hakkından feragat etmesini sağlayarak
+   [ ] c) Ürün sorumluluğu davalarını yasal olarak engelleyerek
+   [✔] d) Hata sayısını azaltarak ve ihmalin kanıtlanmasını zorlaştırarak
+   ✔ Cevap: d)
+
+9) Şelale modelini tanımlayan temel özellik hangisidir?
+   [ ] a) Gereksinimlerin proje boyunca sürekli değişmesi
+   [✔] b) Mevcut aşamanın sonuçları onaylanmadan bir sonraki aşamaya geçilememesi
+   [ ] c) Sistemin 1-4 haftalık sprintlerle geliştirilmesi
+   [ ] d) Kullanıcıların her hafta sistemi değerlendirmesi
+   ✔ Cevap: b)  (c ve d çevik geliştirmenin özellikleridir.)
+
+10) Aşağıdakilerden hangisi şelale modelinin dezavantajlarından biridir?
+   [ ] a) Ara ürünlerin ilerlemeyi ölçmeyi imkânsız kılması
+   [✔] b) Kullanıcıların ara ürünleri kolayca gözden geçirip gerçek ihtiyaçlarını karşılayıp karşılamadığını değerlendirememesi
+   [ ] c) Ekip üyelerinde tükenmişliğe yol açan yoğun bir süreç olması
+   [ ] d) Her aşamanın sonundaki resmi incelemenin yönetim kontrolünü azaltması
+   ✔ Cevap: b)  (c çevik modelin dezavantajıdır; a ve d aslında şelalenin avantajlarının tersi.)
+
+11) Gereksinimlerin proje başında tam olarak bilinemeyeceğini kabul eden ve sistemi 1-4 haftalık yinelemelerle geliştiren metodoloji hangisidir?
+   [ ] a) FMEA
+   [ ] b) CMMI
+   [✔] c) Çevik geliştirme
+   [ ] d) Şelale modeli
+   ✔ Cevap: c) Çevik (agile)
+
+12) Sunuma göre geliştirmenin erken bir aşamasında bir kusuru gidermek, müşteriye dağıtılmış yazılımdaki kusuru gidermeye göre ne kadar daha ucuz olabilir?
+   [ ] a) 1000 kata kadar
+   [ ] b) 10 kata kadar
+   [✔] c) 100 kata kadar
+   [ ] d) 2 kata kadar
+   ✔ Cevap: c) 100 kata kadar
+
+13) Bir test uzmanı, yazılımın iç kodunu bilmeden yalnızca girdi verip çıktıların beklenen sonuçlarla uyuşup uyuşmadığını kontrol ediyor. Bu hangi test türüdür?
+   [✔] a) Kara kutu testi
+   [ ] b) Entegrasyon testi
+   [ ] c) Statik test
+   [ ] d) Beyaz kutu testi
+   ✔ Cevap: a) Kara kutu
+
+14) Kodun fiilen çalıştırılmadan test edildiği yazılım test tekniğine ne ad verilir?
+   [ ] a) Kullanıcı kabul testi
+   [ ] b) Dinamik test
+   [ ] c) Sistem testi
+   [✔] d) Statik test
+   ✔ Cevap: d) Statik test
+
+15) Yazılım birimlerinin bir alt sistemde birleştirilip alt sistemler arasındaki bağlantıların çalıştığının kontrol edildiği test hangisidir?
+   [✔] a) Entegrasyon testi
+   [ ] b) Birim testi
+   [ ] c) Kara kutu testi
+   [ ] d) Kullanıcı kabul testi
+   ✔ Cevap: a) Entegrasyon testi
+
+16) CMMI-DEV modelinde tanımlanan beş olgunluk düzeyinin doğru sıralaması hangisidir?
+   [✔] a) İlk → Yönetilen → Tanımlanan → Nicel olarak yönetilen → Optimize edilen
+   [ ] b) İlk → Tanımlanan → Yönetilen → Optimize edilen → Nicel olarak yönetilen
+   [ ] c) Yönetilen → İlk → Tanımlanan → Optimize edilen → Nicel olarak yönetilen
+   [ ] d) Tanımlanan → Yönetilen → İlk → Nicel olarak yönetilen → Optimize edilen
+   ✔ Cevap: a)
+
+17) Güvenlik açısından kritik sistemler geliştirilirken kabul edilen temel varsayım nedir?
+   [ ] a) Standart geliştirme metodolojisine uyulursa güvenlik kendiliğinden sağlanır
+   [ ] b) Güvenlik yalnızca donanım tasarımına bağlıdır
+   [✔] c) Güvenlik, standart metodolojiye uymaktan otomatik olarak kaynaklanmaz; ek adımlar ve titiz kontrol gerekir
+   [ ] d) Güvenlik için yalnızca kullanıcı kabul testi yeterlidir
+   ✔ Cevap: c)
+
+18) Bir veri merkezinde yangın çıkma olasılığı yılda 0,25 (dört yılda bir), tek bir yangının yol açacağı kayıp ise 200.000 TL olarak tahmin ediliyor. Yıllık zarar beklentisi (ALE) nedir?
+   [ ] a) 200.000 TL
+   [ ] b) 25.000 TL
+   [✔] c) 50.000 TL
+   [ ] d) 800.000 TL
+   ✔ Cevap: c) 50.000 TL
+   (ALE = ARO × SLE = 0,25 × 200.000 = 50.000. ARO = yıllık gerçekleşme
+   oranı, SLE = tek kayıp beklentisi.)
+
+19) Riski yönettikten sonra geriye kalan risk düzeyine ne ad verilir?
+   [✔] a) Artık risk
+   [ ] b) Hata modu
+   [ ] c) Tek kayıp beklentisi
+   [ ] d) Yıllık gerçekleşme oranı
+   ✔ Cevap: a) Artık risk (residual risk)
+
+20) Hata türü ve etkileri analizi (FMEA) hakkında aşağıdakilerden hangisi doğrudur?
+   [ ] a) Yazılım kodunu çalıştırmadan test etme yöntemidir
+   [ ] b) Patent başvurularında kullanılan bir analizdir
+   [ ] c) Çevik geliştirmede sprint süresini belirler
+   [✔] d) ISO 9001 uyumlu kalite sistemleri geliştirmede kullanılan, güvenilirliği ve arızaların etkilerini değerlendiren bir tekniktir
+   ✔ Cevap: d)  (a = statik test.)
+
+
+
+============================================================
+YENİ QUIZ 8 - BT'nin Üretkenliğe ve Sağlığa Etkisi (Bölüm 8)
+============================================================
+SAĞLIK KAYITLARI (karıştırma):
+  - EMR: TEK kuruluşun kaydı, dışarıyla kolay paylaşılmaz
+  - EHR: hastanın TÜM geçmişi, kuruluşlar arası paylaşılır
+  - PHR: hastanın kendi kaydı (bağlı PHR = hasta portalı)
+  - HIE: kuruluşlar arası bilgi paylaşma SÜRECİ
+
+1) Bir ülkenin maddi yaşam standardının en yaygın kullanılan ölçüsü hangisidir?
+   [ ] a) Toplam ihracat hacmi
+   [✔] b) Kişi başına gayri safi yurtiçi hasıla (GSYİH)
+   [ ] c) Ortalama çalışma saati
+   [ ] d) Ulusal işsizlik oranı
+   ✔ Cevap: b)
+
+2) Emek verimliliği nasıl tanımlanır?
+   [ ] a) Yıllık BT yatırımının GSYİH'ya oranı
+   [ ] b) Çalışan sayısının şirket gelirine oranı
+   [✔] c) Üretilen mal ve hizmet miktarının bunları üretmek için harcanan çalışma saatleriyle karşılaştırılması
+   [ ] d) Çalışanların ortalama maaş artışı
+   ✔ Cevap: c)
+
+3) Sunuma göre verimlilik artışında kilit faktör nedir?
+   [ ] a) Vergi oranlarının düşürülmesi
+   [✔] b) İnovasyon
+   [ ] c) Dış kaynak kullanımı
+   [ ] d) Çalışma saatlerinin uzatılması
+   ✔ Cevap: b) İnovasyon
+
+4) Aşağıdakilerden hangisi, belirli bir girdi miktarından üretilen çıktının değerini artırarak verimliliği yükseltme yollarından biridir?
+   [ ] a) Operasyonları konsolide ederek ölçek ekonomilerinden yararlanmak
+   [✔] b) Daha yüksek değerli mal ve hizmetler satmak
+   [ ] c) Daha verimli hâle gelerek girdi miktarını azaltmak
+   [ ] d) Çalışan sayısını artırmak
+   ✔ Cevap: b)  (a ve c girdiyi AZALTMA yollarıdır; soru çıktının DEĞERİNİ artırmayı soruyor.)
+
+5) Aşağıdakilerden hangisi ulusal verimlilik oranlarını etkileyen faktörlerden biri olarak sunumda yer almaz?
+   [ ] a) Hizmete dayalı ekonomilerde çıktının ölçülmesinin zorluğu
+   [ ] b) Müteahhitlere dış kaynak kullanımı
+   [✔] c) Ülkenin coğrafi yüzölçümü
+   [ ] d) Genişleme ve daralma iş döngüleri
+   ✔ Cevap: c)
+
+6) BT yatırımlarının çalışan verimliliği üzerindeki faydalarını ölçmenin zor olmasının temel nedeni nedir?
+   [✔] a) BT çözümünün uygulanması ile önemli verimlilik kazanımları arasında bir gecikme olması
+   [ ] b) Verimliliğin yalnızca imalat sektöründe ölçülebilmesi
+   [ ] c) BT yatırımlarının hiçbir fayda sağlamaması
+   [ ] d) BT harcamalarının gizli tutulması
+   ✔ Cevap: a)  (Gecikme 5-7 yıl sürebilir.)
+
+7) Makine öğrenimi sisteminin üç ana bileşeni hangileridir?
+   [ ] a) Sensör, işlemci ve robot kolu
+   [ ] b) Kullanıcı, arayüz ve sunucu
+   [ ] c) Girdi, çıktı ve veritabanı
+   [✔] d) Model, parametreler ve öğrenci (learner)
+   ✔ Cevap: d)
+
+8) Bir makine öğrenimi sisteminde, tahmin ile gerçeklik arasındaki farkı kullanarak parametreleri değiştiren bileşen hangisidir?
+   [ ] a) Doğal dil işleyici
+   [✔] b) Öğrenci (learner)
+   [ ] c) Model
+   [ ] d) Girdi verisi
+   ✔ Cevap: b) Öğrenci (learner)  (Model = tahmini yapan; öğrenci = parametreleri ayarlayan.)
+
+9) Otomobil boyama veya hassas kaynak yapma gibi yüksek hassasiyet gerektiren ya da insanlar için tehlikeli görevleri yerine getiren cihazların geliştirilmesi hangi alana girer?
+   [ ] a) Doğal dil işleme
+   [ ] b) Klinik karar desteği
+   [ ] c) Telesağlık
+   [✔] d) Robotik
+   ✔ Cevap: d) Robotik
+
+10) Bir müşteri hizmetleri uygulamasının, müşterilerin yazdığı Türkçe mesajları anlayıp uygun yanıtlar üretmesini sağlayan yapay zekâ alanı hangisidir?
+   [ ] a) CPOE
+   [ ] b) Uzaktan izleme
+   [ ] c) Robotik
+   [✔] d) Doğal dil işleme
+   ✔ Cevap: d) Doğal dil işleme
+
+11) Sunumda aktarılan araştırmalara göre insan iş faaliyetlerinin yaklaşık ne kadarı mevcut teknolojiyle otomatikleştirilebilir?
+   [ ] a) %10
+   [ ] b) %25
+   [✔] c) %45
+   [ ] d) %90
+   ✔ Cevap: c) %45
+
+12) Aşağıdakilerden hangisi ABD'de sağlık harcamalarındaki artışın üç temel nedeninden biri değildir?
+   [ ] a) Hükümet politikası
+   [ ] b) Nüfusun yaşlanması
+   [ ] c) Yaşam tarzı değişiklikleri
+   [✔] d) Doktor sayısının azalması
+   ✔ Cevap: d)
+
+13) Tek bir sağlık kuruluşundaki personel tarafından oluşturulan ve kullanılan sağlık bilgileri koleksiyonuna ne ad verilir?
+   [ ] a) Kişisel sağlık kaydı (PHR)
+   [ ] b) Sağlık bilgi alışverişi (HİE)
+   [✔] c) Elektronik tıbbi kayıt (EMR)
+   [ ] d) Elektronik sağlık kaydı (EHR)
+   ✔ Cevap: c) EMR
+
+14) Bir hastanın, hastane portalından kendi ilaç geçmişini ve test sonuçlarını görüntüleyebildiği kayıt bölümü hangisidir?
+   [✔] a) Kişisel sağlık kaydı (PHR)
+   [ ] b) HİE
+   [ ] c) EMR
+   [ ] d) CPOE
+   ✔ Cevap: a) PHR  (Hastane portalı = bağlı PHR.)
+
+15) Hasta düzeyindeki elektronik sağlık bilgilerinin farklı kuruluşlar arasında paylaşılması sürecine ne denir?
+   [ ] a) Uzaktan izleme
+   [ ] b) Klinik karar desteği
+   [✔] c) Sağlık bilgi alışverişi (HİE)
+   [ ] d) Teletıp
+   ✔ Cevap: c) HIE
+
+16) 2009'da kabul edilen HITECH Yasası, doktor ve hastaneleri EHR kullanmaya nasıl teşvik etti?
+   [ ] a) EHR kullanmayanlara hapis cezası öngörerek
+   [✔] b) EHR'nin "anlamlı kullanımını" gösterenlere artan Medicare ve Medicaid geri ödemeleri sağlayarak
+   [ ] c) Hastaların EHR'ye erişimini yasaklayarak
+   [ ] d) EHR yazılımlarını ücretsiz dağıtarak
+   ✔ Cevap: b)
+
+17) Doktorların ilaç, laboratuvar testi ve radyoloji gibi siparişleri elektronik olarak verip iletmesini sağlayan sistem hangisidir?
+   [✔] a) Bilgisayarlı sağlayıcı sipariş girişi (CPOE)
+   [ ] b) Depola ve ilet teletıp
+   [ ] c) Klinik karar desteği (CDS)
+   [ ] d) Kişisel sağlık kaydı (PHR)
+   ✔ Cevap: a) CPOE
+
+18) Bir dermatolog, kırsal bir klinikte çekilen cilt fotoğraflarını ertesi gün inceleyip teşhis koyuyor. Hasta ve doktor aynı anda bağlantıda değildir. Bu hangi teletıp türüdür?
+   [✔] a) Depola ve ilet teletıp
+   [ ] b) Sağlık bilgi alışverişi
+   [ ] c) Canlı teletıp
+   [ ] d) Uzaktan izleme
+   ✔ Cevap: a) Depola ve ilet  (Aynı anda değil, sonradan değerlendirme.)
+
+19) Canlı teletıbbı diğer teletıp türlerinden ayıran özellik nedir?
+   [ ] a) Verilerin sonradan değerlendirilmek üzere saklanması
+   [ ] b) Yalnızca yaşamsal belirtilerin otomatik ölçülmesi
+   [ ] c) Hastanın ve sağlayıcının aynı yerde bulunması
+   [✔] d) Hastanın ve sağlayıcının aynı anda farklı yerlerde bulunması, genellikle video konferansla
+   ✔ Cevap: d)
+
+20) Bir diyabet hastasının glikoz seviyelerinin evde sürekli ölçülüp verilerin sağlık sağlayıcısına iletilmesi hangi uygulamaya örnektir?
+   [ ] a) Elektronik tıbbi kayıt
+   [ ] b) CPOE
+   [✔] c) Uzaktan (evde) izleme
+   [ ] d) Canlı teletıp
+   ✔ Cevap: c) Uzaktan (evde) izleme
+
+
+
+============================================================
+YENİ QUIZ 9 - Sosyal Medya (Bölüm 9)
+============================================================
+PAZARLAMA / ÜCRET TÜRLERİ:
+  - Organik: platformun kendi araçlarıyla topluluk oluşturma
+  - Ücretli: reklam için ödeme (BGBM veya tıklama başına)
+  - Kazanılmış: yorumlar, paylaşımlar, basın haberleri
+  - Viral: insanların mesajı başkalarına iletmesi
+  - BGBM (CPM): her 1.000 gösterim için ödeme (tıklansın tıklanmasın)
+  - Tıklama başına (CPC): sadece tıklanınca ödeme
+
+1) Sosyal medya en iyi hangi ifadeyle tanımlanır?
+   [✔] a) İnsanların çevrimiçi topluluklarda fikir, mesaj, görüntü ve video paylaşarak etkileşim kurmasını sağlayan web tabanlı iletişim araçları
+   [ ] b) Yalnızca şirketlerin reklam yayınladığı web siteleri
+   [ ] c) Televizyon ve radyo yayınlarının İnternet'e aktarılması
+   [ ] d) E-posta sunucularının toplamı
+   ✔ Cevap: a)
+
+2) Sunuma göre sosyal medya pazarlamacılarının iki temel hedefi nedir?
+   [✔] a) Marka bilinirliğini artırmak ve satışları artırmak için web sitesine trafik çekmek
+   [ ] b) Müşteri verilerini satmak ve abonelik ücretlerini artırmak
+   [ ] c) Çalışan sayısını artırmak ve maliyetleri düşürmek
+   [ ] d) Rakiplerin reklamlarını engellemek ve vergi avantajı elde etmek
+   ✔ Cevap: a)
+
+3) Bir şirketin, belirli bir sosyal medya platformuna özgü araçları kullanarak kendi takipçi topluluğunu oluşturup onlarla etkileşim kurması hangi pazarlama türüdür?
+   [ ] a) Tıklama başına maliyet
+   [✔] b) Organik medya pazarlaması
+   [ ] c) Kazanılmış medya
+   [ ] d) Ücretli medya pazarlaması
+   ✔ Cevap: b) Organik
+
+4) Bireyleri bir pazarlama mesajını başkalarına iletmeye teşvik eden sosyal medya pazarlaması yaklaşımına ne ad verilir?
+   [ ] a) Bin gösterim başına maliyet
+   [ ] b) Sosyal alışveriş
+   [ ] c) Ücretli medya pazarlaması
+   [✔] d) Viral pazarlama
+   ✔ Cevap: d) Viral
+
+5) Bir reklamveren, reklamı tıklansa da tıklanmasa da her 1.000 görüntüleme için sabit ücret ödüyor. Bu ücretlendirme yöntemi hangisidir?
+   [ ] a) Kazanılmış medya
+   [✔] b) Bin gösterim başına maliyet (BGBM)
+   [ ] c) Tıklama başına maliyet
+   [ ] d) Organik erişim
+   ✔ Cevap: b) BGBM
+
+6) Tıklama başına maliyet yönteminde reklam görüntülenip tıklanmazsa ne olur?
+   [ ] a) Reklamverenden yarım ücret alınır
+   [ ] b) Reklamverenden 1.000 gösterim ücreti alınır
+   [✔] c) Reklamverenden ücret alınmaz
+   [ ] d) Reklam yayından kaldırılır
+   ✔ Cevap: c)
+
+7) Bir restoranın, kullanıcıların olumlu yorumları, paylaşımları ve basında çıkan haberler sayesinde elde ettiği görünürlük hangi kavramla ifade edilir?
+   [ ] a) Sosyal alışveriş platformu
+   [✔] b) Kazanılmış medya
+   [ ] c) Ücretli medya
+   [ ] d) Organik medya pazarlaması
+   ✔ Cevap: b) Kazanılmış medya
+
+8) Kazanılmış medyanın hacmi bir kuruluş için neyi etkileyen bir faktördür?
+   [ ] a) Kuruluşun patent başvurularını
+   [ ] b) Kuruluşun vergi oranını
+   [ ] c) Kuruluşun çalışan sayısını
+   [✔] d) Kuruluşun Google arama sonuçlarındaki sıralamasını
+   ✔ Cevap: d)
+
+9) İşverenlerin iş adaylarını sosyal medya etkinliklerine göre reddetmesi hakkında aşağıdakilerden hangisi doğrudur?
+   [ ] a) Yalnızca kamu kurumları için yasaldır
+   [ ] b) Her durumda yasa dışıdır
+   [ ] c) Adayın yazılı onayı olmadan yapılamaz
+   [✔] d) Ayrımcılık yasalarını ihlal etmediği sürece yasaldır
+   ✔ Cevap: d)
+
+10) Kuruluşlar müşteri hizmetleri açısından sosyal medyayı izlemezse ne gibi bir sonuçla karşılaşabilirler?
+   [ ] a) Reklam maliyetleri otomatik olarak düşer
+   [ ] b) Ayrımcılık davalarıyla karşılaşırlar
+   [✔] c) Müşteriler sorunlarını kendi başlarına çözmek zorunda kalır, bu da müşteri ve satış kaybına yol açabilir
+   [ ] d) Kazanılmış medya hacmi artar
+   ✔ Cevap: c)
+
+11) Sosyal alışveriş platformları gelirlerini nasıl elde eder?
+   [✔] a) Perakendeci reklamlarıyla ve üyelerin beğenilerine ilişkin verileri perakendecilerle paylaşarak
+   [ ] b) Devlet teşvikleriyle
+   [ ] c) Yalnızca üyelik ücretleriyle
+   [ ] d) Ürünleri kendi depolarından satarak
+   ✔ Cevap: a)
+
+12) Başkalarına zarar vermek ve sıkıntı yaratmak için elektronik iletişim cihazı kullanılarak yapılan her türlü fiziksel veya zihinsel kötü muameleyi kapsayan genel kavram hangisidir?
+   [ ] a) Siber zorbalık
+   [ ] b) Siber taciz (cyberstalking)
+   [ ] c) Viral pazarlama
+   [✔] d) Siber istismar
+   ✔ Cevap: d) Siber istismar  (Genel çatı kavram; siber zorbalık ve siber taciz onun alt türleridir.)
+
+13) Bir öğrencinin, sınıf arkadaşı hakkında aşağılayıcı ve küçük düşürücü gönderiler paylaşarak ona ciddi duygusal sıkıntı yaşatması hangi siber istismar biçimidir?
+   [ ] a) Siber taciz (cyberstalking)
+   [ ] b) İntikam pornosu
+   [✔] c) Siber zorbalık
+   [ ] d) Doxing
+   ✔ Cevap: c) Siber zorbalık
+
+14) Siber tacizi (cyberstalking) siber zorbalıktan ayıran temel özellik nedir?
+   [✔] a) Bir kişinin diğerine yönelik uzun vadeli, ısrarlı takip ve müdahaleci davranış modeli olması
+   [ ] b) Hiçbir zaman korku yaratmaması
+   [ ] c) Yalnızca fotoğraf paylaşımıyla gerçekleşmesi
+   [ ] d) Yalnızca grup tarafından yapılması
+   ✔ Cevap: a)
+
+15) Aşağıdakilerden hangisi siber istismar kurbanı olmamak için önerilen ipuçlarından biri değildir?
+   [ ] a) Gelecekteki etkinlik ve konumlar hakkında paylaşım yapmaktan kaçınmak
+   [ ] b) Her sosyal medya sitesi için güçlü ve benzersiz şifre kullanmak
+   [ ] c) Yabancılardan gelen arkadaşlık isteklerini kabul etmemek
+   [✔] d) Tüm hesaplarda aynı şifreyi kullanarak hatırlamayı kolaylaştırmak
+   ✔ Cevap: d)
+
+16) Cinsel suçlu kaydı ve bildirimi için ilk gereklilikleri belirleyen ve cinsel suçluların ikametgâhlarını yerel kolluğa kaydettirmesini zorunlu kılan yasa hangisidir?
+   [ ] a) İletişim Ahlakı Yasası
+   [ ] b) 2006 Adam Walsh Yasası (SORNA)
+   [ ] c) COPPA
+   [✔] d) 1994 Jacob Wetterling Yasası
+   ✔ Cevap: d) Jacob Wetterling (1994)  ("İlk" kelimesine dikkat; Adam Walsh 2006'da sonradan geldi.)
+
+17) Bir kişinin mahrem fotoğraflarının, izni olmadan, genellikle eski partneri tarafından utandırma veya taciz amacıyla yayınlanmasına ne ad verilir?
+   [ ] a) Viral pazarlama
+   [ ] b) Kazanılmış medya
+   [✔] c) İntikam pornosu
+   [ ] d) Siber zorbalık
+   ✔ Cevap: c)
+
+18) Sosyal medya sitelerinin uygunsuz içeriği silme ve hesapları feshetme hakkı neye dayanır?
+   [✔] a) Kullanım koşulları sözleşmeleri ve politikalarına
+   [ ] b) Reklamverenlerin taleplerine
+   [ ] c) Mahkeme kararlarına
+   [ ] d) Birinci Değişikliğe
+   ✔ Cevap: a)
+
+19) Özel bir şirket, bir çalışanını sosyal medyada şirketi küçük düşüren bir gönderi paylaştığı için işten çıkarıyor. Birinci Değişiklik açısından bu durum nasıl değerlendirilir?
+   [ ] a) Birinci Değişiklik yalnızca sosyal medya gönderilerini korur
+   [✔] b) Birinci Değişiklik özel işverenlerin ifade özgürlüğüne müdahalesini yasaklamaz
+   [ ] c) İşverenin önce mahkemeden izin alması gerekir
+   [ ] d) Birinci Değişiklik bu işten çıkarmayı kesinlikle yasaklar
+   ✔ Cevap: b)  (Birinci Değişiklik yalnızca devleti bağlar.)
+
+20) Sunuma göre araba kullanırken mesajlaşan veya sosyal medya kullanan bir sürücünün kazaya karışma riski kaç kat artar?
+   [ ] a) 2 kat
+   [✔] b) 4 kat
+   [ ] c) 8 kat
+   [ ] d) 20 kat
+   ✔ Cevap: b) 4 kat   [kontrol et]
+   (Kitap "telefonla konuşurken sürüş riski 4 katına çıkarır" diyor. Bazı
+   kaynaklar mesajlaşma için ~23 kat der; hocanın slaytında 20 yazıyorsa d.)
+
+
+
+============================================================
+YENİ QUIZ 10 - BT Kuruluşlarında Etik (Bölüm 10)
+============================================================
+
+1) Koşullu (contingent) çalışma en iyi hangi ifadeyle tanımlanır?
+   [ ] a) Çalışanın birden fazla şirkette tam zamanlı çalışması
+   [ ] b) Çalışanın en az beş yıllık sözleşmeyle işe alınması
+   [✔] c) Çalışanın uzun süreli istihdam için açık veya zımni bir sözleşmesinin bulunmadığı iş durumu
+   [ ] d) Çalışanın yalnızca yurt dışında çalışması
+   ✔ Cevap: c)
+
+2) Firmalar en çok hangi durumda koşullu BT çalışanlarını tercih eder?
+   [ ] a) Çalışanlarına daha fazla yan hak sağlamak istediklerinde
+   [ ] b) Uzun vadeli kurumsal bilgi birikimi oluşturmak istediklerinde
+   [ ] c) Personel sayısını sabit tutmak istediklerinde
+   [✔] d) Teknik personel ihtiyaçlarında büyük dalgalanmalar yaşadıklarında
+   ✔ Cevap: d)
+
+3) Abone olan bir firmanın işgücünü ve tüm İK faaliyetleri ile maliyetlerini başka bir firmaya aktardığı, çalışanların da o firmanın çalışanı hâline geldiği düzenlemeye ne ad verilir?
+   [✔] a) Çalışan kiralama (employee leasing)
+   [ ] b) Geçici personel firması
+   [ ] c) Offshore dış kaynak kullanımı
+   [ ] d) Bağımsız yüklenicilik
+   ✔ Cevap: a) Çalışan kiralama
+
+4) İki işverenin aynı çalışan veya çalışan grubu ile ilgili yasal hak ve görevlere sahip olduğu ilişkiye ne denir?
+   [ ] a) Bağımsız yüklenici sözleşmesi
+   [ ] b) Qui tam ilişkisi
+   [✔] c) Ortak istihdam ilişkisi
+   [ ] d) Esnek ekonomi
+   ✔ Cevap: c)
+
+5) Geçici pozisyonların yaygın olduğu ve kuruluşların kısa vadeli işler için bağımsız çalışanlarla sözleşme yaptığı çalışma ortamı hangi kavramla ifade edilir?
+   [ ] a) Dış kaynak kullanımı
+   [ ] b) Ortak istihdam
+   [✔] c) Esnek ekonomi (gig economy)
+   [ ] d) Yeşil bilişim
+   ✔ Cevap: c) Gig economy
+
+6) Aşağıdakilerden hangisi bağımsız yüklenicilere yönelik eğilimin işveren açısından nedenlerinden biridir?
+   [✔] a) Bordro, yan haklar, ofis alanı ve eğitim maliyetlerini azaltma baskısı
+   [ ] b) Kurum içi eğitim programlarını genişletme isteği
+   [ ] c) Çalışanlara daha fazla yan hak sağlama zorunluluğu
+   [ ] d) Uzun süreli sadakat oluşturma isteği
+   ✔ Cevap: a)
+
+7) Aşağıdakilerden hangisi koşullu işçi kullanmanın dezavantajlarından biridir?
+   [ ] a) İşçi sayısının iş ihtiyacına göre kolayca ayarlanabilmesi
+   [✔] b) Proje bitiminde işçinin bilgi ve becerilerinin şirketten ayrılması
+   [ ] c) Eğitim maliyetlerinin oluşmaması
+   [ ] d) Firmaların yan hak sağlamak zorunda olmaması
+   ✔ Cevap: b)  (a, c, d avantajlardır.)
+
+8) Yöneticinin kontrol listesine göre, koşullu işçilerin yanlış sınıflandırılma riskini azaltmak için aşağıdakilerden hangisi yapılmalıdır?
+   [✔] a) Görevlerin sonlu olmasını ve aralarında mola süreleri bulunmasını sağlamak
+   [ ] b) Aynı koşullu işçileri uzun süre kesintisiz çalıştırmak
+   [ ] c) Koşullu işçileri şirket çalışanlarıyla aynı eğitimlere almak
+   [ ] d) Koşullu işçilere işlerini nerede, ne zaman ve nasıl yapacaklarını doğrudan söylemek
+   ✔ Cevap: a)  (b, c, d onları daimi çalışan gibi gösterir; kaçınılmalı.)
+
+9) H-1B vizesi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?
+   [✔] a) Özel mesleklerde çalışanlara verilen ve en fazla altı yıl çalışmaya izin veren geçici bir vizedir
+   [ ] b) Yalnızca Avrupa vatandaşlarına verilir
+   [ ] c) Süresiz çalışma izni verir
+   [ ] d) Yıllık sayısında herhangi bir sınır yoktur
+   ✔ Cevap: a)
+
+10) H-1B vizesi kullanan şirketler en az ne kadar ücret teklif etmek zorundadır?
+   [ ] a) Asgari ücret
+   [ ] b) Meslek için ortalama maaşın en az %75'i
+   [✔] c) Meslek için ortalama maaşın en az %95'i
+   [ ] d) Meslek için ortalama maaşın en az %120'si
+   ✔ Cevap: c) %95
+
+11) H-1B işçisi çalıştıran şirketler, Amerikalı işçileri yerinden etmeyeceklerini beyan etme zorunluluğundan hangi koşulda muaf olabilir?
+   [ ] a) Şirket 10'dan az çalışana sahipse
+   [ ] b) Şirket yalnızca devlet projelerinde çalışıyorsa
+   [ ] c) H-1B çalışanları yalnızca uzaktan çalışıyorsa
+   [✔] d) Çalışanlarının %15 veya daha fazlası H-1B sahibi ise ve H-1B çalışanlarına yılda en az 60.000 dolar ödeniyorsa
+   ✔ Cevap: d)
+   (Not: Kitaptaki kural tersi yöndedir. Çalışanlarının %15+'ı H-1B olan
+   şirketler beyan vermek ZORUNDADIR; 60.000$+ ödeniyorsa bu zorunluluktan
+   muaftır. Şıklar arasında bu kuralı anlatan tek seçenek d olduğu için cevap d.)
+
+12) Sunumdaki verilere göre ABD'deki bilgisayar ve bilgi bilimi mezunu arzı ile yeni teknoloji işi talebi arasındaki ilişki nasıldır?
+   [ ] a) Hiç yeni teknoloji işi öngörülmemektedir
+   [ ] b) Talep arzdan çok daha fazladır
+   [ ] c) Arz ve talep yaklaşık eşittir
+   [✔] d) Yıllık yaklaşık 130.000 mezuna karşılık yaklaşık 53.000 yeni iş öngörüldüğünden arz talepten belirgin şekilde fazladır
+   ✔ Cevap: d)  (130.000 MEZUN, 53.000 İŞ. Rakamların yönüne dikkat!)
+
+13) Arz-talep yasasına göre belirli bir bölgede bir iş sınıfında işçi arzı talebi aşarsa ne olması beklenir?
+   [ ] a) H-1B vizelerinin otomatik olarak iptal edilmesi
+   [✔] b) İşsizliğin artması ve maaşların düşmesi
+   [ ] c) Maaşların değişmemesi
+   [ ] d) İşsizliğin azalması ve maaşların artması
+   ✔ Cevap: b)
+
+14) Aşağıdakilerden hangisi offshore dış kaynak kullanımının avantajlarından biridir?
+   [ ] a) Müşteri verilerine yönelik potansiyel riskler
+   [ ] b) Kültür ve dil farklılıklarından kaynaklanan yanlış anlamalar
+   [✔] c) Farklı saat dilimlerinde çalışan ekiplerle yazılım geliştirmenin hızlanması ve sürekli destek sağlanması
+   [ ] d) Yerli personelin işten çıkarılması
+   ✔ Cevap: c)
+
+15) Başarılı bir offshore dış kaynak kullanımı için dış kaynak firmasının sağlaması gerekenler arasında aşağıdakilerden hangisi yer almaz?
+   [ ] a) İşverenin ana dilini konuşan bir proje yöneticisi
+   [✔] b) İşveren ülkesinde açılmış bir fabrika
+   [ ] c) Gerekli teknolojilerde uzman çalışanlar
+   [ ] d) Son teknoloji telekomünikasyon altyapısı
+   ✔ Cevap: b)
+
+16) Bilgi uçurma (whistle-blowing) en iyi hangi ifadeyle tanımlanır?
+   [ ] a) Şirket sırlarını rakiplere satmak
+   [ ] b) Şirketin reklam kampanyalarını sosyal medyada paylaşmak
+   [ ] c) Çalışanların performansını yöneticiye raporlamak
+   [✔] d) Bir kuruluşun ihmalkâr, yasa dışı, etik dışı veya tehlikeli bir eylemine kamuoyunun dikkatini çekme çabası
+   ✔ Cevap: d)
+
+17) Yanlış İddialar Yasası'nın qui tam hükmü neye izin verir?
+   [ ] a) Devletin özel şirketlere el koymasına
+   [✔] b) Özel bir vatandaşın, devlet müteahhitlerinin dolandırıcılığı nedeniyle ABD hükümeti adına dava açmasına
+   [ ] c) Çalışanların işverenlerini işten çıkarmasına
+   [ ] d) Muhbirlerin kimliklerinin kamuoyuna açıklanmasına
+   ✔ Cevap: b)
+
+18) Etkili bir ihbar sürecinde "durumun ciddiyetini değerlendirme" ve "belgelemeye başlama" adımlarından sonra gelen adım hangisidir?
+   [ ] a) Doğrudan basına açıklama yapmak
+   [ ] b) Eylem planını uygulamak
+   [ ] c) Sonuçlarla yaşamak
+   [✔] d) Durumu şirket içinde ele almaya çalışmak
+   ✔ Cevap: d)
+   (Sıra: ciddiyeti değerlendir → belgele → şirket içinde çöz → dış
+   kaynaklardan yardım al → eylem planı uygula → sonuçlarla yaşa.)
+
+19) Aşağıdakilerden hangisi yeşil bilişimin üç hedefinden biri değildir?
+   [✔] a) Bilgisayarların işlem hızını en üst düzeye çıkarmak
+   [ ] b) Tehlikeli madde kullanımını azaltmak
+   [ ] c) Şirketlerin enerjiyle ilgili maliyetlerini düşürmek
+   [ ] d) Bilgisayarların güvenli şekilde atılmasını veya geri dönüştürülmesini sağlamak
+   ✔ Cevap: a)
+
+20) Elektronik Ürün Çevresel Değerlendirme Aracı (EPEAT) hakkında aşağıdakilerden hangisi doğrudur?
+   [ ] a) AB'nin Tehlikeli Maddelerin Kısıtlanması Direktifi'nin diğer adıdır
+   [ ] b) Ürünleri fiyatlarına göre sıralar
+   [ ] c) Yalnızca akıllı telefonları değerlendirir
+   [✔] d) Alıcıların ürünleri 51 çevresel kritere göre karşılaştırmasını sağlar ve ürünleri Altın, Gümüş ve Bronz olarak sınıflandırır
+   ✔ Cevap: d)
