@@ -516,7 +516,11 @@ input[type="checkbox"] { accent-color: var(--pen); }
   position: absolute !important; z-index: 1 !important; height: auto; aspect-ratio: 140 / 320; pointer-events: none;
   fill: none; stroke: #6b5a48; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; opacity: 0.68;
 }
-.page-back .uke-doodle-free { visibility: hidden; }
+.doodle-small {
+  position: absolute !important; z-index: 1 !important; height: auto; aspect-ratio: 1; pointer-events: none;
+  fill: none; stroke: #6b5a48; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.6;
+}
+.page-back .uke-doodle-free, .page-back .doodle-small { visibility: hidden; }
 
 /* ===== Bölüme geçiş: porte ve notalar ===== */
 .fx { position: fixed; inset: 0; z-index: 50; overflow: hidden; pointer-events: none; }
@@ -543,7 +547,7 @@ input[type="checkbox"] { accent-color: var(--pen); }
   .cover-label { width: 76%; top: 110px; }
   .cover-label .t { font-size: 36px; }
   .cover-hint { top: 500px; }
-  .uke-doodle-free.tr { display: none; }
+  .uke-doodle-free.tr, .doodle-small.tr { display: none; }
   .uke-cover { top: 230px; width: 120px; height: 240px; }
 }
 .desk-head[hidden] { display: none; }

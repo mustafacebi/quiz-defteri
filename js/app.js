@@ -337,6 +337,10 @@ function bindTurnGestures(el) {
 // Yer, eğim ve boyut sayfa numarasına göre değişir ama aynı sayfada hep aynı kalır.
 const uke = (style, extra = "") => `<svg class="uke-doodle-free ${extra}" viewBox="0 0 140 320" aria-hidden="true" style="${style}"><use href="#uke"/></svg>`;
 
+// nota, kâğıt uçak, pusula: her sayfada sadece bir tane, ukulelenin olmadığı yerde
+const smallDoodle = (id, style, extra = "") =>
+  `<svg class="doodle-small ${extra}" viewBox="0 0 100 100" aria-hidden="true" style="${style}"><use href="#${id}"/></svg>`;
+
 function pageDoodles(i) {
   const r = (n) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
   let html = uke(`left:${8 + r(1) * 8}px; top:${18 + r(2) * 55}%; width:${26 + r(3) * 8}px; transform:rotate(${(r(4) - 0.5) * 50}deg)`);
@@ -344,10 +348,23 @@ function pageDoodles(i) {
   else html += uke(`left:${38 + r(9) * 10}%; bottom:${14 + r(10) * 6}px; width:22px; transform:rotate(${-60 - r(11) * 30}deg)`);
   // sağ üst köşe (köşe kıvırma düğmesinin altında, soru bilgisinin sağında)
   html += uke(`right:${22 + r(12) * 16}px; top:${54 + r(13) * 14}px; width:${18 + r(14) * 6}px; transform:rotate(${(r(15) - 0.5) * 70}deg)`, "tr");
+  // her sayfada iki nota: biri sol kenarda (ukuleleden uzak), biri sayfa altında
+  const ukeTop = 18 + r(2) * 55; // sol kenardaki ukulelenin yeri (%)
+  html += smallDoodle("note", `left:${10 + r(17) * 6}px; top:${ukeTop < 45 ? 72 + r(18) * 12 : 12 + r(18) * 10}%;
+    width:${32 + r(19) * 8}px; transform:rotate(${(r(20) - 0.5) * 40}deg)`);
+  html += smallDoodle("note", `left:${16 + r(21) * 10}%; bottom:${14 + r(22) * 8}px; width:${28 + r(23) * 8}px;
+    transform:rotate(${(r(24) - 0.5) * 50}deg)`);
+  // tek sayfalarda sağ alt köşe boş: ara ara kedi ya da pati izleri
+  if (i % 4 === 1) html += smallDoodle("cat", `right:${20 + r(25) * 14}px; bottom:${18 + r(26) * 10}px; width:${48 + r(27) * 10}px; transform:rotate(${(r(28) - 0.5) * 16}deg)`);
+  if (i % 4 === 3) html += smallDoodle("paws", `right:${18 + r(29) * 20}px; bottom:${22 + r(30) * 14}px; width:${44 + r(31) * 10}px; transform:rotate(${-20 + r(32) * 30}deg)`);
   return html;
 }
 
 const sheetDoodles = () =>
+  smallDoodle("cat", "right:44px; top:34px; width:54px; transform:rotate(-4deg)", "tr") +
+  smallDoodle("note", "left:14px; top:40%; width:28px; transform:rotate(-12deg)") +
+  smallDoodle("note", "left:12px; top:78%; width:24px; transform:rotate(14deg)") +
+  smallDoodle("paws", "left:8px; top:8%; width:40px; transform:rotate(-30deg)") +
   uke("left:12px; top:22%; width:30px; transform:rotate(-18deg)") +
   uke("left:10px; top:58%; width:26px; transform:rotate(24deg)") +
   uke("right:26px; bottom:26px; width:54px; transform:rotate(28deg)");
