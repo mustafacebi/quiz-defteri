@@ -1,259 +1,261 @@
-/* ===== Renkler ve ölçüler =====
-   Tüm renkler burada; gece modu sadece bu değerleri değiştirir. */
+/* ===== Renkler ve ölçüler ===== */
 :root {
-  --desk: #d8cfbe;                      /* sayfanın arkasındaki masa */
-  --paper: #f3ead7;                     /* sararmış fildişi kâğıt */
-  --paper-edge: rgba(122, 88, 44, 0.16); /* kenarlara doğru eskime */
-  --rule: rgba(120, 96, 64, 0.17);      /* soluk kahverengi çizgiler */
-  --margin: rgba(170, 72, 58, 0.42);    /* çift kırmızı kenar çizgisi */
-  --grain: 0.35;                        /* kâğıt dokusunun yoğunluğu */
   --ink: #2f2620;                       /* sepya mürekkep */
   --ink-soft: #7a6a57;                  /* soluk mürekkep */
   --pen: #2e3c58;                       /* solmuş dolma kalem mavisi */
   --correct: #3d6b3f;
   --wrong: #9c3b2e;
-  --marker: rgba(214, 170, 60, 0.3);    /* eski fosforlu kalem */
+  --redpen: #b3261e;                    /* öğretmen kalemi */
+  --desk-ink: #eadcc1;                  /* masa üstündeki yazılar */
+  --rule: rgba(110, 88, 58, 0.22);      /* soluk kahverengi çizgiler */
+  --margin: rgba(170, 72, 58, 0.45);    /* çift kırmızı kenar çizgisi */
+  --hl: rgba(250, 214, 60, 0.55);       /* fosforlu kalem (JS değiştirir) */
+  --hl-edge: rgba(235, 190, 30, 0.6);
 
-  --line: 28px;                         /* çizgi aralığı; yazı satırları da buna oturur */
-  --margin-x: 64px;                     /* kenar çizgisinin soldan uzaklığı */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --desk: #121010;
-    --paper: #1f1b17;
-    --paper-edge: rgba(0, 0, 0, 0.35);
-    --rule: rgba(230, 205, 170, 0.07);
-    --margin: rgba(196, 92, 78, 0.32);
-    --grain: 0.5;
-    --ink: #e5dac6;
-    --ink-soft: #9c8f7c;
-    --pen: #b4c2dc;
-    --correct: #8fbf8c;
-    --wrong: #e0907f;
-    --marker: rgba(214, 170, 60, 0.18);
-  }
-}
-:root[data-theme="dark"] {
-  --desk: #121010;
-  --paper: #1f1b17;
-  --paper-edge: rgba(0, 0, 0, 0.35);
-  --rule: rgba(230, 205, 170, 0.07);
-  --margin: rgba(196, 92, 78, 0.32);
-  --grain: 0.5;
-  --ink: #e5dac6;
-  --ink-soft: #9c8f7c;
-  --pen: #b4c2dc;
-  --correct: #8fbf8c;
-  --wrong: #e0907f;
-  --marker: rgba(214, 170, 60, 0.18);
+  --line: 28px;                         /* bütün dikey ölçüler bunun katı: yazı hep iki çizginin arasında */
+  --fs: 19px;                           /* sayfaya sığmazsa küçülen yazı boyutu */
+  --margin-x: 54px;                     /* kenar çizgisinin soldan uzaklığı */
 }
 
 /* ===== Temel ===== */
 * { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--desk);
+  min-height: 100vh;
+  overflow-x: hidden;
   color: var(--ink);
   font-family: "EB Garamond", Garamond, Georgia, serif;
   font-size: 19px;
   line-height: var(--line);
   font-variant-numeric: oldstyle-nums;
+  background: #3a2416 url(../img/wood.jpg) 0 0 / 1024px;
 }
 
 a { color: var(--pen); text-decoration: none; }
 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+p, ol, ul { margin: 0; }
 
-/* ===== Defter sayfası ===== */
-.page {
-  position: relative;
-  z-index: 0; /* aşağıdaki doku katmanı içeriğin arkasında kalsın diye */
-  max-width: 760px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: var(--line) 36px calc(var(--line) * 3) calc(var(--margin-x) + 28px);
-  background-color: var(--paper);
-  background-image:
-    /* sol kenarda cilt gölgesi */
-    linear-gradient(to right, var(--paper-edge), transparent 22px),
-    /* kenarlara doğru eskime */
-    radial-gradient(ellipse at 50% 40%, transparent 55%, var(--paper-edge) 100%),
-    /* yatay çizgiler: her --line pikselde 1px'lik bir çizgi */
-    linear-gradient(to bottom, transparent calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px));
-  background-size: 100% 100%, 100% 100%, 100% var(--line);
-  box-shadow: 0 1px 2px rgba(60, 40, 20, 0.12), 0 8px 30px rgba(60, 40, 20, 0.12);
-}
-
-/* soldaki çift kenar çizgisi */
-.page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: var(--margin-x);
-  width: 4px;
-  border-left: 1px solid var(--margin);
-  border-right: 1px solid var(--margin);
-}
-
-/* kâğıt dokusu: SVG ile üretilmiş ince gürültü (resim dosyası gerekmez) */
-.page::after {
-  content: "";
-  position: absolute;
+/* ===== Lamba ışığı =====
+   Gündüz: içeriğin altında, masanın kenarlarını karartır.
+   Gece (lamba kısık): içeriğin üstünde, kâğıt dahil her yeri loşlaştırır. */
+.lamp {
+  position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
-  opacity: var(--grain);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 35%, rgba(255, 200, 120, 0.13), transparent 60%),
+    radial-gradient(ellipse at 50% 40%, transparent 45%, rgba(10, 5, 0, 0.6) 100%);
+}
+:root[data-theme="dark"] .lamp {
+  z-index: 100;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .33 0 0 0 0 .2 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background: radial-gradient(ellipse 75% 80% at 50% 50%, #dcc6a4 0%, #b0916b 45%, #45301c 82%, #1a0f08 100%);
 }
 
-/* ===== Üst bar ===== */
+/* ===== Masa üstü: üst bar, etiket butonlar ===== */
+.topbar, main { position: relative; z-index: 1; }
+
 .topbar {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--line);
+  gap: 8px 16px;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 12px 12px 4px;
 }
 
 .logo {
   font-variant: small-caps;
   letter-spacing: 0.12em;
   font-size: 18px;
-  color: var(--ink-soft);
+  color: var(--desk-ink);
 }
-.logo:hover { text-decoration: none; color: var(--ink); }
+.logo:hover { text-decoration: none; color: #fff; }
 
-.link-button {
-  background: none;
-  border: 0;
+.top-tools { display: flex; align-items: center; gap: 16px; }
+
+.desk-link {
   padding: 0;
   font: inherit;
   font-size: 16px;
   font-style: italic;
-  color: var(--ink-soft);
+  color: var(--desk-ink);
+  background: none;
+  border: 0;
   cursor: pointer;
 }
-.link-button:hover { color: var(--pen); }
+.desk-link:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
 
-/* ===== Başlıklar ===== */
-.title {
-  margin: 0;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--pen);
+.pens { display: flex; align-items: center; gap: 7px; }
+.pen-swatch {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--c);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.15s;
 }
-h1.title { font-size: 40px; line-height: calc(var(--line) * 2); }
+.pen-swatch.on { transform: scale(1.22); border-color: #fff; }
 
+/* masa üstündeki butonlar: küçük kâğıt etiketler */
+.desk-btn {
+  display: inline-block;
+  padding: 2px 16px;
+  font: inherit;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink);
+  background: #efe4cb url(../img/paper.jpg);
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.desk-btn:hover:not(:disabled) { color: var(--pen); text-decoration: none; }
+.desk-btn:disabled { opacity: 0.45; cursor: default; }
+.desk-btn.primary { color: #f3ead7; background: var(--pen); }
+
+.view { display: flex; flex-direction: column; align-items: center; margin: 0 auto; padding: 12px 12px 60px; }
+
+.desk-head { width: 100%; color: var(--desk-ink); margin-bottom: 10px; }
+.desk-head .back { color: var(--desk-ink); font-style: italic; font-size: 16px; }
+.desk-head h1 { margin: 0; font-weight: 400; font-style: italic; font-size: 30px; line-height: 40px; color: #f3e8d2; }
+.desk-head .sub { font-style: italic; font-size: 16px; opacity: 0.8; }
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 22px;
+  width: 100%;
+  margin-bottom: 14px;
+  color: var(--desk-ink);
+  font-size: 17px;
+}
+.tools select { color: var(--desk-ink); border-bottom-color: var(--desk-ink); }
+.tools select option { color: var(--ink); }
+.tools label { cursor: pointer; }
+
+/* konu özeti: masaya bırakılmış küçük bir not kâğıdı */
+details.note-card {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 6px 16px;
+  background: #f4ecd4 url(../img/paper.jpg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  transform: rotate(-0.3deg);
+}
+details.note-card summary { cursor: pointer; font-style: italic; color: var(--pen); }
+details.note-card p { white-space: pre-line; }
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: 26px;
+  color: var(--desk-ink);
+  font-style: italic;
+}
+
+/* ===== Kâğıt (tek sayfa ve kitap sayfaları ortak) ===== */
+.paper {
+  position: relative;
+  background: #efe4cb url(../img/paper.jpg) 0 0 / 1024px;
+}
+/* çizgiler + çift kırmızı kenar çizgisi */
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to right,
+      transparent var(--margin-x), var(--margin) var(--margin-x), var(--margin) calc(var(--margin-x) + 1px), transparent calc(var(--margin-x) + 1px),
+      transparent calc(var(--margin-x) + 4px), var(--margin) calc(var(--margin-x) + 4px), var(--margin) calc(var(--margin-x) + 5px), transparent calc(var(--margin-x) + 5px)),
+    linear-gradient(to bottom, transparent calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px)) 0 0 / 100% var(--line);
+}
+/* kenar eskimesi */
+.paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 60px rgba(120, 80, 30, 0.3), inset 0 0 10px rgba(110, 70, 25, 0.32);
+}
+
+/* sayfa kalınlığı: altta kalan sayfaların kenarları */
+.stack {
+  position: relative;
+  box-shadow:
+    1px 1px 0 #e9dfc6, 2px 2px 0 #d6caae, 3px 3px 0 #e6dbc0, 4px 4px 0 #d3c6a8,
+    5px 5px 0 #e3d7bb, 6px 6px 0 #cfc1a2, 7px 7px 0 #dfd2b4,
+    8px 10px 18px rgba(20, 10, 0, 0.45), 0 18px 50px rgba(20, 10, 0, 0.35);
+}
+
+/* tek sayfa (İçindekiler, deneme ayarları, sonuç) */
+.sheet {
+  width: 100%;
+  min-height: calc(var(--line) * 22);
+  padding: calc(var(--line) * 2) 36px calc(var(--line) * 2) calc(var(--margin-x) + 28px);
+}
+.sheet > * { position: relative; z-index: 1; }
+
+/* kitap sayfası */
+.page { overflow: hidden; padding: calc(var(--line) * 2) 32px calc(var(--line) * 2) calc(var(--margin-x) + 26px); }
+.page-inner { position: relative; z-index: 1; height: 100%; overflow: hidden; font-size: var(--fs); }
+.page.overflow .page-inner { overflow-y: auto; scrollbar-width: thin; }
+.page-back .page-inner, .page-back .folio, .page-back .dogear { visibility: hidden; } /* çevrilen sayfanın arkası boş */
+.folio {
+  position: absolute; left: 0; right: 0; bottom: var(--line); z-index: 1;
+  text-align: center; font-style: italic; font-size: 16px; color: var(--ink-soft);
+}
+#probe { position: absolute; left: -9999px; top: 0; visibility: hidden; }
+
+/* ===== Sayfa içi yazılar (hepsi satır yüksekliğinin katı) ===== */
+.title { margin: 0; font-weight: 400; font-style: italic; color: var(--pen); }
+h1.title { font-size: 40px; line-height: calc(var(--line) * 2); }
 h2.title {
   margin-top: var(--line);
   font-style: normal;
   font-variant: small-caps;
   letter-spacing: 0.1em;
   font-size: 21px;
-  line-height: calc(var(--line) * 1.5);
-}
-
-.muted { color: var(--ink-soft); font-style: italic; margin: 0 0 var(--line); }
-
-/* bölüm arası süs */
-.ornament {
-  margin: var(--line) 0 0;
-  text-align: center;
-  color: var(--ink-soft);
-  opacity: 0.7;
-}
-
-/* ===== İçindekiler ===== */
-.toc {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.toc a {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  color: var(--ink);
   line-height: var(--line);
 }
-.toc a:hover { text-decoration: none; }
-.toc a:hover .toc-title { color: var(--pen); }
+.muted { color: var(--ink-soft); font-style: italic; }
+.gap { margin-top: var(--line); }
 
-.toc-no {
-  width: 1.6em;
-  flex-shrink: 0;
-  text-align: right;
-  color: var(--ink-soft);
-  font-variant-numeric: oldstyle-nums tabular-nums;
-}
-
-.toc-title { flex-shrink: 1; min-width: 0; }
-
-/* başlık ile sayı arasındaki noktalar */
-.toc-dots {
-  flex: 1;
-  min-width: 16px;
-  border-bottom: 1px dotted var(--ink-soft);
-  opacity: 0.45;
-  transform: translateY(-6px);
-}
-
-.toc-count {
-  flex-shrink: 0;
-  color: var(--ink-soft);
-  font-style: italic;
-  font-size: 17px;
-}
-
-.mix-link {
-  display: inline-block;
-  margin-top: calc(var(--line) / 2);
-  font-style: italic;
-}
-
-/* ===== Quiz sayfası ===== */
-.back { font-size: 17px; font-style: italic; }
-
-details.summary {
-  margin: var(--line) 0;
-  padding: 0 0 0 14px;
-  border-left: 2px solid var(--marker);
-}
-details.summary summary {
-  cursor: pointer;
-  color: var(--pen);
-  font-style: italic;
-}
-details.summary p { margin: 0; white-space: pre-line; }
-
-.home-links { margin: 0 0 var(--line); }
-.home-links span { color: var(--ink-soft); margin: 0 6px; }
-.footer { margin-top: calc(var(--line) * 2); }
-.notice { font-style: italic; }
-
-/* ===== Butonlar ve form ===== */
 .btn {
-  display: inline-block;
   padding: 0 14px;
   font: inherit;
   font-size: 17px;
   font-style: italic;
-  line-height: calc(var(--line) - 2px);
+  line-height: 26px;
   color: var(--pen);
   background: transparent;
   border: 1px solid currentColor;
   border-radius: 3px;
   cursor: pointer;
 }
-.btn:hover:not(:disabled) { background: var(--marker); text-decoration: none; }
+.btn:hover:not(:disabled) { background: rgba(214, 170, 60, 0.25); text-decoration: none; }
 .btn:disabled { opacity: 0.35; cursor: default; }
-.btn.primary { color: var(--paper); background: var(--pen); border-color: var(--pen); }
-.btn.primary:hover:not(:disabled) { background: var(--pen); opacity: 0.88; }
+.btn.primary { color: #f3ead7; background: var(--pen); border-color: var(--pen); }
+
+.link-button {
+  padding: 0; font: inherit; font-style: italic; color: var(--ink-soft);
+  background: none; border: 0; cursor: pointer;
+}
+.link-button:hover { color: var(--pen); }
 
 select,
 input[type="number"] {
@@ -266,33 +268,31 @@ input[type="number"] {
   padding: 0 2px;
   max-width: 100%;
 }
-select option { background: var(--paper); color: var(--ink); }
 input[type="number"] { width: 4.5em; }
 input[type="checkbox"] { accent-color: var(--pen); }
 
+/* ===== İçindekiler ===== */
+.home-links span { color: var(--ink-soft); margin: 0 6px; }
+.toc { list-style: none; padding: 0; }
+.toc a { display: flex; align-items: baseline; gap: 10px; color: var(--ink); }
+.toc a:hover { text-decoration: none; }
+.toc a:hover .toc-title { color: var(--pen); }
+.toc-no { width: 1.6em; flex-shrink: 0; text-align: right; color: var(--ink-soft); font-variant-numeric: oldstyle-nums tabular-nums; }
+.toc-title { flex-shrink: 1; min-width: 0; }
+.toc-dots { flex: 1; min-width: 16px; border-bottom: 1px dotted var(--ink-soft); opacity: 0.45; transform: translateY(-6px); }
+.toc-count { flex-shrink: 0; color: var(--ink-soft); font-style: italic; font-size: 17px; }
+.mix-link { font-style: italic; }
+.ornament { margin-top: var(--line); text-align: center; color: var(--ink-soft); opacity: 0.7; }
+
 /* ===== Soru ===== */
-.toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 24px;
-  margin: var(--line) 0 0;
-  color: var(--ink-soft);
-  font-size: 17px;
-}
-.toolbar .check { cursor: pointer; }
+.q-meta { font-size: 0.8em; font-style: italic; color: var(--ink-soft); }
+.q-text { font-size: 1.05em; margin-bottom: var(--line); }
+.past { font-size: 0.8em; font-style: italic; color: var(--ink-soft); }
 
-.past { margin: 0; font-size: 16px; font-style: italic; color: var(--ink-soft); }
-
-.question { margin: var(--line) 0 0; }
-.q-meta { margin: 0; font-size: 15px; font-style: italic; color: var(--ink-soft); }
-.q-text { margin: 0 0 calc(var(--line) / 2); font-size: 20px; }
-
-.options { list-style: none; margin: 0; padding: 0; }
-
+.options { list-style: none; padding: 0; }
 .option {
+  position: relative;
   display: flex;
-  align-items: baseline;
   gap: 10px;
   width: calc(100% + 12px);
   margin: 0 -6px;
@@ -303,100 +303,165 @@ input[type="checkbox"] { accent-color: var(--pen); }
   color: var(--ink);
   background: none;
   border: 0;
-  border-radius: 2px;
   cursor: pointer;
 }
+.option * { pointer-events: none; }  /* tıklama hep butona gitsin; yoksa sayfa çevrilir */
 .option:hover:not(:disabled) { color: var(--pen); }
 .option:disabled { cursor: default; }
-.option .letter { flex-shrink: 0; width: 1.2em; font-style: italic; color: var(--ink-soft); }
-.option.selected { background: var(--marker); }   /* fosforlu kalemle işaretlenmiş gibi */
-
+.option .letter { width: 1.2em; flex-shrink: 0; font-style: italic; color: var(--ink-soft); }
 .option.correct { color: var(--correct); }
-.option.correct::after { content: "✓"; margin-left: auto; padding-left: 8px; }
 .option.wrong { color: var(--wrong); }
-.option.wrong .option-text {
-  text-decoration: line-through;
-  text-decoration-color: var(--wrong);
-  text-decoration-thickness: 1.5px;
-}
+.option.wrong .option-text { text-decoration: line-through; }
+.option.correct::after { content: "✓"; margin-left: auto; padding-left: 8px; }
 .option.wrong::after { content: "✗"; margin-left: auto; padding-left: 8px; }
 
-.feedback { margin: calc(var(--line) / 2) 0 0; font-style: italic; }
+/* fosforlu kalem: satırı değil sadece yazıyı, satırdan biraz ince bir şeritle boyar */
+.ink {
+  padding: 0 3px;
+  margin: 0 -3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+  background-position: 0 66%;
+  background-size: 0% 62%;
+  border-radius: 7px 3px 8px 4px / 60% 40% 55% 45%;   /* kalemin uçları hafif düzensiz */
+}
+.option.chosen .ink {
+  background-image: linear-gradient(to bottom, transparent 0, var(--hl) 12%, var(--hl) 80%, var(--hl-edge) 92%, transparent 100%);
+  background-size: 100% 62%;
+}
+.option.draw .ink { animation: highlight 0.45s cubic-bezier(0.3, 0.6, 0.4, 1); }
+@keyframes highlight { from { background-size: 0% 62%; } }
+
+.feedback { margin-top: var(--line); font-style: italic; }
 .ok { color: var(--correct); }
 .bad { color: var(--wrong); }
+.explanation { padding-left: 14px; border-left: 2px solid var(--hl); white-space: pre-line; }
+.uncertain { font-size: 0.85em; color: var(--wrong); }
+.label-sc { font-variant: small-caps; letter-spacing: 0.08em; color: var(--ink-soft); }
+.actions { margin-top: var(--line); display: flex; flex-wrap: wrap; gap: 10px; }
 
-.explanation {
-  margin: 0;
-  padding-left: 14px;
-  border-left: 2px solid var(--marker);
-  white-space: pre-line;
+/* ===== Köşe kıvırma (soruyu işaretle) ===== */
+.dogear {
+  position: absolute; z-index: 3; top: 0; right: 0;
+  width: 46px; height: 46px; padding: 0; border: 0; background: none; cursor: pointer;
 }
-
-.answer-box .label {
-  margin: 0;
-  font-variant: small-caps;
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
+.dogear::before {
+  content: "";
+  position: absolute; top: 0; right: 0;
+  border-style: solid;
+  border-width: 0 16px 16px 0;
+  border-color: transparent rgba(60, 35, 15, 0.12) transparent transparent;
+  transition: border-width 0.25s ease;
 }
-
-.uncertain { margin: calc(var(--line) / 2) 0 0; font-size: 16px; color: var(--wrong); }
-.self-check { margin: calc(var(--line) / 2) 0 0; }
-
-.pager {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin: var(--line) 0;
+.dogear:hover::before { border-width: 0 24px 24px 0; }
+.dogear.folded::before {
+  border-width: 0 42px 42px 0;
+  border-color: transparent #3a2416 #dccca7 transparent;
+  filter: drop-shadow(-2px 3px 2px rgba(0, 0, 0, 0.3));
 }
 
 /* ===== Deneme ===== */
-.exam-form label { display: block; margin-bottom: calc(var(--line) / 2); }
-.exam-form .btn { margin-top: calc(var(--line) / 2); }
-.hint { font-size: 15px; font-style: italic; color: var(--ink-soft); }
-
-.exam-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-variant: small-caps;
-  letter-spacing: 0.06em;
-  color: var(--pen);
-}
+.exam-form label { display: block; }
+.hint { font-size: 16px; font-style: italic; color: var(--ink-soft); }
 .timer { font-variant-numeric: lining-nums tabular-nums; }
-.timer.low { color: var(--wrong); }
-
-.grid { display: flex; flex-wrap: wrap; gap: 6px; margin: var(--line) 0; }
+.timer.low { color: #ffb4a8; }
+.grid { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; margin-top: 18px; }
 .cell {
-  width: 36px;
-  padding: 0;
-  font: inherit;
-  font-size: 15px;
-  line-height: 26px;
-  color: var(--ink-soft);
-  background: none;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  cursor: pointer;
+  width: 34px; padding: 0; font: inherit; font-size: 15px; line-height: 26px;
+  color: var(--ink-soft); background: #efe4cb url(../img/paper.jpg); border: 0; border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); cursor: pointer;
 }
-.cell.done { color: var(--ink); background: var(--marker); }
-.cell.current { color: var(--pen); border-color: var(--pen); }
+.cell.done { color: var(--ink); background: linear-gradient(var(--hl), var(--hl)), #efe4cb url(../img/paper.jpg); }
+.cell.current { outline: 2px solid var(--desk-ink); outline-offset: 1px; }
+.finish { margin-top: 18px; }
 
-.score { font-size: 22px; line-height: calc(var(--line) * 1.5); }
-.score strong { margin-left: 10px; font-weight: 500; color: var(--pen); }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+/* ===== Sonuç: kırmızı kalemle puan ===== */
+.grade { position: relative; width: 210px; height: 112px; margin: 0 0 0 auto; transform: rotate(-4deg); }
+.grade svg { position: absolute; inset: 0; overflow: visible; }
+.grade path {
+  fill: none; stroke: var(--redpen); stroke-width: 2.4; stroke-linecap: round;
+  stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw 0.9s ease-in-out forwards;
+}
+.grade-text {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: "Caveat", cursive; font-size: 54px; color: var(--redpen);
+  opacity: 0; animation: ink 0.5s 0.9s ease-out forwards;
+}
+.teacher-note {
+  font-family: "Caveat", cursive; font-size: 30px; color: var(--redpen); text-align: right;
+  opacity: 0; transform: rotate(-3deg); animation: ink 0.5s 1.4s ease-out forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes ink { from { opacity: 0; filter: blur(2px); } to { opacity: 0.92; filter: none; } }
+.score { font-size: 21px; }
+.review { display: flex; gap: 10px; margin-top: var(--line); }
+.review-no { flex-shrink: 0; padding-top: var(--line); color: var(--ink-soft); }
+.review .q { flex: 1; min-width: 0; font-size: 17px; }
 
-.review { display: flex; gap: 10px; }
-.review-no { flex-shrink: 0; margin-top: var(--line); padding-top: var(--line); color: var(--ink-soft); }
-.review .question { flex: 1; min-width: 0; }
+/* ===== Kapak ===== */
+.cover-scene { position: relative; perspective: 2600px; }
+.cover {
+  position: absolute;
+  inset: -6px -10px -6px -4px;
+  z-index: 5;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 1.4s cubic-bezier(0.6, 0.05, 0.3, 1);
+}
+.cover-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 3px 10px 10px 3px; }
+.cover-front {
+  background: #4a2c1c url(../img/leather.jpg) 0 0 / 512px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.55), inset 0 0 3px rgba(0, 0, 0, 0.8), 6px 12px 30px rgba(0, 0, 0, 0.55);
+}
+.cover-front::before { /* sırt */
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 34px; border-radius: 3px 0 0 3px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(255, 255, 255, 0.06) 60%, rgba(0, 0, 0, 0.35));
+}
+.cover-front::after { /* dikiş */
+  content: ""; position: absolute; inset: 16px 16px 16px 46px;
+  border: 2px dashed rgba(222, 190, 140, 0.45); border-radius: 6px;
+}
+.cover-back { transform: rotateY(180deg); background: #d9c9a3 url(../img/parchment.jpg); box-shadow: inset -20px 0 40px rgba(0, 0, 0, 0.25); }
+.band { /* lastik bant */
+  position: absolute; top: -8px; bottom: -8px; right: 46px; z-index: 6; width: 14px;
+  background: linear-gradient(to right, #1c1410, #3a2b22 45%, #241913);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: transform 0.45s ease-in, opacity 0.45s;
+}
+.cover-label {
+  position: absolute; left: 50%; top: 150px; width: 62%;
+  padding: 18px 20px; text-align: center; color: var(--ink);
+  background: #efe4cb url(../img/paper.jpg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  outline: 1px solid rgba(90, 60, 30, 0.5); outline-offset: -6px;
+  transform: translate(-42%, 0) rotate(-0.6deg);
+}
+.cover-label .t { font-family: "Caveat", cursive; font-size: 44px; line-height: 1.1; color: var(--pen); }
+.cover-label .s { font-style: italic; font-size: 17px; color: var(--ink-soft); }
+.cover-hint {
+  position: absolute; left: 0; right: 0; top: 330px; z-index: 6; text-align: center;
+  color: var(--desk-ink); font-style: italic; pointer-events: none;
+}
+.opened .band { transform: translateX(80px); opacity: 0; }
+.opened .cover { transform: rotateY(-170deg); }
+.opened .cover-hint { opacity: 0; }
 
 /* ===== Telefon ===== */
 @media (max-width: 600px) {
-  :root { --margin-x: 26px; }
+  :root { --margin-x: 30px; }
   body { font-size: 18px; }
-  .page { padding: calc(var(--line) / 2) 16px calc(var(--line) * 2) calc(var(--margin-x) + 16px); }
+  .view { padding: 8px 8px 40px; }
+  .sheet { padding: var(--line) 16px calc(var(--line) * 2) calc(var(--margin-x) + 16px); }
+  .page { padding: var(--line) 16px calc(var(--line) * 2) calc(var(--margin-x) + 16px); }
   h1.title { font-size: 34px; }
   .toc-dots { display: none; }
   .toc-title { flex: 1; }
+  .pens { gap: 5px; }
+  .pen-swatch { width: 18px; height: 18px; }
+  .cover-label { width: 76%; top: 110px; }
+  .cover-label .t { font-size: 36px; }
+  .cover-hint { top: 270px; }
 }
