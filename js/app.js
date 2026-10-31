@@ -44,8 +44,8 @@ function save() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch (e) {}
 }
 
-function record(qid, correct) {
-  store.answers[qid] = { correct };
+function record(qid, correct, choice) {
+  store.answers[qid] = choice == null ? { correct } : { correct, choice };
   save();
 }
 
@@ -519,7 +519,7 @@ function startStudy(key) {
   const ids = orderOk(saved) ? saved : list.base;
   const fixed = key === "wrong" || key === "marked";
   const index = fixed ? 0 : Math.min(store.pos[key] || 0, Math.max(ids.length - 1, 0));
-  session = { ...list, key, ids, index, shuffled: ids === saved, selected: {}, revealed: {}, drawing: null };
+  session = { ...list, key, ids, index, shuffled: ids === saved, selected: {}, revealed: {}, drawing: null, startedAt: Date.now() };
   renderStudyView();
 }
 
@@ -555,7 +555,8 @@ function renderStudyView() {
           <span id="count"></span>
           <button type="button" class="desk-btn" data-action="next">Sonraki →</button>
         </nav>
-        <p class="kbd-hint">← → çevir · 1–4 seç · Enter kontrol</p>` : `
+        <p class="kbd-hint">← → çevir · 1–4 seç · Enter kontrol</p>
+        ${gradableIds(s.ids).length ? `<p class="finish"><button type="button" class="desk-btn primary" data-action="finish-study">Testi bitir</button></p>` : ""}` : `
         <div class="sheet paper stack">${sheetDoodles()}<p>${esc(s.empty)}</p></div>`}
     </section>`;
   if (!s.ids.length) return;
@@ -797,7 +798,7 @@ function closeExam(timeUp) {
   const ex = store.exam;
   ex.finishedAt = timeUp ? ex.startedAt + ex.duration * 1000 : Date.now();
   for (const [id, choice] of Object.entries(ex.choices)) {
-    store.answers[id] = { correct: choice === questionById[id].answer };
+    store.answers[id] = { correct: choice === questionById[id].answer, choice };
   }
   save();
 }
@@ -836,6 +837,7 @@ function renderExamResult() {
           ${blank} boş · %${pct}
         </p>
         <p class="actions">
+          <button type="button" class="btn primary" data-action="retry-test">Aynı testi tekrar çöz</button>
           <a class="btn" href="#/exam">Yeni deneme</a>
           ${wrong ? `<a class="btn" href="#/wrong">Yanlışlarımı çöz</a>` : ""}
         </p>
@@ -869,7 +871,7 @@ const actions = {
     const choice = session.selected[q.id];
     if (choice == null) return;
     session.revealed[q.id] = { choice };
-    record(q.id, choice === q.answer);
+    record(q.id, choice === q.answer, choice);
     renderPage(Number(btn.dataset.i));
   },
   "show-open"(btn) {
@@ -949,6 +951,43 @@ const actions = {
   // genel
   "open-cover"() { openCover(); },
   "close-cover"() { closeCover(); },
+  // çalışma modunda testi bitir: kontrol edilen cevaplardan sonuç sayfası oluşur
+  "finish-study"() {
+    const ids = gradableIds(session.ids);
+    const choices = {};
+    for (const id of ids) {
+      const q = questionById[id];
+      const past = store.answers[id];
+      // önce bu oturumda kontrol edilen, sonra seçilip kontrol edilmeyen, en son daha önce çözülen cevap
+      let choice = session.revealed[id]?.choice ?? session.selected[id];
+      if (choice == null && past) choice = past.choice ?? (past.correct ? q.answer : (q.answer + 1) % q.options.length);
+      if (choice != null) choices[id] = choice;
+    }
+    if (!Object.keys(choices).length && !confirm("Henüz hiç soru kontrol etmedin. Yine de bitirilsin mi?")) return;
+    if (store.exam && !store.exam.finishedAt && !confirm("Yarım kalan deneme silinecek. Devam edilsin mi?")) return;
+    store.exam = { title: session.title, ids, choices, index: 0, startedAt: session.startedAt,
+      duration: 0, finishedAt: Date.now(), fromStudy: session.key };
+    save();
+    location.hash = "#/exam/result";
+  },
+  // sonuç sayfasından aynı soruları sıfırdan çöz
+  "retry-test"() {
+    const ex = store.exam;
+    if (ex.fromStudy) {
+      const key = ex.fromStudy;
+      // yanlışlar/işaretliler listesinde cevapları silmek listeyi boşaltır; orada sadece baştan aç
+      if (key.startsWith("quiz:") || key.startsWith("mix:")) {
+        for (const id of makeList(key)?.base || []) delete store.answers[id];
+      }
+      delete store.pos[key];
+      save();
+      location.hash = "#/" + key.replace(":", "/");
+    } else {
+      store.exam = { ...ex, choices: {}, index: 0, startedAt: Date.now(), finishedAt: null };
+      save();
+      location.hash = "#/exam/run";
+    }
+  },
   // sadece bu listenin ilerlemesini siler (cevaplar, kalınan yer); diğer bölümlere dokunmaz
   "restart-list"() {
     if (!confirm("Bu bölümdeki cevapların silinip baştan başlansın mı?")) return;
