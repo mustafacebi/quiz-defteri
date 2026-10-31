@@ -381,7 +381,7 @@ function renderHome(closing = false) {
       <div class="desk-head" ${showCover ? "hidden" : ""}><button type="button" class="desk-link" data-action="close-cover">Defteri kapat</button></div>
       <div class="${showCover ? `cover-scene ${closing ? "opened" : ""}` : ""}" style="width:100%">
         <div class="sheet paper stack" ${showCover ? "inert" : ""}>
-          <h1 class="title">İçindekiler</h1>
+          <h1 class="title">İçindekiler<svg class="uke-doodle" viewBox="0 0 140 320" aria-hidden="true"><use href="#uke"/></svg></h1>
           <p class="muted">${idsOf(allQuizzes).length} soru, ${DATA.sources.length} defter.
             ${solved ? `Şimdiye kadar ${solved} tanesini çözdün.` : "Bir bölüm seçerek başla."}</p>
           ${examLine}
@@ -398,6 +398,7 @@ function renderHome(closing = false) {
           <div class="cover" data-action="open-cover" role="button" tabindex="0" aria-label="Defteri aç">
             <div class="cover-face cover-front">
               <span class="corner tr"></span><span class="corner br"></span>
+              <svg class="uke-cover" viewBox="0 0 140 320" aria-hidden="true"><use href="#uke"/></svg>
               <div class="cover-label">
                 <div class="t">Quiz Defteri</div>
                 <div class="s">BT Etiği · ${idsOf(allQuizzes).length} soru</div>

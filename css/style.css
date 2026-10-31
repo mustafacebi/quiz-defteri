@@ -471,6 +471,20 @@ input[type="checkbox"] { accent-color: var(--pen); }
 .opened .cover { transform: rotateY(-170deg); }
 .opened .cover-hint { opacity: 0; }
 
+/* ===== Ukulele ===== */
+.uke-cover {
+  position: absolute; z-index: 2; left: 50%; top: 290px; width: 150px; height: 300px;
+  fill: none; stroke: #e0bd72; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+  transform: translateX(-46%) rotate(-14deg);
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.6)) drop-shadow(0 0 1px rgba(243, 213, 142, 0.6));
+}
+.uke-doodle {
+  width: 26px; height: 52px; margin-left: 10px; vertical-align: -10px;
+  fill: none; stroke: #6b5a48; stroke-width: 1.6; stroke-linecap: round; opacity: 0.7;
+  transform: rotate(-20deg);
+}
+.cover-hint { top: 620px; }
+
 /* ===== Telefon ===== */
 @media (max-width: 600px) {
   :root { --margin-x: 30px; }
@@ -485,6 +499,7 @@ input[type="checkbox"] { accent-color: var(--pen); }
   .pen-swatch { width: 18px; height: 18px; }
   .cover-label { width: 76%; top: 110px; }
   .cover-label .t { font-size: 36px; }
-  .cover-hint { top: 270px; }
+  .cover-hint { top: 500px; }
+  .uke-cover { top: 230px; width: 120px; height: 240px; }
 }
 .desk-head[hidden] { display: none; }
