@@ -332,6 +332,26 @@ function bindTurnGestures(el) {
   });
 }
 
+// ===== Ukulele karalamaları =====
+// Yazıya binmesin diye sadece boş yerlere: sol kenar boşluğu, sağ alt köşe, sayfa numarası yanı.
+// Yer, eğim ve boyut sayfa numarasına göre değişir ama aynı sayfada hep aynı kalır.
+const uke = (style, extra = "") => `<svg class="uke-doodle-free ${extra}" viewBox="0 0 140 320" aria-hidden="true" style="${style}"><use href="#uke"/></svg>`;
+
+function pageDoodles(i) {
+  const r = (n) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
+  let html = uke(`left:${8 + r(1) * 8}px; top:${18 + r(2) * 55}%; width:${26 + r(3) * 8}px; transform:rotate(${(r(4) - 0.5) * 50}deg)`);
+  if (i % 2 === 0) html += uke(`right:${18 + r(5) * 20}px; bottom:${16 + r(6) * 20}px; width:${40 + r(7) * 16}px; transform:rotate(${15 + r(8) * 30}deg)`);
+  else html += uke(`left:${38 + r(9) * 10}%; bottom:${14 + r(10) * 6}px; width:22px; transform:rotate(${-60 - r(11) * 30}deg)`);
+  // sağ üst köşe (köşe kıvırma düğmesinin altında, soru bilgisinin sağında)
+  html += uke(`right:${22 + r(12) * 16}px; top:${54 + r(13) * 14}px; width:${18 + r(14) * 6}px; transform:rotate(${(r(15) - 0.5) * 70}deg)`, "tr");
+  return html;
+}
+
+const sheetDoodles = () =>
+  uke("left:12px; top:22%; width:30px; transform:rotate(-18deg)") +
+  uke("left:10px; top:58%; width:26px; transform:rotate(24deg)") +
+  uke("right:26px; bottom:26px; width:54px; transform:rotate(28deg)");
+
 // ===== İçindekiler =====
 
 // İçindekiler'de yarım denemenin durumu; süresi dolmuşsa burada kapatılır
@@ -380,7 +400,7 @@ function renderHome(closing = false) {
     <section class="view" style="max-width:784px">
       <div class="desk-head" ${showCover ? "hidden" : ""}><button type="button" class="desk-link" data-action="close-cover">Defteri kapat</button></div>
       <div class="${showCover ? `cover-scene ${closing ? "opened" : ""}` : ""}" style="width:100%">
-        <div class="sheet paper stack" ${showCover ? "inert" : ""}>
+        <div class="sheet paper stack" ${showCover ? "inert" : ""}>${sheetDoodles()}
           <h1 class="title">İçindekiler<svg class="uke-doodle" viewBox="0 0 140 320" aria-hidden="true"><use href="#uke"/></svg></h1>
           <p class="muted">${idsOf(allQuizzes).length} soru, ${DATA.sources.length} defter.
             ${solved ? `Şimdiye kadar ${solved} tanesini çözdün.` : "Bir bölüm seçerek başla."}</p>
@@ -536,7 +556,7 @@ function renderStudyView() {
           <button type="button" class="desk-btn" data-action="next">Sonraki →</button>
         </nav>
         <p class="kbd-hint">← → çevir · 1–4 seç · Enter kontrol</p>` : `
-        <div class="sheet paper stack"><p>${esc(s.empty)}</p></div>`}
+        <div class="sheet paper stack">${sheetDoodles()}<p>${esc(s.empty)}</p></div>`}
     </section>`;
   if (!s.ids.length) return;
 
@@ -599,7 +619,7 @@ function studyPageHtml(i) {
       })}
       ${actions ? `<p class="actions">${actions}</p>` : ""}
     </div>
-    <div class="folio">${i + 1}</div>`;
+    <div class="folio">${i + 1}</div>${pageDoodles(i)}`;
 }
 
 // açık uçlu sorular puanlanmaz; quiz ve deneme sadece şıklı soruları alır
@@ -622,7 +642,7 @@ function renderExamSetup() {
   app.innerHTML = `
     <section class="view" style="max-width:784px">
       <div class="desk-head"><a class="back" href="#/">← İçindekiler</a></div>
-      <div class="sheet paper stack">
+      <div class="sheet paper stack">${sheetDoodles()}
         <h1 class="title">Deneme sınavı</h1>
         <p class="muted">Cevaplar sınav bitince gösterilir. Açık uçlu sorular denemeye girmez.</p>
         ${running ? `<p><a href="#/exam/run">Yarım kalmış denemene devam et →</a></p>` : ""}
@@ -727,7 +747,7 @@ function examPageHtml(i) {
       })}
       ${choice != null ? `<p class="actions"><button type="button" class="link-button" data-action="exam-clear" data-i="${i}">Boş bırak</button></p>` : ""}
     </div>
-    <div class="folio">${i + 1}</div>`;
+    <div class="folio">${i + 1}</div>${pageDoodles(i)}`;
 }
 
 function updateExamChrome() {
@@ -802,7 +822,7 @@ function renderExamResult() {
   app.innerHTML = `
     <section class="view" style="max-width:784px">
       <div class="desk-head"><a class="back" href="#/">← İçindekiler</a></div>
-      <div class="sheet paper stack">
+      <div class="sheet paper stack">${sheetDoodles()}
         <h1 class="title">Sonuç</h1>
         <p class="muted">${esc(ex.title)} · ${total} soru · ${formatTime(spent)} sürdü</p>
         <div class="grade" aria-label="${correct} / ${total}">
@@ -998,7 +1018,7 @@ window.addEventListener("resize", () => {
 function renderNotFound() {
   app.innerHTML = `
     <section class="view" style="max-width:784px">
-      <div class="sheet paper stack">
+      <div class="sheet paper stack">${sheetDoodles()}
         <h1 class="title">Bu sayfa defterde yok</h1>
         <p><a href="#/">İçindekiler'e dön</a></p>
       </div>
