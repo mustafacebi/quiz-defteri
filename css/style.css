@@ -424,17 +424,26 @@ input[type="checkbox"] { accent-color: var(--pen); }
 }
 .cover-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 3px 10px 10px 3px; }
 .cover-front {
-  background: #4a2c1c url(../img/leather.jpg) 0 0 / 512px;
+  background: #5e1a22 url(../img/leather.jpg) 0 0 / 512px;   /* vişne cilt */
+  background-blend-mode: multiply;
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.55), inset 0 0 3px rgba(0, 0, 0, 0.8), 6px 12px 30px rgba(0, 0, 0, 0.55);
 }
 .cover-front::before { /* sırt */
   content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 34px; border-radius: 3px 0 0 3px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(255, 255, 255, 0.06) 60%, rgba(0, 0, 0, 0.35));
 }
-.cover-front::after { /* dikiş */
-  content: ""; position: absolute; inset: 16px 16px 16px 46px;
-  border: 2px dashed rgba(222, 190, 140, 0.45); border-radius: 6px;
+.cover-front::after { /* bez dokusu */
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 4px);
 }
+.cover .corner { /* deri köşeler */
+  position: absolute; z-index: 1; right: 0; width: 64px; height: 64px;
+  background: #3a2416 url(../img/leather.jpg) 0 0 / 512px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
+}
+.cover .corner.tr { top: 0; border-top-right-radius: 10px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.cover .corner.br { bottom: 0; border-bottom-right-radius: 10px; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.cover-label { z-index: 2; }
 .cover-back { transform: rotateY(180deg); background: #d9c9a3 url(../img/parchment.jpg); box-shadow: inset -20px 0 40px rgba(0, 0, 0, 0.25); }
 .band { /* lastik bant */
   position: absolute; top: -8px; bottom: -8px; right: 46px; z-index: 6; width: 14px;
@@ -477,3 +486,4 @@ input[type="checkbox"] { accent-color: var(--pen); }
   .cover-label .t { font-size: 36px; }
   .cover-hint { top: 270px; }
 }
+.desk-head[hidden] { display: none; }

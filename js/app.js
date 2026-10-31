@@ -352,7 +352,7 @@ function unfinishedExamHtml() {
     → <a href="#/exam/run">Devam et</a></p>`;
 }
 
-function renderHome() {
+function renderHome(closing = false) {
   const examLine = unfinishedExamHtml();
   const solved = Object.keys(store.answers).length;
   const sections = DATA.sources.map((source) => `
@@ -374,10 +374,11 @@ function renderHome() {
     </ol>
     <p><a class="mix-link" href="#/mix/${source.id}">Bu quizlerin hepsinden karışık →</a></p>`).join(`<p class="ornament" aria-hidden="true">❦</p>`);
 
-  const showCover = !sessionGet("coverOpened");
+  const showCover = closing || !sessionGet("coverOpened");
   app.innerHTML = `
     <section class="view" style="max-width:784px">
-      <div class="${showCover ? "cover-scene" : ""}" style="width:100%">
+      <div class="desk-head" ${showCover ? "hidden" : ""}><button type="button" class="desk-link" data-action="close-cover">Defteri kapat</button></div>
+      <div class="${showCover ? `cover-scene ${closing ? "opened" : ""}` : ""}" style="width:100%">
         <div class="sheet paper stack" ${showCover ? "inert" : ""}>
           <h1 class="title">İçindekiler</h1>
           <p class="muted">${idsOf(allQuizzes).length} soru, ${DATA.sources.length} defter.
@@ -395,6 +396,7 @@ function renderHome() {
         ${showCover ? `
           <div class="cover" data-action="open-cover" role="button" tabindex="0" aria-label="Defteri aç">
             <div class="cover-face cover-front">
+              <span class="corner tr"></span><span class="corner br"></span>
               <div class="cover-label">
                 <div class="t">Quiz Defteri</div>
                 <div class="s">BT Etiği · ${idsOf(allQuizzes).length} soru</div>
@@ -402,10 +404,29 @@ function renderHome() {
             </div>
             <div class="cover-face cover-back"></div>
           </div>
-          <div class="band"></div>
           <p class="cover-hint">Açmak için kapağa dokun</p>` : ""}
       </div>
     </section>`;
+
+  // kapanış: kapak açık halde çizilir, bir kare sonra "opened" kalkınca kapanarak gelir
+  if (closing) requestAnimationFrame(() => requestAnimationFrame(() => app.querySelector(".cover-scene")?.classList.remove("opened")));
+  // içindekilerde sağdan sola kaydırınca kapak kapanır
+  const sheet = app.querySelector(".sheet");
+  let start = null;
+  sheet.addEventListener("touchstart", (e) => { const t = e.touches[0]; start = { x: t.clientX, y: t.clientY }; }, { passive: true });
+  sheet.addEventListener("touchend", (e) => {
+    if (!start || app.querySelector(".cover")) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x, dy = t.clientY - start.y;
+    start = null;
+    if (dx < -70 && Math.abs(dx) > Math.abs(dy) * 1.5) closeCover();
+  });
+}
+
+function closeCover() {
+  try { sessionStorage.removeItem("coverOpened"); } catch (e) {}
+  window.scrollTo(0, 0);
+  renderHome(true);
 }
 
 // Kapak oturum başına bir kez gösterilir
@@ -418,8 +439,9 @@ function openCover() {
   if (!scene || scene.classList.contains("opened")) return;
   scene.classList.add("opened");
   scene.querySelector(".sheet")?.removeAttribute("inert");
+  app.querySelector(".desk-head")?.removeAttribute("hidden");
   try { sessionStorage.setItem("coverOpened", "1"); } catch (e) {}
-  setTimeout(() => scene.querySelectorAll(".cover, .band, .cover-hint").forEach((el) => el.remove()), 1500);
+  setTimeout(() => scene.querySelectorAll(".cover, .cover-hint").forEach((el) => el.remove()), 1500);
 }
 
 // ===== Çalışma modu =====
@@ -903,6 +925,7 @@ const actions = {
 
   // genel
   "open-cover"() { openCover(); },
+  "close-cover"() { closeCover(); },
   "reset-progress"() {
     if (!confirm("Bütün ilerlemen (çözdüğün sorular, yanlışların, işaretlerin, denemeler) silinsin mi?")) return;
     Object.assign(store, { answers: {}, pos: {}, order: {}, exam: null, marked: {} });
