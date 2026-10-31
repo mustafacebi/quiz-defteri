@@ -547,7 +547,7 @@ function renderStudyView() {
   app.innerHTML = `
     <section class="view" style="max-width:${w + 24}px">
       <div class="desk-head">
-        <a class="back" href="#/">← İçindekiler</a>
+        <a class="back" href="#/" aria-label="İçindekiler">←<span class="back-text"> İçindekiler</span></a>
         <h1>${esc(s.title)}</h1>
         <span class="sub">${esc(s.subtitle)}</span>
       </div>
@@ -564,7 +564,7 @@ function renderStudyView() {
           ${s.canShuffle ? `<label><input type="checkbox" data-action="toggle-shuffle" ${s.shuffled ? "checked" : ""}> Karışık sıra</label>` : ""}
           ${s.alwaysShuffled ? `<button type="button" class="desk-link" data-action="reshuffle">Yeniden karıştır</button>` : ""}
           ${gradableIds(s.ids).length ? `<button type="button" class="desk-link" data-action="restart-list">Baştan başlat</button>
-          <button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz →</button>` : ""}
+          <button type="button" class="desk-link" data-action="quiz-mode">Quiz<span class="long">&nbsp;olarak çöz</span>&nbsp;→</button>` : ""}
         </div>
         <div class="book-shell stack"></div>
         <nav class="pager">
@@ -659,7 +659,7 @@ function renderExamSetup() {
   const running = store.exam && !store.exam.finishedAt;
   app.innerHTML = `
     <section class="view" style="max-width:784px">
-      <div class="desk-head"><a class="back" href="#/">← İçindekiler</a></div>
+      <div class="desk-head"><a class="back" href="#/" aria-label="İçindekiler">←<span class="back-text"> İçindekiler</span></a></div>
       <div class="sheet paper stack">${sheetDoodles()}
         <h1 class="title">Deneme sınavı</h1>
         <p class="muted">Cevaplar sınav bitince gösterilir. Açık uçlu sorular denemeye girmez.</p>
@@ -718,7 +718,7 @@ function renderExamRun() {
   app.innerHTML = `
     <section class="view" style="max-width:${w + 24}px">
       <div class="desk-head">
-        <a class="back" href="#/">← İçindekiler</a>
+        <a class="back" href="#/" aria-label="İçindekiler">←<span class="back-text"> İçindekiler</span></a>
         <h1>${esc(ex.title)}</h1>
         <span class="sub"><span id="answered"></span> · <span id="timer" class="timer"></span></span>
       </div>
@@ -839,7 +839,7 @@ function renderExamResult() {
 
   app.innerHTML = `
     <section class="view" style="max-width:784px">
-      <div class="desk-head"><a class="back" href="#/">← İçindekiler</a></div>
+      <div class="desk-head"><a class="back" href="#/" aria-label="İçindekiler">←<span class="back-text"> İçindekiler</span></a></div>
       <div class="sheet paper stack">${sheetDoodles()}
         <h1 class="title">Sonuç</h1>
         <p class="muted">${esc(ex.title)} · ${total} soru · ${formatTime(spent)} sürdü</p>
@@ -1201,7 +1201,8 @@ const currentTheme = () => document.documentElement.dataset.theme || "light";
 
 function updateThemeButton() {
   const bulb = `<svg class="lamp-icon" viewBox="0 0 14 16" aria-hidden="true"><path d="M7 1.5a4.5 4.5 0 0 0-2.6 8.2c.4.3.6.8.6 1.3V12h4v-1c0-.5.2-1 .6-1.3A4.5 4.5 0 0 0 7 1.5z M5 14h4"/></svg>`;
-  themeButton.innerHTML = `${bulb} ${currentTheme() === "dark" ? "Lambayı aç" : "Lambayı kıs"}`;
+  themeButton.innerHTML = `${bulb}<span class="lamp-text"> ${currentTheme() === "dark" ? "Lambayı aç" : "Lambayı kıs"}</span>`;
+  themeButton.setAttribute("aria-label", currentTheme() === "dark" ? "Lambayı aç" : "Lambayı kıs");
 }
 
 themeButton.addEventListener("click", () => {

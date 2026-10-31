@@ -498,6 +498,9 @@ input[type="checkbox"] { accent-color: var(--pen); }
 .tools label:has(input:checked) { color: #f3ead7; background: var(--pen); }
 .lamp-icon { width: 14px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
 
+.tools .desk-link { gap: 0; }
+@media (max-width: 420px) { .tools .long { display: none; } }
+
 /* ===== Ukulele ===== */
 .uke-cover {
   position: absolute; z-index: 2; left: 50%; top: 290px; width: 150px; height: 300px;
@@ -548,6 +551,18 @@ input[type="checkbox"] { accent-color: var(--pen); }
   .cover-label .t { font-size: 36px; }
   .cover-hint { top: 500px; }
   .uke-doodle-free.tr, .doodle-small.tr { display: none; }
+  /* telefonda masa üstü sıkı yerleşim */
+  .topbar { flex-wrap: nowrap; gap: 8px; padding: 6px 10px 0; }
+  .logo { font-size: 14px; letter-spacing: 0.06em; white-space: nowrap; }
+  .top-tools { gap: 8px; }
+  .pens { gap: 4px; }
+  .pen-swatch { width: 16px; height: 16px; border-width: 1.5px; }
+  .lamp-text, .back-text { display: none; }
+  .desk-link, .desk-head .back, .tools label:has(input[type="checkbox"]) { padding: 0 8px; font-size: 13px; line-height: 22px; }
+  .desk-head { flex-wrap: nowrap; gap: 8px; margin-bottom: 4px; }
+  .desk-head h1 { font-size: 18px; line-height: 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .desk-head .sub { display: none; }
+  .tools { gap: 6px 8px; font-size: 14px; margin-bottom: 8px; }
   .uke-cover { top: 230px; width: 120px; height: 240px; }
 }
 .desk-head[hidden] { display: none; }
