@@ -1013,6 +1013,67 @@ window.addEventListener("resize", () => {
   }, 250);
 });
 
+// ===== Bölüme geçiş animasyonu (porte) =====
+// İçindekiler'den bir listeye geçerken ekrana porte çizilir, notalar dizilir,
+// sonra yeni sayfa açılırken porte süpürülür.
+const NOTES = ["♪", "♫", "♬", "♩"];
+const NOTE_COLORS = ["#e0bd72", "#efe2c6", "#c9a35a", "#b85a68"];
+let transitioning = false;
+
+function staffTransition(href) {
+  if (transitioning) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return (location.hash = href);
+  transitioning = true;
+  const fx = document.getElementById("fx");
+  const W = window.innerWidth;
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "staff");
+  svg.setAttribute("viewBox", `0 0 ${W} 90`);
+  svg.innerHTML = [0, 1, 2, 3, 4].map((i) => `<line x1="20" x2="${W - 20}" y1="${10 + i * 17}" y2="${10 + i * 17}"/>`).join("");
+  fx.append(svg);
+  svg.querySelectorAll("line").forEach((line, i) => {
+    line.style.strokeDasharray = W;
+    line.animate([{ strokeDashoffset: W }, { strokeDashoffset: 0 }], { duration: 520, delay: i * 60, easing: "ease-out", fill: "both" });
+  });
+  app.querySelector(".sheet")?.animate([{ opacity: 1 }, { opacity: 0.15, filter: "blur(1px)" }], { duration: 500, fill: "forwards" });
+
+  const top = svg.getBoundingClientRect().top;
+  const notes = [];
+  for (let i = 0; i < 9; i++) {
+    const n = document.createElement("span");
+    n.className = "note";
+    n.textContent = NOTES[Math.floor(Math.random() * NOTES.length)];
+    n.style.cssText = `left:${40 + ((W - 80) * (i + 0.5)) / 9}px; top:${top + Math.random() * 64}px;
+      font-size:${30 + Math.random() * 16}px; color:${NOTE_COLORS[i % 4]}; opacity:0`;
+    fx.append(n);
+    notes.push(n);
+    n.animate([
+      { transform: "translate(-50%, -40%) scale(0.2)", opacity: 0 },
+      { transform: "translate(-50%, -50%) scale(1.15)", opacity: 1, offset: 0.6 },
+      { transform: "translate(-50%, -50%) scale(1)", opacity: 1 },
+    ], { duration: 320, delay: 520 + i * 85, fill: "forwards", easing: "ease-out" });
+  }
+
+  setTimeout(() => {
+    location.hash = href;
+    [svg, ...notes].forEach((el, i) => {
+      el.animate([
+        { transform: el === svg ? "none" : "translate(-50%, -50%)", opacity: 1 },
+        { transform: el === svg ? "translateX(110%)" : `translate(calc(-50% + ${W}px), -50%) rotate(30deg)`, opacity: 0 },
+      ], { duration: 700, delay: i * 20, easing: "cubic-bezier(.6, 0, .4, 1)", fill: "forwards" }).onfinish = () => el.remove();
+    });
+    setTimeout(() => (transitioning = false), 750);
+  }, 520 + 9 * 85 + 350);
+}
+
+// İçindekiler'deki bölüm ve karışık liste linkleri geçişle açılır
+app.addEventListener("click", (e) => {
+  const link = e.target.closest('a[href^="#/quiz/"], a[href^="#/mix/"]');
+  if (!link || !app.querySelector(".toc") || e.metaKey || e.ctrlKey) return;
+  e.preventDefault();
+  staffTransition(link.getAttribute("href"));
+});
+
 // ===== Yönlendirme (routing) =====
 
 function renderNotFound() {

@@ -491,6 +491,16 @@ input[type="checkbox"] { accent-color: var(--pen); }
 }
 .page-back .uke-doodle-free { visibility: hidden; }
 
+/* ===== Bölüme geçiş: porte ve notalar ===== */
+.fx { position: fixed; inset: 0; z-index: 50; overflow: hidden; pointer-events: none; }
+.fx .staff { position: absolute; left: 0; right: 0; top: 40%; height: 90px; }
+.fx .staff line { stroke: #e9dcc1; stroke-width: 1.6; stroke-linecap: round; }
+.fx .note {
+  position: absolute; line-height: 1;
+  font-family: "Apple Symbols", "Segoe UI Symbol", "Noto Music", serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+
 /* ===== Telefon ===== */
 @media (max-width: 600px) {
   :root { --margin-x: 30px; }
