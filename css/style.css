@@ -231,6 +231,166 @@ details.summary summary {
 }
 details.summary p { margin: 0; white-space: pre-line; }
 
+.home-links { margin: 0 0 var(--line); }
+.home-links span { color: var(--ink-soft); margin: 0 6px; }
+.footer { margin-top: calc(var(--line) * 2); }
+.notice { font-style: italic; }
+
+/* ===== Butonlar ve form ===== */
+.btn {
+  display: inline-block;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 17px;
+  font-style: italic;
+  line-height: calc(var(--line) - 2px);
+  color: var(--pen);
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) { background: var(--marker); text-decoration: none; }
+.btn:disabled { opacity: 0.35; cursor: default; }
+.btn.primary { color: var(--paper); background: var(--pen); border-color: var(--pen); }
+.btn.primary:hover:not(:disabled) { background: var(--pen); opacity: 0.88; }
+
+select,
+input[type="number"] {
+  font: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ink-soft);
+  border-radius: 0;
+  padding: 0 2px;
+  max-width: 100%;
+}
+select option { background: var(--paper); color: var(--ink); }
+input[type="number"] { width: 4.5em; }
+input[type="checkbox"] { accent-color: var(--pen); }
+
+/* ===== Soru ===== */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 24px;
+  margin: var(--line) 0 0;
+  color: var(--ink-soft);
+  font-size: 17px;
+}
+.toolbar .check { cursor: pointer; }
+
+.past { margin: 0; font-size: 16px; font-style: italic; color: var(--ink-soft); }
+
+.question { margin: var(--line) 0 0; }
+.q-meta { margin: 0; font-size: 15px; font-style: italic; color: var(--ink-soft); }
+.q-text { margin: 0 0 calc(var(--line) / 2); font-size: 20px; }
+
+.options { list-style: none; margin: 0; padding: 0; }
+
+.option {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: calc(100% + 12px);
+  margin: 0 -6px;
+  padding: 0 6px;
+  font: inherit;
+  line-height: var(--line);
+  text-align: left;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.option:hover:not(:disabled) { color: var(--pen); }
+.option:disabled { cursor: default; }
+.option .letter { flex-shrink: 0; width: 1.2em; font-style: italic; color: var(--ink-soft); }
+.option.selected { background: var(--marker); }   /* fosforlu kalemle işaretlenmiş gibi */
+
+.option.correct { color: var(--correct); }
+.option.correct::after { content: "✓"; margin-left: auto; padding-left: 8px; }
+.option.wrong { color: var(--wrong); }
+.option.wrong .option-text {
+  text-decoration: line-through;
+  text-decoration-color: var(--wrong);
+  text-decoration-thickness: 1.5px;
+}
+.option.wrong::after { content: "✗"; margin-left: auto; padding-left: 8px; }
+
+.feedback { margin: calc(var(--line) / 2) 0 0; font-style: italic; }
+.ok { color: var(--correct); }
+.bad { color: var(--wrong); }
+
+.explanation {
+  margin: 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--marker);
+  white-space: pre-line;
+}
+
+.answer-box .label {
+  margin: 0;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.uncertain { margin: calc(var(--line) / 2) 0 0; font-size: 16px; color: var(--wrong); }
+.self-check { margin: calc(var(--line) / 2) 0 0; }
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: var(--line) 0;
+}
+
+/* ===== Deneme ===== */
+.exam-form label { display: block; margin-bottom: calc(var(--line) / 2); }
+.exam-form .btn { margin-top: calc(var(--line) / 2); }
+.hint { font-size: 15px; font-style: italic; color: var(--ink-soft); }
+
+.exam-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--pen);
+}
+.timer { font-variant-numeric: lining-nums tabular-nums; }
+.timer.low { color: var(--wrong); }
+
+.grid { display: flex; flex-wrap: wrap; gap: 6px; margin: var(--line) 0; }
+.cell {
+  width: 36px;
+  padding: 0;
+  font: inherit;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--ink-soft);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.cell.done { color: var(--ink); background: var(--marker); }
+.cell.current { color: var(--pen); border-color: var(--pen); }
+
+.score { font-size: 22px; line-height: calc(var(--line) * 1.5); }
+.score strong { margin-left: 10px; font-weight: 500; color: var(--pen); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.review { display: flex; gap: 10px; }
+.review-no { flex-shrink: 0; margin-top: var(--line); padding-top: var(--line); color: var(--ink-soft); }
+.review .question { flex: 1; min-width: 0; }
+
 /* ===== Telefon ===== */
 @media (max-width: 600px) {
   :root { --margin-x: 26px; }
