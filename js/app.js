@@ -186,13 +186,16 @@ function mountBook(shell, { count, start, render, onFlip }) {
   book = { shell, pages, count, render, onFlip, w, h, rendered: new Set(), dir: 1 };
   ensurePages(start);
 
-  book.flip = new St.PageFlip(shell.firstElementChild, {
+  const flip = new St.PageFlip(shell.firstElementChild, {
     width: w, height: h, size: "fixed", usePortrait: true, showCover: false,
     flippingTime: 900, maxShadowOpacity: 0.6, drawShadow: true,
     showPageCorners: false, useMouseEvents: false, startPage: start,
   });
-  book.flip.loadFromHTML(pages);
-  book.flip.on("flip", (e) => {
+  book.flip = flip;
+  flip.loadFromHTML(pages);
+  flip.on("flip", (e) => {
+    // yıkılmış kitabın geç gelen olayını yok say (book artık başka bir örnek olabilir)
+    if (!book || e.object !== book.flip || flip !== book.flip) return;
     ensurePages(e.data);
     onFlip(e.data);
   });
@@ -211,8 +214,11 @@ function mountBook(shell, { count, start, render, onFlip }) {
 function unmountBook() {
   if (!book) return;
   book.observer.disconnect();
-  try { book.flip.destroy(); } catch (e) {}
-  book = null;
+  const old = book;
+  book = null; // önce null: animasyon biterken gelen "flip" olayı yok sayılır (eski sırayı kayda yazmasın)
+  // çalışan çevirme animasyonunu bitir ki yarım kalıp sonradan tetiklenmesin
+  try { old.flip.getRender().finishAnimation(); } catch (e) {}
+  try { old.flip.destroy(); } catch (e) {}
 }
 
 function ensurePages(i) {
@@ -239,9 +245,17 @@ function turn(dir) {
 }
 
 function goToPage(n) {
+  if (!book) return;
+  // animasyon sürerken turnToPage çakışır; önce çevirmeyi bitir
+  if (book.flip.getState() !== "read") book.flip.getRender().finishAnimation();
   ensurePages(n);
   book.flip.turnToPage(n);
   book.onFlip(n);
+}
+
+// Sayfa yeniden çizilince eski şık butonu DOM'dan gider; odağı aynı şıkka geri ver
+function refocusOption(btn) {
+  book.pages[Number(btn.dataset.i)].querySelector(`.option[data-k="${btn.dataset.k}"]`)?.focus({ preventScroll: true });
 }
 
 // Sayfaya sığmayan içerikte yazıyı adım adım küçült (satır yüksekliği sabit kalır, çizgiler bozulmaz).
@@ -318,7 +332,27 @@ function bindTurnGestures(el) {
 
 // ===== İçindekiler =====
 
+// İçindekiler'de yarım denemenin durumu; süresi dolmuşsa burada kapatılır
+function unfinishedExamHtml() {
+  const ex = store.exam;
+  if (!ex || ex.finishedAt) return "";
+  if (!examValid(ex)) {
+    store.exam = null;
+    save();
+    return "";
+  }
+  const left = ex.duration ? ex.duration - Math.floor((Date.now() - ex.startedAt) / 1000) : null;
+  if (left != null && left <= 0) {
+    closeExam(true);
+    return "";
+  }
+  const answered = Object.keys(ex.choices).length;
+  return `<p>Yarım deneme: ${answered}/${ex.ids.length} cevaplandı${left != null ? ` · ${formatTime(left)} kaldı` : ""}
+    → <a href="#/exam/run">Devam et</a></p>`;
+}
+
 function renderHome() {
+  const examLine = unfinishedExamHtml();
   const solved = Object.keys(store.answers).length;
   const sections = DATA.sources.map((source) => `
     <h2 class="title">${esc(source.title)}</h2>
@@ -343,10 +377,11 @@ function renderHome() {
   app.innerHTML = `
     <section class="view" style="max-width:784px">
       <div class="${showCover ? "cover-scene" : ""}" style="width:100%">
-        <div class="sheet paper stack">
+        <div class="sheet paper stack" ${showCover ? "inert" : ""}>
           <h1 class="title">İçindekiler</h1>
           <p class="muted">${idsOf(allQuizzes).length} soru, ${DATA.sources.length} defter.
             ${solved ? `Şimdiye kadar ${solved} tanesini çözdün.` : "Bir bölüm seçerek başla."}</p>
+          ${examLine}
           <p>
             <a href="#/exam">Deneme sınavı</a><span class="home-links"><span>·</span></span>
             <a href="#/wrong">Yanlışlarım (${wrongIds().length})</a><span class="home-links"><span>·</span></span>
@@ -357,7 +392,7 @@ function renderHome() {
           ${solved ? `<p class="gap"><button class="link-button" data-action="reset-progress">İlerlemeyi sıfırla</button></p>` : ""}
         </div>
         ${showCover ? `
-          <div class="cover" data-action="open-cover" role="button" aria-label="Defteri aç">
+          <div class="cover" data-action="open-cover" role="button" tabindex="0" aria-label="Defteri aç">
             <div class="cover-face cover-front">
               <div class="cover-label">
                 <div class="t">Quiz Defteri</div>
@@ -381,6 +416,7 @@ function openCover() {
   const scene = app.querySelector(".cover-scene");
   if (!scene || scene.classList.contains("opened")) return;
   scene.classList.add("opened");
+  scene.querySelector(".sheet")?.removeAttribute("inert");
   try { sessionStorage.setItem("coverOpened", "1"); } catch (e) {}
   setTimeout(() => scene.querySelectorAll(".cover, .band, .cover-hint").forEach((el) => el.remove()), 1500);
 }
@@ -428,12 +464,14 @@ let session = null; // açık olan çalışma listesi; sayfadan çıkınca sıf�
 function startStudy(key) {
   const list = makeList(key);
   if (!list) return renderNotFound();
-  if (list.alwaysShuffled && !store.order[key]) {
+  // kayıtlı sıra eskimiş olabilir (soru sayısı değişti ya da bir soru silindi)
+  const orderOk = (o) => Array.isArray(o) && o.length === list.base.length && o.every((id) => questionById[id]);
+  if (list.alwaysShuffled && !orderOk(store.order[key])) {
     store.order[key] = shuffle(list.base);
     save();
   }
   const saved = store.order[key];
-  const ids = saved && saved.length === list.base.length ? saved : list.base;
+  const ids = orderOk(saved) ? saved : list.base;
   const fixed = key === "wrong" || key === "marked";
   const index = fixed ? 0 : Math.min(store.pos[key] || 0, Math.max(ids.length - 1, 0));
   session = { ...list, key, ids, index, shuffled: ids === saved, selected: {}, revealed: {}, drawing: null };
@@ -463,14 +501,15 @@ function renderStudyView() {
             / ${s.ids.length}</label>
           ${s.canShuffle ? `<label><input type="checkbox" data-action="toggle-shuffle" ${s.shuffled ? "checked" : ""}> Karışık sıra</label>` : ""}
           ${s.alwaysShuffled ? `<button type="button" class="desk-link" data-action="reshuffle">Yeniden karıştır</button>` : ""}
-          <button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz →</button>
+          ${gradableIds(s.ids).length ? `<button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz →</button>` : ""}
         </div>
         <div class="book-shell stack"></div>
         <nav class="pager">
           <button type="button" class="desk-btn" data-action="prev">← Önceki</button>
           <span id="count"></span>
           <button type="button" class="desk-btn" data-action="next">Sonraki →</button>
-        </nav>` : `
+        </nav>
+        <p class="kbd-hint">← → çevir · 1–4 seç · Enter kontrol</p>` : `
         <div class="sheet paper stack"><p>${esc(s.empty)}</p></div>`}
     </section>`;
   if (!s.ids.length) return;
@@ -537,6 +576,9 @@ function studyPageHtml(i) {
     <div class="folio">${i + 1}</div>`;
 }
 
+// açık uçlu sorular puanlanmaz; quiz ve deneme sadece şıklı soruları alır
+const gradableIds = (ids) => ids.filter((id) => questionById[id].type !== "open");
+
 const pageQuestion = (btn) => questionById[(session ? session.ids : store.exam.ids)[Number(btn.dataset.i)]];
 
 // ===== Deneme sınavı =====
@@ -575,7 +617,7 @@ function renderExamSetup() {
 function startExam(form) {
   if (store.exam && !store.exam.finishedAt && !confirm("Yarım kalan deneme silinecek. Yeni deneme başlasın mı?")) return;
   const [, label, quizzes] = examScopes().find(([value]) => value === form.scope.value);
-  const pool = idsOf(quizzes).filter((id) => questionById[id].type !== "open");
+  const pool = gradableIds(idsOf(quizzes));
   const count = Math.max(1, Math.min(parseInt(form.count.value, 10) || 20, pool.length));
   store.exam = {
     title: label,
@@ -593,10 +635,19 @@ function startExam(form) {
 let timer = null;
 let examDrawing = null;
 
+// kayıtlı denemedeki bir soru artık veride yoksa (soru dosyası güncellendi) deneme kullanılamaz
+const examValid = (ex) => ex.ids.length > 0 && ex.ids.every((id) => questionById[id]);
+
+function dropExam() {
+  store.exam = null;
+  save();
+  location.replace("#/exam");
+}
+
 function renderExamRun() {
   const ex = store.exam;
-  if (!ex) return (location.hash = "#/exam");
-  if (ex.finishedAt) return (location.hash = "#/exam/result");
+  if (!ex || !examValid(ex)) return dropExam();
+  if (ex.finishedAt) return location.replace("#/exam/result");
 
   unmountBook();
   const { w } = pageSize();
@@ -613,6 +664,7 @@ function renderExamRun() {
         <span id="count"></span>
         <button type="button" class="desk-btn" data-action="next">Sonraki →</button>
       </nav>
+      <p class="kbd-hint">← → çevir · 1–4 seç</p>
       <div class="grid" id="grid"></div>
       <p class="finish"><button type="button" class="desk-btn primary" data-action="finish-exam">Testi bitir</button></p>
     </section>`;
@@ -659,9 +711,12 @@ function updateExamChrome() {
   app.querySelector("#answered").textContent = `${Object.keys(ex.choices).length} / ${ex.ids.length} cevaplandı`;
   app.querySelector('[data-action="prev"]').disabled = i === 0;
   app.querySelector('[data-action="next"]').disabled = i === ex.ids.length - 1;
-  app.querySelector("#grid").innerHTML = ex.ids.map((id, k) => `
+  const grid = app.querySelector("#grid");
+  const gridFocused = grid.contains(document.activeElement);
+  grid.innerHTML = ex.ids.map((id, k) => `
     <button type="button" class="cell ${ex.choices[id] != null ? "done" : ""} ${k === i ? "current" : ""}"
       data-action="exam-go" data-i="${k}">${k + 1}</button>`).join("");
+  if (gridFocused) grid.querySelector(".cell.current")?.focus({ preventScroll: true });
 }
 
 // Her saniye çalışır: geçen ya da kalan süreyi yazar, süre bitince sınavı kapatır
@@ -687,17 +742,24 @@ function finishExam(timeUp) {
     if (!confirm(blank ? `${blank} soru boş. Testi bitirmek istiyor musun?` : "Testi bitirmek istiyor musun?")) return;
   }
   clearInterval(timer);
+  closeExam(timeUp);
+  location.replace("#/exam/result");
+}
+
+// Denemeyi kapatır ve cevapları kayda işler (yönlendirme yapmaz; İçindekiler de kullanır)
+function closeExam(timeUp) {
+  const ex = store.exam;
   ex.finishedAt = timeUp ? ex.startedAt + ex.duration * 1000 : Date.now();
   for (const [id, choice] of Object.entries(ex.choices)) {
     store.answers[id] = { correct: choice === questionById[id].answer };
   }
   save();
-  location.hash = "#/exam/result";
 }
 
 function renderExamResult() {
   const ex = store.exam;
-  if (!ex || !ex.finishedAt) return (location.hash = "#/exam");
+  if (!ex || !examValid(ex)) return dropExam();
+  if (!ex.finishedAt) return location.replace("#/exam");
 
   let correct = 0, wrong = 0, blank = 0;
   for (const id of ex.ids) {
@@ -707,7 +769,7 @@ function renderExamResult() {
     else wrong++;
   }
   const total = ex.ids.length;
-  const pct = Math.round((100 * correct) / total);
+  const pct = total ? Math.round((100 * correct) / total) : 0;
   const note = pct >= 85 ? "Aferin!" : pct >= 70 ? "İyi, devam." : pct >= 50 ? "Biraz daha çalış." : "Tekrar et.";
   const spent = Math.round((ex.finishedAt - ex.startedAt) / 1000);
 
@@ -754,6 +816,7 @@ const actions = {
     session.drawing = q.id;
     renderPage(Number(btn.dataset.i));
     session.drawing = null;
+    refocusOption(btn);
   },
   check(btn) {
     const q = pageQuestion(btn);
@@ -816,6 +879,7 @@ const actions = {
     examDrawing = q.id;
     renderPage(Number(btn.dataset.i));
     examDrawing = null;
+    refocusOption(btn);
     updateExamChrome();
   },
   "exam-clear"(btn) {
@@ -828,8 +892,9 @@ const actions = {
   "finish-exam"() { finishExam(false); },
   // açık çalışma listesini süresiz bir teste çevir: cevaplar "Testi bitir" deyince görünür
   "quiz-mode"() {
+    const ids = gradableIds(session.ids);
+    if (!ids.length) return alert("Bu listede puanlanabilir soru yok.");
     if (store.exam && !store.exam.finishedAt && !confirm("Yarım kalan deneme silinecek. Devam edilsin mi?")) return;
-    const ids = session.ids.filter((id) => questionById[id].type !== "open");
     store.exam = { title: session.title, ids, choices: {}, index: 0, startedAt: Date.now(), duration: 0, finishedAt: null };
     save();
     location.hash = "#/exam/run";
@@ -860,11 +925,20 @@ app.addEventListener("submit", (e) => {
 
 // Klavye: ← → sayfa çevirir, 1-4 şık seçer, Enter cevabı kontrol eder
 document.addEventListener("keydown", (e) => {
-  if (!book || e.metaKey || e.ctrlKey || e.altKey) return;
-  if (e.target.closest("input, select, textarea")) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  // kapak bir düğme gibi davranır: Enter ya da Boşluk ile açılır
+  if (e.target.classList?.contains("cover") && (e.key === "Enter" || e.key === " ")) {
+    e.preventDefault();
+    openCover();
+    return;
+  }
+  if (!book || e.target.closest("input, select, textarea")) return;
   const page = book.pages[currentPage()];
+  // sayfa çevrilirken 1-4 ve Enter yok sayılır; yoksa animasyondaki sayfa değişir
+  const reading = book.flip.getState() === "read";
   if (e.key === "ArrowLeft") turn(-1);
   else if (e.key === "ArrowRight") turn(1);
+  else if (!reading) return;
   else if (e.key >= "1" && e.key <= "4") page.querySelectorAll(".option:not(:disabled)")[e.key - 1]?.click();
   else if (e.key === "Enter" && e.target.tagName !== "BUTTON") {
     page.querySelector('[data-action="check"], [data-action="show-open"]')?.click();
@@ -924,7 +998,17 @@ function router() {
 }
 
 window.addEventListener("hashchange", router);
-router();
+
+// Sayfa ölçümleri (fit) yazı tipine bağlı; fontlar gelmeden çizilirse sığdırma yanlış çıkar.
+// Fontlar yüklenince ilk çizim yapılır, ama yavaş ağda sayfa boş kalmasın diye 1,5 sn sınır var.
+const fontsLoaded = document.fonts
+  ? Promise.all([
+      document.fonts.load('16px "EB Garamond"'),
+      document.fonts.load('italic 16px "EB Garamond"'),
+      document.fonts.load('600 16px "Caveat"'),
+    ]).catch(() => {})
+  : Promise.resolve();
+Promise.race([fontsLoaded, new Promise((resolve) => setTimeout(resolve, 1500))]).then(router);
 
 // ===== Lamba (gece modu) =====
 

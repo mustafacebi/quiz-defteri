@@ -167,6 +167,21 @@ details.note-card p { white-space: pre-line; }
   font-style: italic;
 }
 
+/* klavye ipucu masanın üstünde; dokunmatik cihazlarda gereksiz */
+.kbd-hint {
+  width: 100%;
+  margin: 10px 0 0;
+  text-align: center;
+  color: var(--desk-ink);
+  font-style: italic;
+  font-size: 15px;
+  opacity: 0.7;
+}
+@media (hover: none) { .kbd-hint { display: none; } }
+
+/* iOS'ta üst üste hızlı dokunuşun sayfayı yakınlaştırmasını engelle */
+button, .option, .book-shell, .cover { touch-action: manipulation; }
+
 /* ===== Kâğıt (tek sayfa ve kitap sayfaları ortak) ===== */
 .paper {
   position: relative;
