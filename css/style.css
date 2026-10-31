@@ -1,0 +1,242 @@
+/* ===== Renkler ve ölçüler =====
+   Tüm renkler burada; gece modu sadece bu değerleri değiştirir. */
+:root {
+  --desk: #d8cfbe;                      /* sayfanın arkasındaki masa */
+  --paper: #f3ead7;                     /* sararmış fildişi kâğıt */
+  --paper-edge: rgba(122, 88, 44, 0.16); /* kenarlara doğru eskime */
+  --rule: rgba(120, 96, 64, 0.17);      /* soluk kahverengi çizgiler */
+  --margin: rgba(170, 72, 58, 0.42);    /* çift kırmızı kenar çizgisi */
+  --grain: 0.35;                        /* kâğıt dokusunun yoğunluğu */
+  --ink: #2f2620;                       /* sepya mürekkep */
+  --ink-soft: #7a6a57;                  /* soluk mürekkep */
+  --pen: #2e3c58;                       /* solmuş dolma kalem mavisi */
+  --correct: #3d6b3f;
+  --wrong: #9c3b2e;
+  --marker: rgba(214, 170, 60, 0.3);    /* eski fosforlu kalem */
+
+  --line: 28px;                         /* çizgi aralığı; yazı satırları da buna oturur */
+  --margin-x: 64px;                     /* kenar çizgisinin soldan uzaklığı */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --desk: #121010;
+    --paper: #1f1b17;
+    --paper-edge: rgba(0, 0, 0, 0.35);
+    --rule: rgba(230, 205, 170, 0.07);
+    --margin: rgba(196, 92, 78, 0.32);
+    --grain: 0.5;
+    --ink: #e5dac6;
+    --ink-soft: #9c8f7c;
+    --pen: #b4c2dc;
+    --correct: #8fbf8c;
+    --wrong: #e0907f;
+    --marker: rgba(214, 170, 60, 0.18);
+  }
+}
+:root[data-theme="dark"] {
+  --desk: #121010;
+  --paper: #1f1b17;
+  --paper-edge: rgba(0, 0, 0, 0.35);
+  --rule: rgba(230, 205, 170, 0.07);
+  --margin: rgba(196, 92, 78, 0.32);
+  --grain: 0.5;
+  --ink: #e5dac6;
+  --ink-soft: #9c8f7c;
+  --pen: #b4c2dc;
+  --correct: #8fbf8c;
+  --wrong: #e0907f;
+  --marker: rgba(214, 170, 60, 0.18);
+}
+
+/* ===== Temel ===== */
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--desk);
+  color: var(--ink);
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  font-size: 19px;
+  line-height: var(--line);
+  font-variant-numeric: oldstyle-nums;
+}
+
+a { color: var(--pen); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+/* ===== Defter sayfası ===== */
+.page {
+  position: relative;
+  z-index: 0; /* aşağıdaki doku katmanı içeriğin arkasında kalsın diye */
+  max-width: 760px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: var(--line) 36px calc(var(--line) * 3) calc(var(--margin-x) + 28px);
+  background-color: var(--paper);
+  background-image:
+    /* sol kenarda cilt gölgesi */
+    linear-gradient(to right, var(--paper-edge), transparent 22px),
+    /* kenarlara doğru eskime */
+    radial-gradient(ellipse at 50% 40%, transparent 55%, var(--paper-edge) 100%),
+    /* yatay çizgiler: her --line pikselde 1px'lik bir çizgi */
+    linear-gradient(to bottom, transparent calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px));
+  background-size: 100% 100%, 100% 100%, 100% var(--line);
+  box-shadow: 0 1px 2px rgba(60, 40, 20, 0.12), 0 8px 30px rgba(60, 40, 20, 0.12);
+}
+
+/* soldaki çift kenar çizgisi */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--margin-x);
+  width: 4px;
+  border-left: 1px solid var(--margin);
+  border-right: 1px solid var(--margin);
+}
+
+/* kâğıt dokusu: SVG ile üretilmiş ince gürültü (resim dosyası gerekmez) */
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--grain);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .33 0 0 0 0 .2 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== Üst bar ===== */
+.topbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--line);
+}
+
+.logo {
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+.logo:hover { text-decoration: none; color: var(--ink); }
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.link-button:hover { color: var(--pen); }
+
+/* ===== Başlıklar ===== */
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--pen);
+}
+h1.title { font-size: 40px; line-height: calc(var(--line) * 2); }
+
+h2.title {
+  margin-top: var(--line);
+  font-style: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  font-size: 21px;
+  line-height: calc(var(--line) * 1.5);
+}
+
+.muted { color: var(--ink-soft); font-style: italic; margin: 0 0 var(--line); }
+
+/* bölüm arası süs */
+.ornament {
+  margin: var(--line) 0 0;
+  text-align: center;
+  color: var(--ink-soft);
+  opacity: 0.7;
+}
+
+/* ===== İçindekiler ===== */
+.toc {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--ink);
+  line-height: var(--line);
+}
+.toc a:hover { text-decoration: none; }
+.toc a:hover .toc-title { color: var(--pen); }
+
+.toc-no {
+  width: 1.6em;
+  flex-shrink: 0;
+  text-align: right;
+  color: var(--ink-soft);
+  font-variant-numeric: oldstyle-nums tabular-nums;
+}
+
+.toc-title { flex-shrink: 1; min-width: 0; }
+
+/* başlık ile sayı arasındaki noktalar */
+.toc-dots {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 1px dotted var(--ink-soft);
+  opacity: 0.45;
+  transform: translateY(-6px);
+}
+
+.toc-count {
+  flex-shrink: 0;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 17px;
+}
+
+.mix-link {
+  display: inline-block;
+  margin-top: calc(var(--line) / 2);
+  font-style: italic;
+}
+
+/* ===== Quiz sayfası ===== */
+.back { font-size: 17px; font-style: italic; }
+
+details.summary {
+  margin: var(--line) 0;
+  padding: 0 0 0 14px;
+  border-left: 2px solid var(--marker);
+}
+details.summary summary {
+  cursor: pointer;
+  color: var(--pen);
+  font-style: italic;
+}
+details.summary p { margin: 0; white-space: pre-line; }
+
+/* ===== Telefon ===== */
+@media (max-width: 600px) {
+  :root { --margin-x: 26px; }
+  body { font-size: 18px; }
+  .page { padding: calc(var(--line) / 2) 16px calc(var(--line) * 2) calc(var(--margin-x) + 16px); }
+  h1.title { font-size: 34px; }
+  .toc-dots { display: none; }
+  .toc-title { flex: 1; }
+}
