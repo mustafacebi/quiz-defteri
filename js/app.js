@@ -85,6 +85,7 @@ const shortSource = (quiz) => quiz.source.title.split(" ")[0]; // "Yeni Quizler"
 // ===== Fosforlu kalem rengi (tarayıcıda hatırlanır) =====
 
 const PENS = {
+  vişne: ["rgba(150, 40, 62, 0.32)", "rgba(125, 28, 48, 0.4)"],
   sarı: ["rgba(250, 214, 60, 0.55)", "rgba(235, 190, 30, 0.6)"],
   yeşil: ["rgba(140, 220, 110, 0.5)", "rgba(100, 190, 80, 0.55)"],
   pembe: ["rgba(245, 130, 175, 0.45)", "rgba(230, 95, 150, 0.5)"],
@@ -112,9 +113,9 @@ pensEl.addEventListener("click", (e) => {
 
 try {
   const saved = localStorage.getItem("pen");
-  setPen(saved in PENS ? saved : "sarı");
+  setPen(saved in PENS ? saved : "vişne");
 } catch (e) {
-  setPen("sarı");
+  setPen("vişne");
 }
 
 // ===== Soru görünümü (çalışma, deneme ve sonuç ekranı ortak kullanır) =====
