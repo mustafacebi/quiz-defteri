@@ -842,8 +842,14 @@ function renderExamResult() {
           ${wrong ? `<a class="btn" href="#/wrong">Yanlışlarımı çöz</a>` : ""}
         </p>
         <p class="ornament" aria-hidden="true">❦</p>
+        <p class="review-filter">
+          <button type="button" class="filter on" data-action="filter-review" data-kind="all">Hepsi (${total})</button>
+          <button type="button" class="filter ok" data-action="filter-review" data-kind="ok">Doğrular (${correct})</button>
+          <button type="button" class="filter bad" data-action="filter-review" data-kind="bad">Yanlışlar (${wrong})</button>
+          <button type="button" class="filter" data-action="filter-review" data-kind="blank">Boşlar (${blank})</button>
+        </p>
         ${ex.ids.map((id, i) => `
-          <div class="review">
+          <div class="review" data-kind="${ex.choices[id] == null ? "blank" : ex.choices[id] === questionById[id].answer ? "ok" : "bad"}">
             <span class="review-no">${i + 1}.</span>
             <div class="q">${questionHtml(questionById[id], { selected: ex.choices[id], revealed: true, action: "none", i })}</div>
           </div>`).join("")}
@@ -951,6 +957,12 @@ const actions = {
   // genel
   "open-cover"() { openCover(); },
   "close-cover"() { closeCover(); },
+  // sonuç dökümünde sadece doğruları / yanlışları / boşları göster
+  "filter-review"(btn) {
+    const kind = btn.dataset.kind;
+    app.querySelectorAll(".filter").forEach((b) => b.classList.toggle("on", b === btn));
+    app.querySelectorAll(".review").forEach((r) => { r.hidden = kind !== "all" && r.dataset.kind !== kind; });
+  },
   // çalışma modunda testi bitir: kontrol edilen cevaplardan sonuç sayfası oluşur
   "finish-study"() {
     const ids = gradableIds(session.ids);

@@ -412,6 +412,16 @@ input[type="checkbox"] { accent-color: var(--pen); }
 .review-no { flex-shrink: 0; padding-top: var(--line); color: var(--ink-soft); }
 .review .q { flex: 1; min-width: 0; font-size: 17px; }
 
+.review-filter { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: var(--line); }
+.filter {
+  padding: 0; font: inherit; font-style: italic; color: var(--ink-soft);
+  background: none; border: 0; border-bottom: 2px solid transparent; cursor: pointer;
+}
+.filter.ok { color: var(--correct); } .filter.bad { color: var(--wrong); }
+.filter.on { border-bottom-color: currentColor; color: var(--ink); }
+.filter.ok.on { color: var(--correct); } .filter.bad.on { color: var(--wrong); }
+.review[hidden] { display: none; }
+
 /* ===== Kapak ===== */
 .cover-scene { position: relative; perspective: 2600px; }
 .cover {
