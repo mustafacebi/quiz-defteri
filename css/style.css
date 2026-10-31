@@ -66,7 +66,7 @@ p, ol, ul { margin: 0; }
   gap: 8px 16px;
   max-width: 780px;
   margin: 0 auto;
-  padding: 12px 12px 4px;
+  padding: 8px 12px 0;
 }
 
 .logo {
@@ -123,22 +123,22 @@ p, ol, ul { margin: 0; }
 .desk-btn:disabled { opacity: 0.45; cursor: default; }
 .desk-btn.primary { color: #f3ead7; background: var(--pen); }
 
-.view { display: flex; flex-direction: column; align-items: center; margin: 0 auto; padding: 12px 12px 60px; }
+.view { display: flex; flex-direction: column; align-items: center; margin: 0 auto; padding: 6px 12px 60px; }
 
-.desk-head { width: 100%; color: var(--desk-ink); margin-bottom: 10px; }
+.desk-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; width: 100%; color: var(--desk-ink); margin-bottom: 6px; }
 .desk-head .back { color: var(--desk-ink); font-style: italic; font-size: 16px; }
-.desk-head h1 { margin: 0; font-weight: 400; font-style: italic; font-size: 30px; line-height: 40px; color: #f3e8d2; }
+.desk-head h1 { margin: 0; font-weight: 400; font-style: italic; font-size: 24px; line-height: 32px; color: #f3e8d2; }
 .desk-head .sub { font-style: italic; font-size: 16px; opacity: 0.8; }
 
 .tools {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px 22px;
+  gap: 4px 18px;
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: var(--desk-ink);
-  font-size: 17px;
+  font-size: 16px;
 }
 .tools select { color: var(--desk-ink); border-bottom-color: var(--desk-ink); }
 .tools select option { color: var(--ink); }

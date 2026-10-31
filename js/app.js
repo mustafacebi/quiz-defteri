@@ -447,9 +447,9 @@ function renderStudyView() {
   app.innerHTML = `
     <section class="view" style="max-width:${w + 24}px">
       <div class="desk-head">
-        <a class="back" href="#/">← İçindekiler</a>
+        <a class="back" href="#/" title="İçindekiler" aria-label="İçindekiler">←</a>
         <h1>${esc(s.title)}</h1>
-        <p class="sub">${esc(s.subtitle)}</p>
+        <span class="sub">${esc(s.subtitle)}</span>
       </div>
       ${s.summary ? `
         <details class="note-card">
@@ -463,7 +463,7 @@ function renderStudyView() {
             / ${s.ids.length}</label>
           ${s.canShuffle ? `<label><input type="checkbox" data-action="toggle-shuffle" ${s.shuffled ? "checked" : ""}> Karışık sıra</label>` : ""}
           ${s.alwaysShuffled ? `<button type="button" class="desk-link" data-action="reshuffle">Yeniden karıştır</button>` : ""}
-          <button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz (cevaplar sonda) →</button>
+          <button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz →</button>
         </div>
         <div class="book-shell stack"></div>
         <nav class="pager">
@@ -603,9 +603,9 @@ function renderExamRun() {
   app.innerHTML = `
     <section class="view" style="max-width:${w + 24}px">
       <div class="desk-head">
-        <a class="back" href="#/">← İçindekiler</a>
+        <a class="back" href="#/" title="İçindekiler" aria-label="İçindekiler">←</a>
         <h1>${esc(ex.title)}</h1>
-        <p class="sub"><span id="answered"></span> · <span id="timer" class="timer"></span></p>
+        <span class="sub"><span id="answered"></span> · <span id="timer" class="timer"></span></span>
       </div>
       <div class="book-shell stack"></div>
       <nav class="pager">
