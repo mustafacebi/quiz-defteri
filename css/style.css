@@ -315,23 +315,20 @@ input[type="checkbox"] { accent-color: var(--pen); }
 .option.correct::after { content: "✓"; margin-left: auto; padding-left: 8px; }
 .option.wrong::after { content: "✗"; margin-left: auto; padding-left: 8px; }
 
-/* fosforlu kalem: satırı değil sadece yazıyı, satırdan biraz ince bir şeritle boyar */
-.ink {
-  padding: 0 3px;
-  margin: 0 -3px;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  background-repeat: no-repeat;
-  background-position: 0 66%;
-  background-size: 0% 62%;
-  border-radius: 7px 3px 8px 4px / 60% 40% 55% 45%;   /* kalemin uçları hafif düzensiz */
+/* fosforlu kalem: her satır için JS bir şerit çizer (.mark); yazı şeridin üstünde kalır */
+.option-text { position: relative; }
+.ink { position: relative; z-index: 1; }
+.mark {
+  position: absolute; z-index: 0; height: 20px;
+  background: linear-gradient(to bottom, var(--hl-edge) 0, var(--hl) 20%, var(--hl) 72%, var(--hl-edge) 100%);
+  border-radius: 45% 10px 40% 12px / 55% 35% 60% 40%;
+  mix-blend-mode: multiply;
+  transform-origin: left center;
 }
-.option.chosen .ink {
-  background-image: linear-gradient(to bottom, transparent 0, var(--hl) 12%, var(--hl) 80%, var(--hl-edge) 92%, transparent 100%);
-  background-size: 100% 62%;
-}
-.option.draw .ink { animation: highlight 0.45s cubic-bezier(0.3, 0.6, 0.4, 1); }
-@keyframes highlight { from { background-size: 0% 62%; } }
+.mark.draw { animation: stroke 0.38s cubic-bezier(0.3, 0.6, 0.4, 1) both; }
+@keyframes stroke { from { transform: rotate(var(--r)) scaleX(0); } to { transform: rotate(var(--r)) scaleX(1); } }
+/* sonuç sayfasında (kitap dışı) basit şerit */
+.sheet .option.chosen .ink { background: linear-gradient(transparent 25%, var(--hl) 25%, var(--hl) 85%, transparent 85%); }
 
 .feedback { margin-top: var(--line); font-style: italic; }
 .ok { color: var(--correct); }

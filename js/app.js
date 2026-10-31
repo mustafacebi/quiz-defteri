@@ -226,6 +226,8 @@ function renderPage(k) {
   page.innerHTML = book.render(k);
   book.rendered.add(k);
   fit(page);
+  // kütüphane sayfanın stilini her çizimde baştan yazıyor; açık sayfayı hemen yeniden çizdir
+  if (book.flip && k === currentPage()) book.flip.update();
 }
 
 const currentPage = () => book.flip.getCurrentPageIndex();
@@ -258,9 +260,31 @@ function fit(page) {
       break;
     }
   }
-  page.style.setProperty("--fs", chosen + "px");
+  // --fs iç kutuya yazılır: kütüphane sayfanın kendi style'ını her çizimde siler
+  page.querySelector(".page-inner").style.setProperty("--fs", chosen + "px");
+  drawMarks(probe, page);
   // en küçük yazıyla da sığmıyorsa (telefonda çok uzun cevaplar) sayfanın içi kaydırılır
   page.classList.toggle("overflow", inner.scrollHeight > inner.clientHeight);
+}
+
+// Fosforlu kalem şeritleri: işaretli şıkkın her satırı ölçülür (görünmez kopya sayfada),
+// gerçek sayfaya hafif eğik, düzensiz uçlu bir şerit eklenir. Animasyon transform ile yapılır.
+function drawMarks(probe, page) {
+  const probeOpts = probe.querySelectorAll(".option");
+  const realOpts = page.querySelectorAll(".option");
+  probeOpts.forEach((opt, j) => {
+    if (!opt.classList.contains("chosen")) return;
+    const box = opt.querySelector(".option-text").getBoundingClientRect();
+    const rects = [...opt.querySelector(".ink").getClientRects()];
+    const seed = [...realOpts[j].dataset.i + realOpts[j].dataset.k].reduce((a, c) => a * 31 + c.charCodeAt(0), 7);
+    const rnd = (n) => ((Math.sin(seed + n) * 10000) % 1 + 1) % 1; // aynı şık hep aynı şekilde çizilsin
+    const draw = realOpts[j].classList.contains("draw");
+    realOpts[j].querySelector(".option-text").insertAdjacentHTML("afterbegin", rects.map((r, n) => `
+      <span class="mark ${draw ? "draw" : ""}" style="
+        left:${r.left - box.left - 4 + rnd(n) * 3}px; top:${r.top - box.top + r.height / 2 - 9 + rnd(n + 9) * 2}px;
+        width:${r.width + 6 + rnd(n + 3) * 6}px; --r:${(rnd(n + 5) - 0.5) * 1.6}deg; transform:rotate(var(--r));
+        animation-delay:${n * 0.3}s"></span>`).join(""));
+  });
 }
 
 // Sayfanın sağ %30'una dokununca ileri, sol %30'una dokununca geri; telefonda yatay kaydırma
