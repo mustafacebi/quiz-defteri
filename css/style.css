@@ -348,6 +348,7 @@ input[type="checkbox"] { accent-color: var(--pen); }
 .feedback { margin-top: var(--line); font-style: italic; }
 .ok { color: var(--correct); }
 .bad { color: var(--wrong); }
+.options + .explanation { margin-top: var(--line); }
 .explanation { padding-left: 14px; border-left: 2px solid var(--hl); white-space: pre-line; }
 .uncertain { font-size: 0.85em; color: var(--wrong); }
 .label-sc { font-variant: small-caps; letter-spacing: 0.08em; color: var(--ink-soft); }

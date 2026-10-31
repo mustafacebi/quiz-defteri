@@ -154,11 +154,12 @@ function questionHtml(q, o) {
 }
 
 function feedbackHtml(q, choice) {
-  const right = q.type === "mc" ? `${LETTERS[q.answer]}) ${q.options[q.answer]}` : q.options[q.answer];
-  let html;
-  if (choice == null) html = `<p class="feedback bad">Boş bıraktın. Doğru cevap: ${esc(right)}</p>`;
-  else if (choice === q.answer) html = `<p class="feedback ok">Doğru.</p>`;
-  else html = `<p class="feedback bad">Yanlış. Doğru cevap: ${esc(right)}</p>`;
+  // doğru/yanlış zaten şıkların yanında ✓ ✗ ile görünüyor; burada sadece boş soru ve açıklama
+  let html = "";
+  if (choice == null) {
+    const right = q.type === "mc" ? `${LETTERS[q.answer]}) ${q.options[q.answer]}` : q.options[q.answer];
+    html = `<p class="feedback bad">Boş bıraktın. Doğru cevap: ${esc(right)}</p>`;
+  }
   if (q.explanation) html += `<p class="explanation">${esc(q.explanation)}</p>`;
   return html;
 }
