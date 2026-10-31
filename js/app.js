@@ -524,7 +524,8 @@ function renderStudyView() {
             / ${s.ids.length}</label>
           ${s.canShuffle ? `<label><input type="checkbox" data-action="toggle-shuffle" ${s.shuffled ? "checked" : ""}> Karışık sıra</label>` : ""}
           ${s.alwaysShuffled ? `<button type="button" class="desk-link" data-action="reshuffle">Yeniden karıştır</button>` : ""}
-          ${gradableIds(s.ids).length ? `<button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz →</button>` : ""}
+          ${gradableIds(s.ids).length ? `<button type="button" class="desk-link" data-action="restart-list">Baştan başlat</button>
+          <button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz →</button>` : ""}
         </div>
         <div class="book-shell stack"></div>
         <nav class="pager">
@@ -926,6 +927,14 @@ const actions = {
   // genel
   "open-cover"() { openCover(); },
   "close-cover"() { closeCover(); },
+  // sadece bu listenin ilerlemesini siler (cevaplar, kalınan yer); diğer bölümlere dokunmaz
+  "restart-list"() {
+    if (!confirm("Bu bölümdeki cevapların silinip baştan başlansın mı?")) return;
+    for (const id of session.base) delete store.answers[id];
+    delete store.pos[session.key];
+    save();
+    startStudy(session.key);
+  },
   "reset-progress"() {
     if (!confirm("Bütün ilerlemen (çözdüğün sorular, yanlışların, işaretlerin, denemeler) silinsin mi?")) return;
     Object.assign(store, { answers: {}, pos: {}, order: {}, exam: null, marked: {} });
