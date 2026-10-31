@@ -530,7 +530,7 @@ function renderStudyView() {
   app.innerHTML = `
     <section class="view" style="max-width:${w + 24}px">
       <div class="desk-head">
-        <a class="back" href="#/" title="İçindekiler" aria-label="İçindekiler">←</a>
+        <a class="back" href="#/">← İçindekiler</a>
         <h1>${esc(s.title)}</h1>
         <span class="sub">${esc(s.subtitle)}</span>
       </div>
@@ -701,7 +701,7 @@ function renderExamRun() {
   app.innerHTML = `
     <section class="view" style="max-width:${w + 24}px">
       <div class="desk-head">
-        <a class="back" href="#/" title="İçindekiler" aria-label="İçindekiler">←</a>
+        <a class="back" href="#/">← İçindekiler</a>
         <h1>${esc(ex.title)}</h1>
         <span class="sub"><span id="answered"></span> · <span id="timer" class="timer"></span></span>
       </div>
@@ -1183,7 +1183,8 @@ const themeButton = document.getElementById("theme-toggle");
 const currentTheme = () => document.documentElement.dataset.theme || "light";
 
 function updateThemeButton() {
-  themeButton.textContent = currentTheme() === "dark" ? "Lambayı aç" : "Lambayı kıs";
+  const bulb = `<svg class="lamp-icon" viewBox="0 0 14 16" aria-hidden="true"><path d="M7 1.5a4.5 4.5 0 0 0-2.6 8.2c.4.3.6.8.6 1.3V12h4v-1c0-.5.2-1 .6-1.3A4.5 4.5 0 0 0 7 1.5z M5 14h4"/></svg>`;
+  themeButton.innerHTML = `${bulb} ${currentTheme() === "dark" ? "Lambayı aç" : "Lambayı kıs"}`;
 }
 
 themeButton.addEventListener("click", () => {
