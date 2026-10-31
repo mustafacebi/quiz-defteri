@@ -463,6 +463,7 @@ function renderStudyView() {
             / ${s.ids.length}</label>
           ${s.canShuffle ? `<label><input type="checkbox" data-action="toggle-shuffle" ${s.shuffled ? "checked" : ""}> Karışık sıra</label>` : ""}
           ${s.alwaysShuffled ? `<button type="button" class="desk-link" data-action="reshuffle">Yeniden karıştır</button>` : ""}
+          <button type="button" class="desk-link" data-action="quiz-mode">Quiz olarak çöz (cevaplar sonda) →</button>
         </div>
         <div class="book-shell stack"></div>
         <nav class="pager">
@@ -613,7 +614,7 @@ function renderExamRun() {
         <button type="button" class="desk-btn" data-action="next">Sonraki →</button>
       </nav>
       <div class="grid" id="grid"></div>
-      <p class="finish"><button type="button" class="desk-btn primary" data-action="finish-exam">Sınavı bitir</button></p>
+      <p class="finish"><button type="button" class="desk-btn primary" data-action="finish-exam">Testi bitir</button></p>
     </section>`;
 
   mountBook(app.querySelector(".book-shell"), {
@@ -683,7 +684,7 @@ function finishExam(timeUp) {
   const ex = store.exam;
   if (!timeUp) {
     const blank = ex.ids.length - Object.keys(ex.choices).length;
-    if (!confirm(blank ? `${blank} soru boş. Sınavı bitirmek istiyor musun?` : "Sınavı bitirmek istiyor musun?")) return;
+    if (!confirm(blank ? `${blank} soru boş. Testi bitirmek istiyor musun?` : "Testi bitirmek istiyor musun?")) return;
   }
   clearInterval(timer);
   ex.finishedAt = timeUp ? ex.startedAt + ex.duration * 1000 : Date.now();
@@ -825,6 +826,14 @@ const actions = {
   },
   "exam-go"(btn) { goToPage(Number(btn.dataset.i)); },
   "finish-exam"() { finishExam(false); },
+  // açık çalışma listesini süresiz bir teste çevir: cevaplar "Testi bitir" deyince görünür
+  "quiz-mode"() {
+    if (store.exam && !store.exam.finishedAt && !confirm("Yarım kalan deneme silinecek. Devam edilsin mi?")) return;
+    const ids = session.ids.filter((id) => questionById[id].type !== "open");
+    store.exam = { title: session.title, ids, choices: {}, index: 0, startedAt: Date.now(), duration: 0, finishedAt: null };
+    save();
+    location.hash = "#/exam/run";
+  },
 
   // genel
   "open-cover"() { openCover(); },
